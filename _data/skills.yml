@@ -9,8 +9,11 @@
 - skill: ElasticSearch
   description: <ul class="resume-item-list"><li>월 5억개의 로그가 발생하는 ElasticSearch 클러스터 구축 및 운영 with Docker</li><li>Curator를 사용한 자동 Alias 설정 및 ILM을 사용한 자동 백업 설정</li></ul>
 
+- skill: CI/CD
+  description: <ul class="resume-item-list"><li>Docker기반 Jenkins 구축/운영 경험</li><li>Bash 기반 PipeLine 작성 및 Git + Terraform 을 연동하여 서버 구축 자동화 경험</li></ul>
+
 - skill: Cloud
-  description: <ul class="resume-item-list"><li>AWS - AWS EC2, EKS 사용 경험 / Route53 과 LB를 사용한 DR구성 경험 / AWS WAF를 운영하고, Market Place에 Managed Rule Group 등록 경험</li><li>Azure, NaverCloud, Linode, DigitalOcean, Vultr Cloud 인프라 경험</li></ul>
+  description: <ul class="resume-item-list"><li>AWS - AWS EC2, EKS 사용 경험 / Route53 과 LB를 사용한 DR구성 경험 / AWS WAF를 운영하고, Market Place에 Managed Rule Group 등록 경험</li><li>Azure, NaverCloud, Linode, DigitalOcean, Vultr Cloud 인프라 경험</li><li>Terraform 을 이용한 여러 Cloud 인프라 통합 관리</li></ul>
 
 - skill: Zabbix/Prometheus with Grafana
   description: <ul class="resume-item-list"><li>Prometheus Node Exporter를 사용한 모니터링</li><li>Zabbix를 통해 SNMP를 사용한 AgentLess 방식 모니터링</li><li>Prometheus 와 Zabbix를 Grafana에 연동하여 대시보드 수동 생성 경험</li></ul>
