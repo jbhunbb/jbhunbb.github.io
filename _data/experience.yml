@@ -3,20 +3,10 @@
 - company: Cloudbric
   position: Cloud Security Tech Engineer
   duration: 2020.08 &mdash; 현재
-  summary: 
-  	<ul class="resume-item-list">
-    <li>자동화 시스템 구축</li>
-    <li>ChatBot 개발 및 유지보수</li>
-    <li>ElasticSearch Cluster 구축/운영</li>
-    <li>AWS WAF 운영</li>
-    </ul>
+  summary: <ul class="resume-item-list"><li>자동화 시스템 구축</li><li>ChatBot 개발 및 유지보수</li><li>ElasticSearch Cluster 구축/운영</li><li>AWS WAF 운영</li></ul>
 
 # Director of Digital Stratgy
 - company: Gkes
   position: Tech Engineer
   duration: 2016.08 &mdash; 2017.08
-  summary: 
-  	<ul class="resume-item-list">
-    <li>지킴-e 시스템 운영</li>
-    <li>공공기관, 금융권 NMS 시스템 구축, 운영 관리</li>
-    </ul>
+  summary: <ul class="resume-item-list"><li>지킴-e 시스템 운영</li><li>공공기관, 금융권 NMS 시스템 구축, 운영 관리</li></ul>
