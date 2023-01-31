@@ -1,16 +1,51 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
+# ChatBot
+- project: Slack Chat Bot 개발
+  role: Python Developer
+  duration: 2020.08 &mdash; 2021.01
   # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+  description: Python과 Django를 활용해 서버 장애에 대응하는 Slack ChatBot을 개발했습니다. ChatBot은 서버에 문제가 잇을 경우 명령어를 통해 편리하고 효율적으로 해결하는 데 도움을 주었습니다.
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
+# 서비스 구축 자동화
+- project: Automated service deployment with Terraform, Jenkins
+  role: DevOps Engineer
+  duration: 2021.02 &mdash; 2021.05
   # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+  description: IaC(Terraform) 및 Jenkins를 구현하여 서비스 구축 프로세스를 자동화했습니다. 이러한 오픈소스 도구의 연동으로 구축 기간이 2일에서 1시간 미만으로 단축되어 구축 프로세스가 간결화 됐습니다.
+
+# AWS WAF 관리
+- project: AWS WAF operation
+  role: DevOps & Security Engineer
+  duration: 2021.05 &mdash; 2022.03
+  # url: "#"
+  description: AWS MarketPlace에서 AWS WAF Managed Rule Group 제품을 등록한 경험이 있습니다. 또한 위협 IP 정보를 자동으로 업데이트하는 Python 스크립트를 사용하여 수동 개발하여 수동 작업을 최소화 했습니다.
+
+# Elastic Search
+- project: Elastic Search Cluster Operation
+  role: DevOps & Tech Engineer
+  duration: 2022.04 &mdash; 2022.05
+  # url: "#"
+  description: Docker를 기반으로 AWS WAF 로그를 수집 및 검색하고 보고서를 출력하도록 ElasticSearch 클러스터를 구성했습니다. 이는 로그를 효율적으로 관리하고 시스템의 전반적인 성능을 향상시키는 데 도움이 되었습니다.
+
+# Mornitoring
+- project: Monitoring
+  role: DevOps & Tech Engineer
+  duration: 2022.04 &mdash; 2022.05
+  # url: "#"
+  description: 자체 점검 스크립트를 사용하여 발생할 수 있는 혼란을 제거하고 원활한 기능을 보장하기 위해 사용되었습니다. Zabbix 및 Grafana 로 구현했으며, Prometheus에 대한 테스트도 진행하였습니다. 이로인해 서비스 안정성 보장할 수 잇었으며, 대시보드를 통한 가시성 있는 모니터링이 가능해졌습니다.
+
+# 자동화 스크립트 개발
+- project: Development for automation
+  role: DevOps Engineer
+  duration: 2021.01 &mdash; 2022.01
+  # url: "#"
+  description: WAF에 대한 정책 검토, 정책 적용, AWS Route 53 Failover 생성과 같이 반복 작업에 대해 자동화하는 스크립트를 만들었습니다. 이러한 작업의 자동화는 작업 리소스를 줄이고 Human Error를 최소화했습니다.
+
+# Disaster Recovery
+- project: Development for automation
+  role: DevOps & Cloud Engineer
+  duration: 2022.01 &mdash; 2022.08
+  # url: "#"
+  description: Route 53 Failover 및 Load Balancer와 같은 AWS 기술을 사용하여 DR을 구성하는 방법을 익히고 자동화하는 방법을 익혔습니다. AWS CDN(Cloudfront)와 GA를 사용해본 경험도 있습니다.
