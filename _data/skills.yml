@@ -1,7 +1,7 @@
 # Skills
 
 - skill: Python
-  description: <ul class="resume-item-list"><li>AWS Boto3, Google sheet, ElasticSearch 라이브러리 들을 활용 및 RESTful API와 연동하여 자동화 스크립트 개발</li></ul>
+  description: <ul class="resume-item-list"><li>AWS Boto3, Google sheet, ElasticSearch 라이브러리 들을 활용 및 RESTful API와 연동하여 자동화 스크립트 개발</li><li>Django 또는 Node.js와 연동한 ChatBot 개발 경험</li></ul>
 
 - skill: Linux (CentOS 6~7, Ubuntu 18.x, 22.x) With Nginx
   description: <ul class="resume-item-list"><li>Linux에 Nginx 서비스를 구축하여 약 200대의 웹서버 운영 경험</li><li>Nginx의 Configuration이나 Linux Iptables와 같은 방화벽 설정</li><li>Access Log나 System Log를 보며 트러블 슈팅 경험</li></ul>
