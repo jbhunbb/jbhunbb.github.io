@@ -1,13 +1,13 @@
 # Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
+- degree: 컴퓨터공학부 컴퓨터 공학과
+  uni: 한양사이버대학교
+  year: 2017 &mdash; 2022
   awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+    - award: 4년제 학사 졸업
+  #summary: If you had any meaningful roles at college, feel free to write about them here
 
 - degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+  uni: 한세사이버보안고등학교
+  year: 2017
+  award: 졸업
+  summary: 동아리 Web Programming 팀장
