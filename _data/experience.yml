@@ -1,19 +1,22 @@
 # Jobs
 # VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+- company: Cloudbric
+  position: Cloud Security Tech Engineer
+  duration: 2020.08 &mdash; 현재
+  summary: 
+  	<ul class="resume-item-list">
+    <li>자동화 시스템 구축</li>
+    <li>ChatBot 개발 및 유지보수</li>
+    <li>ElasticSearch Cluster 구축/운영</li>
+    <li>AWS WAF 운영</li>
+    </ul>
 
 # Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
-
-
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+- company: Gkes
+  position: Tech Engineer
+  duration: 2016.08 &mdash; 2017.08
+  summary: 
+  	<ul class="resume-item-list">
+    <li>지킴-e 시스템 운영</li>
+    <li>공공기관, 금융권 NMS 시스템 구축, 운영 관리</li>
+    </ul>
