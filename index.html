@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지병훈 · Container Platform Engineer</title>
+<meta name="description" content="지병훈, 6년 차 Container Platform · DevOps Engineer. 숙련도에 따라 달라지던 운영을, 누가 해도 같은 결과가 나오도록 표준화하고 프로세스화합니다. EKS 무중단 업그레이드, Rancher 멀티 클러스터, ChatOps, 폐쇄망 Kubernetes 구축.">
+<meta name="author" content="지병훈">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://jbhunbb.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jbhunbb.github.io/">
+<meta property="og:title" content="지병훈 · Container Platform Engineer">
+<meta property="og:description" content="숙련도에 따라 달라지던 운영을, 누가 해도 같은 결과가 나오도록 표준화하고 프로세스화합니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="지병훈 포트폴리오">
+<meta property="og:image" content="https://jbhunbb.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="지병훈 · Container Platform / DevOps Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0b'/%3E%3Cpath d='M9 11l6 5-6 5' stroke='%23c8ff3d' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 22h7' stroke='%23c8ff3d' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"></noscript>
+<style>
+:root{
+  --bg:#0a0a0b;
+  --bg-2:#0f1012;
+  --surface:#131417;
+  --surface-2:#18191d;
+  --line:rgba(var(--fg-rgb),.08);
+  --line-2:rgba(var(--fg-rgb),.14);
+  --text:#ededee;
+  --text-2:#b4b7bd;
+  --muted:#8b8f97;
+  --accent:#c8ff3d;
+  --accent-dim:rgba(var(--acc-rgb),.12);
+  --accent-ink:#0a0a0b;
+  --fg-rgb:255,255,255;
+  --acc-rgb:200,255,61;
+  --h1-a:#ffffff;
+  --h1-b:#a9acb2;
+  --shadow:rgba(0,0,0,.9);
+  --noise:.07;
+  --nav-bg:rgba(10,10,11,.62);
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --wrap:1180px;
+  --gut:clamp(16px,4vw,40px);
+  --sec:clamp(96px,11vw,152px);
+  --gap:16px;
+  --r:18px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#fafaf7;
+  --bg-2:#f2f3ef;
+  --surface:#ffffff;
+  --surface-2:#e9ebe5;
+  --line:rgba(17,19,23,.1);
+  --line-2:rgba(17,19,23,.18);
+  --text:#111317;
+  --text-2:#363b43;
+  --muted:#5a6069;
+  --accent:#3d6a00;
+  --accent-dim:rgba(110,170,0,.14);
+  --accent-ink:#ffffff;
+  --fg-rgb:17,19,23;
+  --acc-rgb:110,170,0;
+  --h1-a:#0d0f12;
+  --h1-b:#4a4f57;
+  --shadow:rgba(20,30,10,.18);
+  --noise:.035;
+  --nav-bg:rgba(250,250,247,.78);
+}}
+:root[data-theme="light"]{
+  --bg:#fafaf7;
+  --bg-2:#f2f3ef;
+  --surface:#ffffff;
+  --surface-2:#e9ebe5;
+  --line:rgba(17,19,23,.1);
+  --line-2:rgba(17,19,23,.18);
+  --text:#111317;
+  --text-2:#363b43;
+  --muted:#5a6069;
+  --accent:#3d6a00;
+  --accent-dim:rgba(110,170,0,.14);
+  --accent-ink:#ffffff;
+  --fg-rgb:17,19,23;
+  --acc-rgb:110,170,0;
+  --h1-a:#0d0f12;
+  --h1-b:#4a4f57;
+  --shadow:rgba(20,30,10,.18);
+  --noise:.035;
+  --nav-bg:rgba(250,250,247,.78);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%;overflow-x:clip;color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){color-scheme:light}}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:16px;line-height:1.7;letter-spacing:-.011em;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;word-break:keep-all;overflow-wrap:break-word;
+}
+/* texture: grid + noise */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(to right,rgba(var(--fg-rgb),.028) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(var(--fg-rgb),.028) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 30%,transparent 85%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 30%,transparent 85%);
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:var(--noise);mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+::selection{background:var(--accent);color:var(--accent-ink)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{position:relative;z-index:1;max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--mono);letter-spacing:0}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--accent-ink);padding:8px 12px;border-radius:6px;z-index:200}
+.skip:focus{left:8px}
+
+/* ── nav */
+header.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);
+  background:var(--nav-bg);border-bottom:1px solid transparent;transition:border-color .3s;
+}
+header.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.brand{font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px}
+.brand b{color:var(--accent);font-weight:500}
+.brand .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(var(--fg-rgb),.02)}
+.nav ul a{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;padding:6px 12px;border-radius:999px;transition:color .2s,background .25s}
+.nav ul a:hover{color:var(--text)}
+.nav ul a.active{color:var(--accent-ink);background:var(--accent)}
+.nav .gh{font-family:var(--mono);font-size:12px;text-decoration:none;border:1px solid var(--line-2);padding:7px 12px;border-radius:999px;color:var(--text);transition:border-color .2s,background .2s}
+.nav .gh:hover{border-color:var(--accent);background:var(--accent-dim)}
+@media (max-width:860px){.nav ul li:not(.m){display:none}.nav ul a{padding:5px 10px;font-size:10.5px;letter-spacing:.06em}}
+@media (max-width:560px){.nav .gh{display:none}.brand .full{display:none}}
+
+/* ── section scaffolding */
+section{position:relative;padding:var(--sec) 0 0;scroll-margin-top:24px}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:20px 48px;margin-bottom:clamp(40px,5vw,64px);align-items:start}
+.sec-idx{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;padding-top:14px;display:flex;gap:10px;align-items:center}
+.sec-idx::before{content:"";width:18px;height:1px;background:var(--accent)}
+.sec-title{font-size:clamp(30px,4.6vw,52px);line-height:1.18;letter-spacing:-.035em;font-weight:700;margin:0}
+.sec-title em{font-style:normal;color:var(--muted)}
+.sec-lede{grid-column:2;color:var(--text-2);max-width:640px;margin:0;font-size:17px}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}.sec-lede{grid-column:1}.sec-idx{padding-top:0}}
+
+/* ── hero */
+.hero{padding-top:clamp(120px,17vh,184px);min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:1000px;height:1000px;left:50%;top:-480px;transform:translateX(-20%);
+  background:radial-gradient(closest-side,rgba(var(--acc-rgb),.11),rgba(var(--acc-rgb),.03) 55%,transparent 72%);
+  animation:aura 18s ease-in-out infinite alternate;
+}
+@keyframes aura{0%{transform:translate(-20%,0) scale(1)}50%{transform:translate(-34%,40px) scale(1.08)}100%{transform:translate(-12%,-20px) scale(.96)}}
+.prompt{font-family:var(--mono);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0 0 28px}
+.prompt .ok{color:var(--accent)}
+.prompt .cursor{display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero h1{margin:0 0 0 -.04em;font-weight:800;letter-spacing:-.065em;line-height:.9;font-size:clamp(76px,14vw,192px);background:linear-gradient(180deg,var(--h1-a) 30%,var(--h1-b) 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:20px 56px;margin-top:clamp(32px,4.5vw,56px);padding-top:clamp(22px,2.6vw,30px);position:relative}
+.hero-sub::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line)}
+.hero-sub::after{content:"";position:absolute;left:0;top:0;height:1px;width:28%;background:linear-gradient(90deg,transparent,var(--accent),transparent);animation:scan 6s var(--ease) infinite}
+@keyframes scan{0%{transform:translateX(-100%);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(360%);opacity:0}}
+.role{margin:0;font-size:clamp(20px,2.3vw,28px);letter-spacing:-.025em;font-weight:600;line-height:1.3;color:var(--text)}
+.role .slash{color:var(--accent);font-weight:300;margin:0 .12em}
+.role small{display:block;font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+@media (max-width:760px){.hero-sub{grid-template-columns:1fr}}
+.thesis{margin:0;font-size:clamp(19px,2.1vw,26px);line-height:1.55;letter-spacing:-.03em;font-weight:500;color:var(--text-2)}
+.thesis .hl{color:var(--text);background:linear-gradient(rgba(var(--acc-rgb),.3),rgba(var(--acc-rgb),.3)) no-repeat 0 88%/0% 34%;padding:0 2px;animation:hl 1.4s .9s var(--ease) forwards}
+@keyframes hl{to{background-size:100% 34%}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-family:var(--mono);font-size:11.5px;color:var(--text-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;background:rgba(var(--fg-rgb),.02)}
+
+.metrics{
+  margin-top:auto;padding-top:clamp(56px,8vw,96px);
+  display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);
+}
+.metric{padding:28px 24px 8px 0;border-right:1px solid var(--line);position:relative;transition:background .3s}
+.metric::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.metric:hover::before{transform:scaleX(1)}
+.metric:not(:first-child){padding-left:24px}
+.metric:last-child{border-right:0}
+.metric .num{font-size:clamp(34px,3.6vw,52px);font-weight:700;letter-spacing:-.045em;line-height:1;white-space:nowrap}
+.metric .num small{font-size:.42em;font-weight:500;color:var(--muted);letter-spacing:-.01em;margin-left:4px}
+.metric .num .arr{color:var(--accent);font-weight:400;margin:0 .06em}
+.metric .lbl{margin:14px 0 0;font-size:14px;color:var(--text-2);line-height:1.5}
+.metric .ctx{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:.02em}
+@media (max-width:1080px){
+  .metrics{grid-template-columns:repeat(3,1fr)}
+  .metric:nth-child(3){border-right:0}
+  .metric:nth-child(4){padding-left:0}
+  .metric:nth-child(n+4){border-top:1px solid var(--line)}
+}
+@media (max-width:640px){
+  .metrics{grid-template-columns:1fr 1fr}
+  .metric{padding:22px 14px 18px 0!important;border-right:0;border-top:1px solid var(--line)}
+  .metric:nth-child(odd){padding-right:14px!important;border-right:1px solid var(--line)}
+  .metric:nth-child(even){padding-left:16px!important}
+  .metric:first-child{grid-column:1/-1;border-right:0;border-top:0}
+  .metric:nth-child(2),.metric:nth-child(4){padding-left:0!important;border-right:1px solid var(--line);padding-right:14px!important}
+  .metric:nth-child(3),.metric:nth-child(5){padding-left:16px!important;border-right:0}
+}
+.scroll-hint{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin:36px 0 0;display:flex;align-items:center;gap:12px}
+.scroll-hint i{display:block;width:1px;height:28px;background:linear-gradient(var(--accent),transparent);animation:drip 2.2s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ── principles */
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.pr{background:var(--bg-2);padding:32px 26px 30px;transition:background .3s}
+.pr:hover{background:var(--surface)}
+.pr .k{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.pr h3{font-size:21px;letter-spacing:-.03em;margin:18px 0 12px;line-height:1.35}
+.pr p{margin:0;color:var(--text-2);font-size:15px;line-height:1.65}
+@media (max-width:980px){.principles{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.principles{grid-template-columns:1fr}}
+
+/* ── timeline */
+.tl-bar{display:flex;gap:4px;margin-bottom:12px;height:10px}
+.tl-bar span{border-radius:3px;background:var(--surface-2);position:relative}
+.tl-bar span.cur{background:var(--accent);box-shadow:0 0 18px rgba(var(--acc-rgb),.45)}
+.tl-bar span.gap{background:transparent}
+.tl-years{position:relative;height:16px;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:40px}
+.tl-years span{position:absolute;top:0;transform:translateX(-50%)}
+.tl-years span::before{content:"";position:absolute;left:50%;top:-9px;width:1px;height:6px;background:var(--line-2)}
+@media (max-width:560px){.tl-years span:nth-child(even){display:none}}
+.tl-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.tl-item{display:grid;grid-template-columns:200px 1.1fr 1.4fr;gap:20px 48px;padding:34px 0;border-bottom:1px solid var(--line);position:relative}
+.tl-item .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:6px}
+.tl-item .when b{display:block;color:var(--text-2);font-weight:500;margin-top:4px;font-size:12px}
+.tl-item h3{margin:0;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.035em;line-height:1.25}
+.tl-item h3 .tag{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.04em;vertical-align:middle;margin-left:10px;padding:3px 8px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted);white-space:nowrap}
+.tl-item h3 .tag.now{border-color:var(--accent);color:var(--accent)}
+.tl-item .role{margin:8px 0 0;color:var(--text-2);font-size:15px}
+.tl-item .ctx{margin:4px 0 0;color:var(--muted);font-size:14px}
+.tl-item ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.tl-item li{position:relative;padding-left:20px;color:var(--text-2);font-size:15px;line-height:1.6}
+.tl-item li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--accent)}
+.tl-item li strong{color:var(--text);font-weight:600}
+@media (max-width:900px){.tl-item{grid-template-columns:1fr;gap:10px}.tl-item ul{margin-top:10px}}
+
+
+
+.eyebrow{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;display:flex;gap:12px;flex-wrap:wrap}
+.eyebrow span{color:var(--muted)}
+svg text{font-family:var(--mono)}
+.case h4{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 16px;display:flex;align-items:center;gap:10px}
+.case h4 i{font-style:normal;color:var(--accent)}
+.case strong{color:var(--text);font-weight:600}
+.case code{font-family:var(--mono);font-size:.88em;background:rgba(var(--fg-rgb),.06);border:1px solid var(--line);padding:1px 6px;border-radius:5px;color:var(--text)}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-family:var(--mono);font-size:11.5px;color:var(--text-2);border:1px solid var(--line-2);border-radius:6px;padding:3px 9px;background:rgba(var(--fg-rgb),.02)}
+
+/* ── cases */
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:var(--gap)}
+.case{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;transition:border-color .3s,transform .3s,background .3s}
+.case:hover{background:var(--surface)}
+.case .eyebrow{font-size:11px}
+.case h3{font-size:clamp(22px,2.3vw,27px);letter-spacing:-.035em;line-height:1.3;margin:14px 0 22px}
+.case .big{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:22px}
+.case .big b{font-size:clamp(34px,3.6vw,46px);letter-spacing:-.045em;line-height:1;font-weight:700;white-space:nowrap}
+.case .big b .arr{color:var(--accent);font-weight:400}
+.case .big > span{color:var(--text-2);font-size:14px;line-height:1.45}
+.steps{display:grid;gap:18px;margin-bottom:24px}
+.steps h4{margin-bottom:8px!important}
+.steps p{margin:0;color:var(--text-2);font-size:15px;line-height:1.7}
+.steps ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.steps ul li{padding-left:16px;position:relative;color:var(--text-2);font-size:15px;line-height:1.65}
+.steps ul li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:6px;border:1px solid var(--accent);border-radius:50%}
+.case .tags{margin-top:auto}
+.case.wide{grid-column:1/-1}
+@media (max-width:900px){.cases{grid-template-columns:1fr}}
+
+/* ── field notes */
+
+
+/* ── skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.sk{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:var(--bg-2)}
+.sk h3{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin:0 0 6px}
+.sk p{margin:0 0 18px;color:var(--muted);font-size:14px}
+.sk .tags span{font-size:12px;padding:5px 10px}
+@media (max-width:980px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.skills{grid-template-columns:1fr}}
+
+/* ── certs */
+.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.cert{background:var(--bg);padding:26px 24px;display:flex;flex-direction:column;gap:6px;min-height:150px}
+.cert.wide{grid-column:span 2}
+.cert .badge{font-family:var(--mono);font-weight:700;font-size:26px;letter-spacing:-.02em}
+.cert .badge.lg{font-size:17px;line-height:1.35;letter-spacing:-.01em;font-family:var(--sans)}
+.cert .iss{color:var(--text-2);font-size:13.5px}
+.cert .d{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:auto}
+@media (max-width:980px){.certs{grid-template-columns:repeat(2,1fr)}}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:var(--gap)}
+.edu > div{border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap}
+.edu b{font-weight:600}
+.edu span{color:var(--text-2);font-size:14px}
+.edu .mono{font-size:11px;color:var(--muted)}
+@media (max-width:760px){.edu{grid-template-columns:1fr}}
+
+/* ── contact */
+
+
+.contact{padding-bottom:0}
+.site-foot{margin-top:clamp(72px,9vw,112px);padding-top:22px;padding-bottom:28px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--muted)}
+.site-foot::before{display:none}
+
+/* ── spotlight hover */
+.spot{position:relative;isolation:isolate}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;opacity:0;transition:opacity .35s;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(var(--acc-rgb),.07),transparent 60%)}
+.spot:hover::after{opacity:1}
+.case,.sk{transition:border-color .35s,transform .45s var(--ease),background .35s,box-shadow .45s}
+.case:hover,.sk:hover{transform:translateY(-3px);border-color:rgba(var(--acc-rgb),.28);box-shadow:0 24px 60px -30px var(--shadow),0 0 0 1px rgba(var(--acc-rgb),.04) inset}
+.tags span{transition:border-color .25s,color .25s}
+.case:hover .tags span,.sk:hover .tags span{border-color:rgba(var(--fg-rgb),.2);color:var(--text)}
+.cert{transition:background .35s}
+.cert:hover{background:var(--bg-2)}
+
+
+/* ── v3 additions */
+.case .big b .u{font-size:.45em;color:var(--muted);font-weight:500;margin-left:3px;letter-spacing:-.01em}
+.case .big.txt b{font-size:clamp(22px,2.2vw,28px);letter-spacing:-.035em}
+.case.wide .steps{grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:900px){.case.wide .steps{grid-template-columns:1fr;gap:18px}}
+.sk.wide{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;padding:20px 26px}
+.sk.wide h3,.sk.wide p{margin:0}
+.sk.wide .tags{margin-left:auto}
+@media (max-width:600px){.sk.wide .tags{margin-left:0}}
+
+.incs{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.inc{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2);padding:clamp(22px,2.6vw,32px);display:flex;flex-direction:column;transition:border-color .35s,transform .45s var(--ease),background .35s}
+.inc:hover{transform:translateY(-3px);border-color:rgba(var(--acc-rgb),.28);background:var(--surface)}
+.inc .eyebrow{font-size:11px}
+.inc h3{font-size:clamp(19px,1.9vw,22px);letter-spacing:-.03em;line-height:1.38;margin:12px 0 18px}
+.inc-rows{margin:0 0 20px;border-top:1px solid var(--line)}
+.inc-rows > div{display:grid;grid-template-columns:76px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+.inc-rows dt{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted);padding-top:3px;white-space:nowrap}
+.inc-rows > div:last-child dt{color:var(--accent)}
+.inc-rows dd{margin:0;color:var(--text-2);font-size:14.5px;line-height:1.7}
+.inc-rows dd strong{color:var(--text);font-weight:600}
+.inc-rows dd code{font-family:var(--mono);font-size:.86em;background:rgba(var(--fg-rgb),.06);border:1px solid var(--line);padding:1px 5px;border-radius:5px;color:var(--text)}
+.inc .tags{margin-top:auto}
+@media (max-width:900px){.incs{grid-template-columns:1fr}}
+@media (max-width:420px){.inc-rows > div{grid-template-columns:1fr;gap:4px}}
+@media (prefers-reduced-motion:reduce){.inc:hover{transform:none}}
+
+/* ── reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+.no-js .rv{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .prompt .cursor,.scroll-hint i,.hero::after,.hero-sub::after{animation:none}
+  .hero-sub::after{display:none}
+  .thesis .hl{animation:none;background-size:100% 34%}
+  .case:hover,.sk:hover{transform:none}
+  *{transition-duration:0s!important}
+}
+
+/* ── review pass: nav, theme toggle, icons, flows, certs, print */
+.nav-in{gap:10px}
+.nav nav{flex:1 1 auto;min-width:0;display:flex;justify-content:center}
+.nav ul{max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav ul::-webkit-scrollbar{display:none}
+.nav ul li{flex:0 0 auto}
+.nav ul li:not(.m){display:list-item}
+.nav-tools{display:flex;gap:8px;align-items:center}
+.theme-toggle,.nav .gh{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;min-width:40px;border:1px solid var(--line-2);border-radius:999px;background:transparent;color:var(--text);cursor:pointer;transition:border-color .2s,background .2s}
+.theme-toggle{padding:0;width:40px}
+.theme-toggle:hover,.nav .gh:hover{border-color:var(--accent);background:var(--accent-dim)}
+.theme-toggle svg,.nav .gh svg{width:18px;height:18px}
+.theme-toggle .sun{display:none}
+:root[data-theme="light"] .theme-toggle .sun{display:block}:root[data-theme="light"] .theme-toggle .moon{display:none}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .theme-toggle .sun{display:block}:root:not([data-theme="dark"]) .theme-toggle .moon{display:none}}
+.nav .gh{padding:0 14px}
+@media (max-width:860px){.nav ul a{padding:0 12px;min-height:40px;display:flex;align-items:center;font-size:11px}.nav ul{padding:0 2px}}
+@media (max-width:560px){.nav .gh{display:inline-flex;padding:0;width:40px}.nav .gh .t{display:none}.nav ul a{padding:0 10px;letter-spacing:.04em}}
+.ic{width:20px;height:20px;flex:0 0 auto;color:var(--accent);vertical-align:-4px}
+.sec-idx .ic{width:16px;height:16px}
+.sec-idx::before{display:none}
+.metric .mi{display:block;width:22px;height:22px;margin-bottom:16px;color:var(--accent)}
+.sk h3{display:flex;align-items:center;gap:8px}
+.sk h3 .ic{width:18px;height:18px}
+.inc-rows > div{grid-template-columns:104px 1fr}
+.inc-rows dt{display:flex;align-items:flex-start;gap:7px}
+.inc-rows dt .ic{width:16px;height:16px;color:var(--muted)}
+.inc-rows > div:last-child dt .ic{color:var(--accent)}
+.inc.wide{grid-column:1/-1}
+.inc .flow{margin:0 0 18px}
+@media (max-width:420px){.inc-rows > div{grid-template-columns:1fr}}
+.case .big b .arr{color:var(--accent)}
+/* flow chart */
+.flow{list-style:none;margin:6px 0 12px;padding:0;display:flex;flex-direction:column;gap:22px;counter-reset:none}
+.flow li{position:relative;display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;background:var(--surface);font-size:14px;line-height:1.45;color:var(--text)}
+.flow li .n{font-family:var(--mono);font-size:10.5px;color:var(--accent);padding-top:2px;flex:0 0 auto}
+.flow li .t{display:flex;flex-direction:column;gap:2px;font-weight:600;letter-spacing:-.02em}
+.flow li small{font-weight:400;font-size:12.5px;color:var(--muted);letter-spacing:-.01em}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:22px;bottom:-17px;width:9px;height:9px;border-right:1.6px solid var(--accent);border-bottom:1.6px solid var(--accent);transform:rotate(45deg)}
+.flow li:not(:last-child)::before{content:"";position:absolute;left:26px;bottom:-21px;width:1.6px;height:18px;background:var(--accent);opacity:.6}
+.flow li.end{border-color:var(--accent);background:var(--accent-dim)}
+@media (min-width:900px){
+  .flow.h{flex-direction:row;gap:30px;align-items:stretch}
+  .flow.h li{flex:1 1 0;min-width:0;flex-direction:column;gap:6px}
+  .flow.h li:not(:last-child)::after{left:auto;bottom:auto;right:-20px;top:50%;margin-top:-5px;transform:rotate(-45deg)}
+  .flow.h li:not(:last-child)::before{left:auto;bottom:auto;right:-24px;top:50%;width:18px;height:1.6px}
+}
+.steps .note{margin-top:4px;font-size:14px;color:var(--text-2)}
+.case .steps > div > .flow{margin-top:8px}
+.cert.exp .badge{color:var(--muted)}
+.cert.exp .d{color:var(--muted)}
+.cert.wide{grid-column:span 2}
+@media (max-width:980px){.cert.wide{grid-column:span 2}}
+/* print */
+@media print{
+  :root,:root[data-theme]{--bg:#fff;--bg-2:#fff;--surface:#fff;--surface-2:#f4f4f4;--text:#000;--text-2:#222;--muted:#444;--accent:#2f5200;--accent-dim:transparent;--line:#ccc;--line-2:#bbb;--fg-rgb:0,0,0;--acc-rgb:47,82,0}
+  html,body{background:#fff!important;color:#000}
+  body::before,body::after,.hero::after,.hero-sub::after{display:none!important}
+  .nav,.skip,.scroll-hint,.theme-toggle{display:none!important}
+  .rv{opacity:1!important;transform:none!important}
+  *{animation:none!important;transition:none!important}
+  .hero{min-height:0;padding-top:24px}
+  .hero h1{background:none!important;-webkit-background-clip:border-box;background-clip:border-box;color:#000!important;font-size:64px}
+  .thesis .hl{background-size:100% 34%!important}
+  section{padding-top:36px}
+  .case,.inc,.sk,.cert,.pr,.tl-item,.metric,.flow li{break-inside:avoid}
+  .case,.inc,.sk{box-shadow:none!important;transform:none!important}
+  a{color:#000}
+}
+</style>
+</head>
+<body class="no-js">
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sun" viewBox="0 0 24 24"><title>라이트 모드</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><title>다크 모드</title><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-about" viewBox="0 0 24 24"><title>소개</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></g></symbol>
+    <symbol id="i-career" viewBox="0 0 24 24"><title>경력</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8.5 7V5.5A1.5 1.5 0 0 1 10 4h4a1.5 1.5 0 0 1 1.5 1.5V7M3 12.5h18"/></g></symbol>
+    <symbol id="i-work" viewBox="0 0 24 24"><title>작업</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 16.5l9 5 9-5" stroke-linecap="round"/></g></symbol>
+    <symbol id="i-incident" viewBox="0 0 24 24"><title>장애</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.2v.3"/></g></symbol>
+    <symbol id="i-stack" viewBox="0 0 24 24"><title>기술</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></g></symbol>
+    <symbol id="i-certs" viewBox="0 0 24 24"><title>자격</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5L7 21l5-2.5 5 2.5-1.5-7.5"/></g></symbol>
+    <symbol id="i-upgrade" viewBox="0 0 24 24"><title>업그레이드</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16.5v-9M8 11l4-4 4 4"/></g></symbol>
+    <symbol id="i-clusters" viewBox="0 0 24 24"><title>클러스터</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><circle cx="5" cy="5.5" r="2"/><circle cx="19" cy="5.5" r="2"/><circle cx="5" cy="18.5" r="2"/><circle cx="19" cy="18.5" r="2"/><path d="M6.5 7l3.6 3.3M17.5 7l-3.6 3.3M6.5 17l3.6-3.3M17.5 17l-3.6-3.3"/></g></symbol>
+    <symbol id="i-deploy" viewBox="0 0 24 24"><title>배포</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l15.5-8-4 16-4.5-5.5z"/><path d="M11 15l8.5-10.5"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><title>시간</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+    <symbol id="i-revenue" viewBox="0 0 24 24"><title>매출</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5h17"/><path d="M4.5 16l5-5 3.5 3.5 7-7.5"/><path d="M15 7h5v5"/></g></symbol>
+    <symbol id="i-k8s" viewBox="0 0 24 24"><title>Kubernetes</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l7.8 3.9 1.9 8.4-5.4 6.8H7.7l-5.4-6.8 1.9-8.4z"/><circle cx="12" cy="12.5" r="2.5"/><path d="M12 6.5v3.5M17.5 11l-3.2 1M6.5 11l3.2 1M15.3 17.3l-1.8-2.8M8.7 17.3l1.8-2.8"/></g></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><title>클라우드</title><path d="M7 18.5h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.5 9.5 4.5 4.5 0 0 0 7 18.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-airgap" viewBox="0 0 24 24"><title>폐쇄망</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2.5" width="8" height="6" rx="1"/><rect x="6" y="8.5" width="12" height="13" rx="2"/><path d="M10.5 5h0M13.5 5h0M10 13h4"/></g></symbol>
+    <symbol id="i-observe" viewBox="0 0 24 24"><title>관측</title><path d="M2.5 12.5h4l2.5-6 4.5 12 3-8.5 1.5 2.5h3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><title>보안</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2.5"/></g></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><title>코드</title><path d="M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><title>AI</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M10 3.5l1.6 4.4L16 9.5l-4.4 1.6L10 15.5l-1.6-4.4L4 9.5l4.4-1.6z"/><path d="M17.5 13.5l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z"/></g></symbol>
+    <symbol id="i-symptom" viewBox="0 0 24 24"><title>증상</title><path d="M2.5 12h4l2-4.5 3.5 9 2.5-6 1.5 1.5h5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cause" viewBox="0 0 24 24"><title>원인</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/></g></symbol>
+    <symbol id="i-fix" viewBox="0 0 24 24"><title>해결</title><path d="M14.5 5.5a4.5 4.5 0 0 0 5.6 5.6l-8.6 8.6a2.1 2.1 0 0 1-3-3l8.6-8.6a4.5 4.5 0 0 0-2.6-2.6Zm0 0L17 3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-prevent" viewBox="0 0 24 24"><title>재발 방지</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></symbol>
+  </defs>
+</svg>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="맨 위로"><span class="dot" aria-hidden="true"></span>jbhunbb<span class="full"><b>/</b>devops</span></a>
+    <nav aria-label="주요 섹션">
+      <ul>
+        <li><a href="#principles">About</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#incident">Incident</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#certs">Certs</a></li>
+      </ul>
+    </nav>
+    <div class="nav-tools">
+    <button class="theme-toggle" type="button" aria-label="라이트 모드로 전환" title="테마 전환"><svg class="sun" role="img" aria-label="라이트 모드"><use href="#i-sun"/></svg><svg class="moon" role="img" aria-label="다크 모드"><use href="#i-moon"/></svg></button>
+    <a class="gh" href="https://github.com/jbhunbb" target="_blank" rel="noopener" aria-label="GitHub (새 창)"><svg viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="GitHub"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span class="t">GitHub ↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ═════════ HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap" style="display:flex;flex-direction:column;flex:1">
+    <p class="prompt"><span><span class="ok">●</span> Cloud since 2020 · Kubernetes since 2023</span></p>
+    <h1 id="hero-title">지병훈</h1>
+    <div class="hero-sub">
+      <p class="role">Container Platform<span class="slash">/</span>DevOps Engineer<small>6 yrs · EKS · AKS · Rancher · kubeadm</small></p>
+      <div>
+        <p class="thesis">숙련도에 따라 달라지던 운영을, <span class="hl">누가 해도 같은 결과가 나오도록</span> 표준화하고 프로세스화합니다.</p>
+        <div class="hero-meta">
+          <span class="chip">AWS DevOps Pro · SAA · ICA</span>
+          <span class="chip">Rancher · ArgoCD · Terraform</span>
+        </div>
+      </div>
+    </div>
+
+    <dl class="metrics" aria-label="주요 성과">
+      <div class="metric"><dt class="num"><svg class="ic mi" role="img" aria-label="업그레이드"><use href="#i-upgrade"/></svg>10<small>여 개</small></dt><dd class="lbl">운영 EKS 무중단 업그레이드<span class="ctx">1.29 → 1.32</span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" role="img" aria-label="클러스터"><use href="#i-clusters"/></svg>10<small>여 개</small></dt><dd class="lbl">Rancher로 연결한 클러스터<span class="ctx">vanilla Kubernetes · RBAC</span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" role="img" aria-label="배포"><use href="#i-deploy"/></svg>120<span class="arr">→</span>10<small>분</small></dt><dd class="lbl">하루 배포 처리 시간<span class="ctx">ChatOps + ArgoCD</span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" role="img" aria-label="시간"><use href="#i-clock"/></svg>50<span class="arr">→</span>10<small>분</small></dt><dd class="lbl">고객 환경 구축 시간<span class="ctx">Terraform + Jenkins</span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" role="img" aria-label="매출"><use href="#i-revenue"/></svg>1<small>억 원 이상</small></dt><dd class="lbl">상품 월 구독 매출<span class="ctx">AWS Marketplace WAF</span></dd></div>
+    </dl>
+    <p class="scroll-hint" aria-hidden="true"><i></i>scroll</p>
+  </div>
+</section>
+
+<!-- ═════════ ABOUT -->
+<section id="principles" aria-labelledby="pr-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="소개"><use href="#i-about"/></svg>01 · About</div>
+      <h2 class="sec-title" id="pr-title">일하는 방식</h2>
+      <p class="sec-lede">같은 일을 두 번 하게 되면 도구로 만듭니다. 다만 저만 알아보는 자동화는 또 다른 수동 업무가 되기 때문에, 다음 사람이 읽고 고칠 수 있는 구조를 더 중요하게 봅니다.</p>
+    </div>
+    <div class="principles">
+      <article class="pr spot rv"><span class="k">01</span><h3>반복되면 도구로</h3><p>DM으로 받던 배포 요청은 Teams 챗봇과 ArgoCD로, 클라우드 다섯 곳에서 손으로 하던 고객 환경 구축은 Jenkins 파이프라인 하나로 바꿨습니다.</p></article>
+      <article class="pr spot rv d1"><span class="k">02</span><h3>바꾸기 전에 복구할 길부터</h3><p>EKS는 이전 버전으로 되돌릴 수 없어서, 폐기 API와 애드온 호환성을 점검하고 Velero로 백업한 뒤 한 마이너 버전씩 올렸습니다.</p></article>
+      <article class="pr spot rv d2"><span class="k">03</span><h3>증상보다 원인</h3><p>PostgreSQL 반복 재시작을 손상 행과 하드웨어 이벤트 로그까지 따라가 강제 전원 차단으로 확정했습니다.</p></article>
+      <article class="pr spot rv d3"><span class="k">04</span><h3>해결은 문서로</h3><p>현장 작업은 런북으로 남겨 다른 엔지니어가 이어받게 합니다. 문서에는 적용 버전과 확인 날짜를 같이 적습니다.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CAREER -->
+<section id="career" aria-labelledby="career-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="경력"><use href="#i-career"/></svg>02 · Career</div>
+      <h2 class="sec-title" id="career-title">경력</h2>
+      <p class="sec-lede">2020년 클라우드 웹방화벽 SaaS에서 시작해 Azure·AWS 쿠버네티스 운영을 거쳤고, 지금은 인터넷이 차단된 고객사 서버에 쿠버네티스를 직접 설치하는 일을 하고 있습니다.</p>
+    </div>
+
+    <div class="rv" aria-hidden="true">
+      <div class="tl-bar">
+        <span style="flex:32" title="Cloudbric"></span>
+        <span class="gap" style="flex:1"></span>
+        <span style="flex:12" title="Posicube"></span>
+        <span class="gap" style="flex:3"></span>
+        <span style="flex:5" title="ATS"></span>
+        <span style="flex:14" title="AP Thefin"></span>
+        <span class="cur" style="flex:4" title="GenOn"></span>
+      </div>
+      <div class="tl-years"><span style="left:2.8%">2021</span><span style="left:19.7%">2022</span><span style="left:36.6%">2023</span><span style="left:53.5%">2024</span><span style="left:70.4%">2025</span><span style="left:87.3%">2026</span></div>
+    </div>
+
+    <ol class="tl-list" reversed>
+      <li class="tl-item rv">
+        <div class="when">2026.06 – 현재<b>Infra / DevOps</b></div>
+        <div><h3>GenOn <span style="color:var(--muted);font-weight:500">제논</span><span class="tag now">NOW</span></h3><p class="role">공공·금융 대상 온프레미스 생성형 AI 플랫폼</p><p class="ctx">kubeadm · containerd · Calico · 폐쇄망</p></div>
+        <ul>
+          <li>폐쇄망 구축 절차 정리, 설치 자동화 도구 설계(AI 코딩 도구로 구현)</li>
+          <li>증권사·공공기관 3곳 구축에 적용, 런북을 받은 동료가 현장 작업 수행</li>
+          <li>감리 대응 KISA 기준 보안 점검 도구 설계(진단과 조치 분리)</li>
+          <li>사내 서버 자산·IP를 NetBox로 이관</li>
+        </ul>
+      </li>
+      <li class="tl-item rv">
+        <div class="when">2025.04 – 2026.06<b>DevOps · 1인</b></div>
+        <div><h3>AP Thefin</h3><p class="role">대출비교 핀테크 · 인프라 1인 담당</p><p class="ctx">AWS 7개 계정 · EC2 · 컨테이너</p></div>
+        <ul>
+          <li>Keycloak SSO로 7개 계정 통합, <strong>장기 Access Key 0개</strong></li>
+          <li>CI에 Trivy 취약점 검사 단계 추가, <strong>Critical 취약 이미지 0개</strong></li>
+          <li>Prometheus · Loki · Grafana 통합, 신규 서버 모니터링 누락 0건</li>
+        </ul>
+      </li>
+      <li class="tl-item rv">
+        <div class="when">2024.11 – 2025.04<b>Kubernetes</b></div>
+        <div><h3>애커튼테크놀로지서비스</h3><p class="role">정규직 · SK 계열사 파견</p><p class="ctx">AWS EKS · Azure AKS 운영</p></div>
+        <ul>
+          <li>운영 EKS 10여 개 무중단 업그레이드 <strong>1.29 → 1.32</strong></li>
+          <li>Velero 정기 백업과 알람 체계로 클러스터 단위 복구 경로 확보</li>
+        </ul>
+      </li>
+      <li class="tl-item rv">
+        <div class="when">2023.08 – 2024.08<b>DevOps</b></div>
+        <div><h3>Posicube</h3><p class="role">기업용 생성형 AI 챗봇 솔루션</p><p class="ctx">Azure · 고객사별 격리 환경 납품</p></div>
+        <ul>
+          <li>ChatOps로 하루 배포 처리 시간 <strong>120분 → 10분</strong></li>
+          <li>Rancher 서버를 직접 설치해 vanilla 클러스터 <strong>10여 개</strong> 연결, RBAC 한곳에서 관리</li>
+          <li>고객사별 격리형 Private AKS·VNet을 Terraform 모듈로 구축</li>
+          <li>솔루션 Helm 차트화</li>
+        </ul>
+      </li>
+      <li class="tl-item rv">
+        <div class="when">2020.11 – 2023.07<b>Cloud</b></div>
+        <div><h3>Cloudbric</h3><p class="role">클라우드 웹방화벽(WAF) SaaS</p><p class="ctx">5개 클라우드에 고객 환경 구축</p></div>
+        <ul>
+          <li>AWS Marketplace WAF Managed Rule Group 출시, <strong>월 구독 매출 1억 원 이상</strong></li>
+          <li>멀티 클라우드 고객 환경 구축 <strong>50분 → 10분</strong> (Terraform + Jenkins)</li>
+          <li>Route 53 기반 멀티 리전 DR 설계, 도메인 등록 자동화</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═════════ WORK -->
+<section id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="작업"><use href="#i-work"/></svg>03 · Work</div>
+      <h2 class="sec-title" id="work-title">주요 작업</h2>
+      <p class="sec-lede">최근 작업부터 적었습니다. 어떤 문제가 있었고, 왜 그렇게 풀었고, 결과가 어땠는지 순서입니다.</p>
+    </div>
+
+    <div class="cases">
+      <!-- Air-gapped -->
+      <article class="case wide spot rv" aria-labelledby="c1">
+        <div class="eyebrow">Air‑gapped · On‑prem <span>현 직장 · 2026.07 – 09</span></div>
+        <h3 id="c1">폐쇄망 온프레미스 Kubernetes 구축 절차와 설치 자동화</h3>
+        <div class="big"><b>3<span class="u">곳</span></b><span>증권사·공공기관 구축에 적용</span></div>
+        <ol class="flow h" aria-label="폐쇄망 설치 흐름"><li><span class="n">01</span><span class="t">웹 빌드<small>이미지·설치 파일 패키지</small></span></li><li><span class="n">02</span><span class="t">반입 전 누락 검사</span></li><li><span class="n">03</span><span class="t">USB 반입</span></li><li><span class="n">04</span><span class="t">재실행 가능한 설치 스크립트</span></li><li class="end"><span class="n">05</span><span class="t">kubeadm 클러스터</span></li></ol>
+        <div class="steps">
+          <div><h4><i>01</i> 문제</h4><p>인터넷이 막힌 고객사 서버에 설치 파일을 USB로 반입해야 하는데, 정형화된 문서가 없어 사람마다 반입 목록과 설치 방식이 달랐습니다. 이미지가 빠지면 재반입과 재설치로 일정이 밀렸습니다.</p></div>
+          <div><h4><i>02</i> 판단</h4><ul>
+            <li>설계 방향은 제가 정하고 구현은 <strong>AI 코딩 도구(Claude Code)</strong>로 했습니다. 코드 검토 역량이 부족한 부분은 <strong>PR마다 Skill·Hook으로 자동 검증</strong>되게 설계했습니다.</li>
+            <li>패키지 안 <code>info.yaml</code>에 버전·아키텍처를 담아 <strong>설치 스크립트가 이 파일만 보고 분기</strong>하게 했습니다.</li>
+            <li>이미지 이름은 그대로 두고 <strong>containerd 미러 설정(<code>certs.d</code>)</strong>으로 내부 저장소에서 받게 해, 공식 Helm 차트를 수정 없이 썼습니다(고객사 자체 저장소일 때는 이름 변경(retag) 유지).</li>
+                        <li>누락 검사는 이미지 개수가 아니라 tar 안 <code>manifest.json</code>으로 하고, 설치 단계는 <strong>몇 번 다시 실행해도 결과가 같게(멱등)</strong> 만들었습니다.</li>
+          </ul></div>
+          <div><h4><i>03</i> 결과</h4><p>증권사·공공기관 3곳 구축에 적용했습니다. 런북을 받은 동료가 공공기관 운영망 재구축과 GPU 분할을, 현장 인력이 증권사 후속 조치를 방문 없이 마쳤습니다.</p></div>
+        </div>
+        <div class="tags"><span>kubeadm</span><span>containerd</span><span>Calico</span><span>skopeo</span><span>Bash</span><span>Claude Code</span></div>
+      </article>
+
+      <!-- Securities HA -->
+      <article class="case spot rv" aria-labelledby="c2">
+        <div class="eyebrow">High availability <span>현 직장 · 증권사</span></div>
+        <h3 id="c2">증권사 고가용성 Kubernetes 구축</h3>
+        <div class="big"><b>3<span class="arr">+</span>3</b><span>컨트롤 플레인 3 · 워커 3</span></div>
+        <div class="steps">
+          <div><h4><i>01</i> 구성</h4><ul>
+            <li>컨트롤 플레인을 3대로 두어 <strong>노드 한 대가 멈춰도 etcd 과반(쿼럼)이 유지</strong>되게 했습니다.</li>
+            <li>Secret이 etcd에 평문으로 남지 않도록 <strong>저장 시 암호화</strong>했습니다.</li>
+            <li><strong>DB와 벡터DB도 3중화</strong>했습니다.</li>
+          </ul></div>
+        </div>
+        <div class="tags"><span>Kubernetes</span><span>etcd</span><span>Encryption at rest</span><span>HA</span></div>
+      </article>
+
+      <!-- Fintech -->
+      <article class="case spot rv d1" aria-labelledby="c3">
+        <div class="eyebrow">Security · Observability <span>AP Thefin · 2025.07 – 10</span></div>
+        <h3 id="c3">규제 핀테크 AWS 7개 계정의 인증·보안·모니터링</h3>
+        <div class="big"><b>0<span class="u">개</span></b><span>장기 Access Key · Critical 취약 이미지</span></div>
+        <div class="steps">
+          <div><h4><i>01</i> 문제</h4><p>AWS 계정 7개의 로그인 관리, 컨테이너 이미지 보안, 모니터링을 혼자 정비해야 했습니다.</p></div>
+          <div><h4><i>02</i> 판단</h4><ul>
+            <li>사내 Keycloak으로 <strong>AWS 7개 계정의 로그인을 SSO로 통합</strong>하고, 오래 쓰는 접속 키 대신 임시 자격 증명을 쓰게 했습니다.</li>
+            <li>Alpine 멀티스테이지로 베이스 이미지를 맞추고, <strong>CodeBuild에 Trivy 취약점 검사 단계</strong>를 넣어 기준 미달 이미지 배포를 막았습니다.</li>
+            <li>Prometheus · Loki · Grafana로 모니터링을 모으고, Launch Template과 Helm으로 에이전트를 자동 설치했습니다.</li>
+          </ul></div>
+          <div><h4><i>03</i> 결과</h4><p>계정 관리가 한 곳으로 모였고, 장기 키와 Critical 취약 이미지가 모두 0개가 됐습니다. 신규 서버 모니터링 누락도 0건입니다.</p></div>
+        </div>
+        <div class="tags"><span>Keycloak</span><span>SAML 2.0</span><span>IAM · STS</span><span>Trivy</span><span>CodeBuild</span><span>Prometheus</span><span>Loki</span><span>Grafana</span></div>
+      </article>
+
+      <!-- EKS -->
+      <article class="case spot rv" aria-labelledby="c4">
+        <div class="eyebrow">Upgrade <span>ATS · SK 계열사 · 2025.03 – 04</span></div>
+        <h3 id="c4">운영 EKS 10여 개를 중단 없이 1.29 → 1.32</h3>
+        <div class="big"><b>0<span class="u">회</span></b><span>업그레이드 중 서비스 중단<br>절차는 팀 표준 런북으로 공유</span></div>
+        <div class="steps">
+          <div><h4><i>01</i> 문제</h4><p>클러스터가 1.29에 머물러 있었고 서비스는 멈출 수 없었습니다. EKS는 이전 버전으로 되돌릴 수 없는데, 기존 EC2 스냅샷으로는 K8s 리소스를 복구할 수 없었습니다.</p></div>
+          <div><h4><i>02</i> 진행</h4><ol class="flow" aria-label="EKS 업그레이드 흐름"><li><span class="n">01</span><span class="t">폐기 API·애드온 호환성 점검<small>VPC CNI · CoreDNS</small></span></li><li><span class="n">02</span><span class="t">Velero 백업<small>되돌릴 수 없어 이 백업이 복구 경로</small></span></li><li><span class="n">03</span><span class="t">1.29 → 1.30 → 1.31 → 1.32<small>컨트롤 플레인 → 노드 그룹</small></span></li><li class="end"><span class="n">04</span><span class="t">중단 0회 · 팀 런북</span></li></ol></div>
+        </div>
+        <div class="tags"><span>AWS EKS</span><span>eksctl</span><span>Velero</span><span>VPC CNI</span><span>CoreDNS</span></div>
+      </article>
+
+      <!-- ChatOps -->
+      <article class="case spot rv d1" aria-labelledby="c5">
+        <div class="eyebrow">ChatOps · GitOps <span>Posicube · 2024.01 – 03</span></div>
+        <h3 id="c5">DM으로 받던 배포를 Teams 셀프서비스로</h3>
+        <div class="big"><b>120<span class="arr">→</span>10<span class="u">분</span></b><span>하루 배포 처리 시간<br>배포 이력 기록</span></div>
+        <div class="steps">
+          <div><h4><i>01</i> 문제</h4><p>배포 요청이 DM으로 오면 DevOps가 손으로 처리했습니다. 하루 평균 120분이 걸렸고, 누가 언제 무엇을 배포했는지 기록이 없었습니다.</p></div>
+          <div><h4><i>02</i> 바꾼 흐름</h4><ol class="flow" aria-label="ChatOps 배포 흐름"><li><span class="n">01</span><span class="t">개발자 Teams 요청<small>환경 · 이미지 태그 선택</small></span></li><li><span class="n">02</span><span class="t">승인 버튼</span></li><li><span class="n">03</span><span class="t">ArgoCD 동기화</span></li><li class="end"><span class="n">04</span><span class="t">채널 알림 · 이력<small>하루 120분 → 10분</small></span></li></ol><p class="note">챗봇은 Azure Bot Service로 만들었고, 셀프서비스여도 승인을 거쳐야 배포되게 했습니다.</p></div>
+        </div>
+        <div class="tags"><span>Node.js</span><span>Azure Bot Service</span><span>ArgoCD</span><span>Helm</span></div>
+      </article>
+
+      <!-- Rancher -->
+      <article class="case spot rv" aria-labelledby="c6">
+        <div class="eyebrow">Multi‑cluster <span>Posicube · 2023.08 – 2024.08</span></div>
+        <h3 id="c6">Rancher로 사내 Kubernetes 클러스터 통합 관리</h3>
+        <div class="big"><b>10<span class="u">여 개</span></b><span>Rancher에 연결한 vanilla 클러스터</span></div>
+        <div class="steps">
+          <div><h4><i>01</i> 구성</h4><ol class="flow h" aria-label="Rancher 구성"><li><span class="n">01</span><span class="t">vanilla K8s 클러스터 10여 개</span></li><li class="end"><span class="n">02</span><span class="t">Rancher<small>RBAC · 단일 화면</small></span></li></ol><p class="note">Rancher 서버를 직접 설치해 연결했고, RBAC은 UI 한곳에서 같은 규칙으로 관리했습니다.</p></div>
+          <div><h4><i>02</i> GitOps 도입 전 배포 경로</h4><ol class="flow h" aria-label="GitOps 도입 전 배포 경로"><li><span class="n">01</span><span class="t">FastAPI API<small>배포 이미지 변경만 허용</small></span></li><li class="end"><span class="n">02</span><span class="t">Rancher</span></li></ol><p class="note">배포는 이 API로만 하게 해 권한을 최소로 좁혔습니다. ArgoCD 도입 후에는 필요 없어졌습니다.</p></div>
+        </div>
+        <div class="tags"><span>Rancher</span><span>RBAC</span><span>Python</span><span>FastAPI</span><span>ArgoCD</span></div>
+      </article>
+
+      <!-- AKS -->
+      <article class="case spot rv d1" aria-labelledby="c7">
+        <div class="eyebrow">IaC · Azure <span>Posicube · 2023.08 – 12</span></div>
+        <h3 id="c7">고객사별 격리형 Private AKS를 Terraform 모듈로 구축</h3>
+        <div class="steps">
+          <div><h4><i>01</i> 문제</h4><p>금융·엔터프라이즈 고객사에 납품하는 AI 챗봇을, 고객사마다 외부와 격리된 Azure 환경에 올려야 했습니다.</p></div>
+          <div><h4><i>02</i> 한 일</h4><ul>
+            <li>Private AKS와 VNet을 <strong>Terraform 모듈</strong>로 만들어 고객사마다 같은 구성으로 구축했습니다.</li>
+            <li><strong>Fluent Bit와 Elasticsearch</strong>로 로그 파이프라인을 구성했습니다.</li>
+          </ul></div>
+        </div>
+        <div class="tags"><span>Azure AKS</span><span>Terraform</span><span>VNet</span><span>Fluent Bit</span><span>Elasticsearch</span></div>
+      </article>
+
+      <!-- WAF -->
+      <article class="case wide spot rv" aria-labelledby="c8">
+        <div class="eyebrow">Product <span>Cloudbric · 2021.10 – 2022.04</span></div>
+        <h3 id="c8">AWS WAF Managed Rule Group을 Marketplace 상품으로 출시</h3>
+        <div class="big"><b>1<span class="u">억 원 이상</span></b><span>상품 월 구독 매출<br>개발·배포를 맡은 상품</span></div>
+        <div class="steps">
+          <div><h4><i>01</i> 문제</h4><p>자사 웹방화벽의 탐지 규칙을 AWS WAF 사용자가 구독해서 바로 쓸 수 있는 상품으로 만들어야 했습니다. 규칙은 AWS WAF를 지원하는 모든 리전에 같은 상태로 있어야 했습니다.</p></div>
+          <div><h4><i>02</i> 판단</h4><ul>
+            <li>OWASP Top 10 관련 공격 패턴을 <strong>정규식 기반 탐지·차단 규칙</strong>으로 개발했습니다.</li>
+            <li>리전마다 손으로 올리지 않고 <strong>Python 도구로 전 리전에 자동 배포·동기화</strong>해 리전 간 차이를 없앴습니다.</li>
+          </ul></div>
+          <div><h4><i>03</i> 결과</h4><p>AWS Marketplace에 출시했고, 상품 월 구독 매출이 1억 원을 넘었습니다.</p></div>
+        </div>
+        <div class="tags"><span>AWS WAF</span><span>Marketplace</span><span>Regex</span><span>Python · Boto3</span></div>
+      </article>
+
+      <!-- AI -->
+      <article class="case wide spot rv" aria-labelledby="c9">
+        <div class="eyebrow">AI 활용 <span>현 직장 · 2026</span></div>
+        <h3 id="c9">온보딩과 문서 작업에 AI 코딩 도구 활용</h3>
+        <div class="steps">
+          <div><h4><i>01</i> 온보딩</h4><p>신규 입사자가 AI 코딩 도구와 대화하며 반입·설치·장애 대응·보안 점검을 단계별로 익히도록 온보딩 스킬 10종을 만들었습니다.</p></div>
+          <div><h4><i>02</i> 위키 작성 규칙</h4><p>AI로 쓴 문서도 같은 문체와 구조를 따르도록 팀 위키 작성 규칙을 스킬로 만들었습니다.</p></div>
+          <div><h4><i>03</i> 문서 생성과 검증</h4><p>설계·제안 문서를 HTML에서 PDF로 만드는 커맨드를 만들고, 생성 후 새 에이전트를 따로 띄워 결재자 입장에서 검토하게 했습니다.</p></div>
+        </div>
+        <div class="tags"><span>Claude Code</span><span>Codex</span><span>Skills</span><span>Commands</span><span>Agent review</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ INCIDENT -->
+<section id="incident" aria-labelledby="inc-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="장애"><use href="#i-incident"/></svg>04 · Incident</div>
+      <h2 class="sec-title" id="inc-title">장애 대응</h2>
+      <p class="sec-lede">증상만 가라앉히고 끝내지 않습니다. 로그와 기록으로 원인을 확인한 뒤 같은 장애가 다시 나지 않게 고칩니다.</p>
+    </div>
+    <div class="incs">
+      <article class="inc wide spot rv" aria-labelledby="i1">
+        <div class="eyebrow">Database · Hardware <span>현 직장</span></div>
+        <h3 id="i1">PostgreSQL 반복 재시작과 원인 불명 재부팅</h3>
+        <ol class="flow h" aria-label="장애 파악과 조치 순서"><li><span class="n">01</span><span class="t">재현으로 범위 좁힘</span></li><li><span class="n">02</span><span class="t">손상 행 추적<small>ctid · TOAST</small></span></li><li><span class="n">03</span><span class="t">하드웨어 이벤트 로그·부팅 기록 대조</span></li><li><span class="n">04</span><span class="t">강제 전원 차단 확정</span></li><li><span class="n">05</span><span class="t">재적재 안내</span></li><li><span class="n">06</span><span class="t">복제본 재구성<small>3 → 2 → 3</small></span></li><li class="end"><span class="n">07</span><span class="t">타임아웃 60초</span></li></ol>
+        <dl class="inc-rows">
+          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>Kubernetes 오퍼레이터(CloudNativePG)로 운영하던 PostgreSQL이 약 800만 행 테이블을 조회할 때마다 재시작됐고, 다음 날에는 복제본이 200회 넘게 재시작하며 주 서버(primary)가 계속 바뀌었습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>로그의 손상 행을 물리 위치(<code>ctid</code>)로 따라가 큰 값을 따로 저장하는 영역(TOAST)의 첫 조각이 빠진 것을 찾았습니다. 하드웨어 이벤트 로그(IPMI SEL)의 강제 전원 차단 기록(<code>S5: entered by override</code>)과 journalctl 부팅 이력을 대조해 <strong>디스크·OS 문제가 아니라 예기치 않은 전원 차단</strong>임을 확정했습니다. 쓰기 도중 전원이 끊겨 TOAST 데이터가 손상된 것으로 판단했고, 반복된 재시작과 주 서버 전환으로 복제본의 WAL 타임라인이 어긋났습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>손상된 테이블은 재적재로 복구하도록 안내했고, 복제본은 Pod·PVC·PV를 지운 뒤 클러스터를 3 → 2 → 3으로 조정해 복제를 다시 구성했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>복제본 재시작이 반복되지 않도록, 5초로 짧게 잡혀 있던 <code>wal_sender_timeout</code> · <code>wal_receiver_timeout</code>을 CloudNativePG GitHub 이슈를 근거로 PostgreSQL 기본값인 60초로 변경했습니다.</dd></div>
+        </dl>
+        <div class="tags"><span>CloudNativePG</span><span>PostgreSQL</span><span>IPMI SEL</span><span>journalctl</span></div>
+      </article>
+
+      <article class="inc spot rv" aria-labelledby="i2">
+        <div class="eyebrow">Release · Validation <span>현 직장</span></div>
+        <h3 id="i2">반입 패키지에서 K8s 시스템 이미지가 통째로 빠진 회귀</h3>
+        <dl class="inc-rows">
+          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>검증을 통과한 패키지에 Calico 이미지만 있고 쿠버네티스 시스템 이미지가 전부 빠져 있었습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>검증이 이미지 개수만 세고 있었습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>이미지 묶음(tar) 안의 목록 파일(<code>manifest.json</code>)까지 열어 이미지 이름과 레이어를 확인하는 방식으로 검증을 다시 설계하고, AI 코딩 도구로 반영했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>압축 전과 후에 검증이 자동으로 돌아서, 잘못된 패키지는 현장에 반입되기 전에 막힙니다.</dd></div>
+        </dl>
+        <div class="tags"><span>OCI</span><span>manifest.json</span><span>Claude Code</span></div>
+      </article>
+
+      <article class="inc spot rv d1" aria-labelledby="i3">
+        <div class="eyebrow">Install <span>현 직장 · 아키텍처가 다른 사이트</span></div>
+        <h3 id="i3">아키텍처 불일치로 설치 중간에 노드가 망가지던 문제</h3>
+        <dl class="inc-rows">
+          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>여러 설치 단계가 노드를 바꾼 뒤에야 <code>Exec format error</code>로 실패했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>설치를 시작하기 전에 서버와 패키지의 아키텍처가 맞는지 확인하지 않았습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>사전 점검에서 아키텍처가 다르면 아무것도 바꾸기 전에 중단하도록 설계하고, AI 코딩 도구로 반영했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>설치 단계를 몇 번 다시 실행해도 결과가 같게(멱등) 만들고, 실패하면 이어서 실행할 명령을 그대로 출력하게 했습니다.</dd></div>
+        </dl>
+        <div class="tags"><span>Bash</span><span>kubeadm</span><span>Claude Code</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ STACK -->
+<section id="stack" aria-labelledby="stack-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="기술"><use href="#i-stack"/></svg>05 · Stack</div>
+      <h2 class="sec-title" id="stack-title">기술 스택</h2>
+    </div>
+    <div class="skills">
+      <div class="sk spot rv"><h3><svg class="ic" role="img" aria-label="Kubernetes"><use href="#i-k8s"/></svg>Kubernetes</h3><p>매니지드와 kubeadm 직접 설치</p><div class="tags"><span>Kubernetes</span><span>kubeadm</span><span>EKS</span><span>AKS</span><span>Rancher</span><span>Helm</span><span>helmfile</span><span>ArgoCD</span><span>Istio (ICA)</span><span>Velero</span><span>Calico</span><span>containerd</span></div></div>
+      <div class="sk spot rv d1"><h3><svg class="ic" role="img" aria-label="Cloud · IaC"><use href="#i-cloud"/></svg>Cloud · IaC</h3><p>멀티 클라우드 프로비저닝</p><div class="tags"><span>AWS</span><span>Azure</span><span>NCP</span><span>Terraform</span><span>Ansible</span></div></div>
+      <div class="sk spot rv d2"><h3><svg class="ic" role="img" aria-label="Air‑gapped · On‑prem"><use href="#i-airgap"/></svg>Air‑gapped · On‑prem</h3><p>폐쇄망 패키징과 서버 관리</p><div class="tags"><span>skopeo</span><span>regctl</span><span>local registry</span><span>NFS</span><span>NetBox</span></div></div>
+      <div class="sk spot rv"><h3><svg class="ic" role="img" aria-label="Observability"><use href="#i-observe"/></svg>Observability</h3><p>메트릭 · 로그 · 알람</p><div class="tags"><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Alertmanager</span><span>Fluent Bit</span><span>Elasticsearch</span></div></div>
+      <div class="sk spot rv d1"><h3><svg class="ic" role="img" aria-label="Security"><use href="#i-lock"/></svg>Security</h3><p>인증 · 공급망 · 감리</p><div class="tags"><span>Keycloak</span><span>SAML 2.0</span><span>AWS IAM · STS</span><span>Trivy</span><span>AWS WAF</span><span>KISA 점검</span></div></div>
+      <div class="sk spot rv d2"><h3><svg class="ic" role="img" aria-label="CI · Language"><use href="#i-code"/></svg>CI · Language</h3><p>파이프라인과 도구 개발</p><div class="tags"><span>Python</span><span>FastAPI</span><span>Go</span><span>Bash</span><span>Node.js</span><span>Jenkins</span><span>CodeBuild</span></div></div>
+      <div class="sk spot wide rv"><h3><svg class="ic" role="img" aria-label="AI 활용"><use href="#i-ai"/></svg>AI 활용</h3><p>Claude Code·Codex (스킬·커맨드 작성, 에이전트 검증)</p><div class="tags"><span>Claude Code</span><span>Codex</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CERTS -->
+<section id="certs" aria-labelledby="certs-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="자격"><use href="#i-certs"/></svg>06 · Certs</div>
+      <h2 class="sec-title" id="certs-title">자격 · 학력</h2>
+    </div>
+    <div class="certs rv">
+      <div class="cert spot"><span class="badge">ICA</span><span class="iss">Istio Certified Associate</span><span class="d">The Linux Foundation · 취득 2026.04</span></div>
+      <div class="cert spot"><span class="badge lg">DevOps Engineer – Professional</span><span class="iss">Amazon Web Services</span><span class="d">취득 2026.03</span></div>
+      <div class="cert spot"><span class="badge lg">Solutions Architect – Associate</span><span class="iss">Amazon Web Services</span><span class="d">취득 2026.03</span></div>
+      <div class="cert spot"><span class="badge lg">AWSKRUG</span><span class="iss">DevOps · 플랫폼 엔지니어링 소모임</span><span class="d">2026.01 – 현재</span></div>
+      <div class="cert spot exp"><span class="badge">CKA</span><span class="iss">Certified Kubernetes Administrator</span><span class="d">취득 2023.05 · 2026.05 만료</span></div>
+      <div class="cert spot exp"><span class="badge">CKAD</span><span class="iss">Certified Kubernetes Application Developer</span><span class="d">취득 2024.04 · 2026.04 만료</span></div>
+      <div class="cert spot exp wide"><span class="badge">CKS</span><span class="iss">Certified Kubernetes Security Specialist</span><span class="d">취득 2024.04 · 2026.04 만료</span></div>
+    </div>
+    <div class="edu rv">
+      <div><b>한양사이버대학교</b><span>컴퓨터공학과 졸업</span><span class="mono">2017.02 – 2022.02</span></div>
+      <div><b>한세사이버보안고등학교</b><span>해킹보안과 졸업</span></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="wrap"><div class="site-foot"><small>© 2026 지병훈 · 이 페이지는 AI 도구(Claude Code)의 도움을 받아 만들었습니다.</small></div></footer>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  var nav=document.getElementById('nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>8)};
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // theme toggle
+  var root=document.documentElement,tb=document.querySelector('.theme-toggle');
+  var mq=window.matchMedia('(prefers-color-scheme: light)');
+  function cur(){return root.getAttribute('data-theme')||(mq.matches?'light':'dark')}
+  function sync(){var c=cur();tb.setAttribute('aria-label',c==='light'?'다크 모드로 전환':'라이트 모드로 전환');tb.setAttribute('aria-pressed',c==='light'?'true':'false');
+    var m=document.querySelectorAll('meta[name="theme-color"]');[].forEach.call(m,function(x){x.setAttribute('content',c==='light'?'#fafaf7':'#0a0a0b')})}
+  if(tb){tb.addEventListener('click',function(){var n=cur()==='light'?'dark':'light';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}sync()});sync();
+    if(mq.addEventListener)mq.addEventListener('change',function(){if(!root.getAttribute('data-theme'))sync()})}
+  // active nav link
+  var links={};[].forEach.call(document.querySelectorAll('.nav ul a'),function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){for(var k in links)links[k].classList.toggle('active',k===e.target.id)}})},{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(links).forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el)});
+  }
+  // spotlight
+  [].forEach.call(document.querySelectorAll('.spot'),function(el){
+    el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')});
+  });
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
