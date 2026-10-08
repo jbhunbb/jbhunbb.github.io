@@ -8,8 +8,8 @@
 <meta name="description" content="지병훈, 6년 차 Container Platform · DevOps Engineer. 숙련도에 따라 달라지던 운영을, 누가 해도 같은 결과가 나오도록 표준화하고 프로세스화합니다. EKS 무중단 업그레이드, Rancher 멀티 클러스터, ChatOps, 폐쇄망 Kubernetes 구축.">
 <meta name="author" content="지병훈">
 <meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#0e0d0c" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f8f9" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://jbhunbb.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jbhunbb.github.io/">
@@ -22,7 +22,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="지병훈 · Container Platform / DevOps Engineer">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e0d0c'/%3E%3Cpath d='M9 11l6 5-6 5' stroke='%23f0b44c' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 22h7' stroke='%23f0b44c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0e'/%3E%3Cpath d='M9 11l6 5-6 5' stroke='%235eead4' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 22h7' stroke='%235eead4' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,25 +31,25 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"></noscript>
 <style>
 :root{
-  --bg:#0e0d0c;
-  --bg-2:#131211;
-  --surface:#191816;
-  --surface-2:#22201d;
+  --bg:#0b0c0e;
+  --bg-2:#101215;
+  --surface:#15181c;
+  --surface-2:#1c2025;
   --line:rgba(var(--fg-rgb),.08);
   --line-2:rgba(var(--fg-rgb),.14);
-  --text:#ece7df;
-  --text-2:#bfb8ad;
-  --muted:#8f887d;
-  --accent:#f0b44c;
-  --accent-dim:rgba(240,180,76,.1);
-  --accent-ink:#14120f;
+  --text:#e8eaed;
+  --text-2:#b3b8bf;
+  --muted:#858b94;
+  --accent:#5eead4;
+  --accent-dim:rgba(94,234,212,.1);
+  --accent-ink:#06201c;
   --fg-rgb:255,255,255;
-  --acc-rgb:240,180,76;
-  --h1-a:#f4efe7;
-  --h1-b:#b4ab9c;
+  --acc-rgb:94,234,212;
+  --h1-a:#ffffff;
+  --h1-b:#9aa1aa;
   --shadow:rgba(0,0,0,.9);
   --noise:.04;
-  --nav-bg:rgba(14,13,12,.7);
+  --nav-bg:rgba(11,12,14,.7);
   --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   --wrap:1180px;
@@ -60,46 +60,46 @@
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 @media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
-  --bg:#f6f3ec;
-  --bg-2:#efebe2;
-  --surface:#fbf9f4;
-  --surface-2:#e5dfd2;
-  --line:rgba(28,26,23,.1);
-  --line-2:rgba(28,26,23,.18);
-  --text:#1c1a17;
-  --text-2:#3e3a34;
-  --muted:#68625a;
-  --accent:#8a5a00;
-  --accent-dim:rgba(138,90,0,.12);
-  --accent-ink:#fbf9f4;
-  --fg-rgb:28,26,23;
-  --acc-rgb:138,90,0;
-  --h1-a:#141210;
-  --h1-b:#4a453d;
+  --bg:#f7f8f9;
+  --bg-2:#eff1f3;
+  --surface:#ffffff;
+  --surface-2:#e3e7ea;
+  --line:rgba(16,19,23,.1);
+  --line-2:rgba(16,19,23,.18);
+  --text:#101317;
+  --text-2:#353b43;
+  --muted:#5b626b;
+  --accent:#0f766e;
+  --accent-dim:rgba(15,118,110,.1);
+  --accent-ink:#ffffff;
+  --fg-rgb:16,19,23;
+  --acc-rgb:15,118,110;
+  --h1-a:#0b0e11;
+  --h1-b:#49515b;
   --shadow:rgba(20,30,10,.18);
   --noise:.025;
-  --nav-bg:rgba(246,243,236,.82);
+  --nav-bg:rgba(247,248,249,.82);
 }}
 :root[data-theme="light"]{
-  --bg:#f6f3ec;
-  --bg-2:#efebe2;
-  --surface:#fbf9f4;
-  --surface-2:#e5dfd2;
-  --line:rgba(28,26,23,.1);
-  --line-2:rgba(28,26,23,.18);
-  --text:#1c1a17;
-  --text-2:#3e3a34;
-  --muted:#68625a;
-  --accent:#8a5a00;
-  --accent-dim:rgba(138,90,0,.12);
-  --accent-ink:#fbf9f4;
-  --fg-rgb:28,26,23;
-  --acc-rgb:138,90,0;
-  --h1-a:#141210;
-  --h1-b:#4a453d;
+  --bg:#f7f8f9;
+  --bg-2:#eff1f3;
+  --surface:#ffffff;
+  --surface-2:#e3e7ea;
+  --line:rgba(16,19,23,.1);
+  --line-2:rgba(16,19,23,.18);
+  --text:#101317;
+  --text-2:#353b43;
+  --muted:#5b626b;
+  --accent:#0f766e;
+  --accent-dim:rgba(15,118,110,.1);
+  --accent-ink:#ffffff;
+  --fg-rgb:16,19,23;
+  --acc-rgb:15,118,110;
+  --h1-a:#0b0e11;
+  --h1-b:#49515b;
   --shadow:rgba(20,30,10,.18);
   --noise:.025;
-  --nav-bg:rgba(246,243,236,.82);
+  --nav-bg:rgba(247,248,249,.82);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -172,11 +172,8 @@ section{position:relative;padding:var(--sec) 0 0;scroll-margin-top:24px}
   background:radial-gradient(closest-side,rgba(var(--acc-rgb),.11),rgba(var(--acc-rgb),.03) 55%,transparent 72%);
   animation:aura 18s ease-in-out infinite alternate;
 }
-@keyframes aura{0%{transform:translate(-20%,0) scale(1)}50%{transform:translate(-34%,40px) scale(1.08)}100%{transform:translate(-12%,-20px) scale(.96)}}
 .prompt{font-family:var(--mono);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0 0 28px}
 .prompt .ok{color:var(--accent)}
-.prompt .cursor{display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
 .hero h1{margin:0 0 0 -.04em;font-weight:800;letter-spacing:-.065em;line-height:.9;font-size:clamp(76px,14vw,192px);background:linear-gradient(180deg,var(--h1-a) 30%,var(--h1-b) 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-sub{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:20px 56px;margin-top:clamp(32px,4.5vw,56px);padding-top:clamp(22px,2.6vw,30px);position:relative}
 .hero-sub::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line)}
@@ -264,33 +261,11 @@ section{position:relative;padding:var(--sec) 0 0;scroll-margin-top:24px}
 .eyebrow{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;display:flex;gap:12px;flex-wrap:wrap}
 .eyebrow span{color:var(--muted)}
 svg text{font-family:var(--mono)}
-.case h4{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 16px;display:flex;align-items:center;gap:10px}
-.case h4 i{font-style:normal;color:var(--accent)}
-.case strong{color:var(--text);font-weight:600}
-.case code{font-family:var(--mono);font-size:.88em;background:rgba(var(--fg-rgb),.06);border:1px solid var(--line);padding:1px 6px;border-radius:5px;color:var(--text)}
 
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-family:var(--mono);font-size:11.5px;color:var(--text-2);border:1px solid var(--line-2);border-radius:6px;padding:3px 9px;background:rgba(var(--fg-rgb),.02)}
 
 /* ── cases */
-.cases{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:var(--gap)}
-.case{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;transition:border-color .3s,transform .3s,background .3s}
-.case:hover{background:var(--surface)}
-.case .eyebrow{font-size:11px}
-.case h3{font-size:clamp(22px,2.3vw,27px);letter-spacing:-.035em;line-height:1.3;margin:14px 0 22px}
-.case .big{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:22px}
-.case .big b{font-size:clamp(34px,3.6vw,46px);letter-spacing:-.045em;line-height:1;font-weight:700;white-space:nowrap}
-.case .big b .arr{color:var(--accent);font-weight:400}
-.case .big > span{color:var(--text-2);font-size:14px;line-height:1.45}
-.steps{display:grid;gap:18px;margin-bottom:24px}
-.steps h4{margin-bottom:8px!important}
-.steps p{margin:0;color:var(--text-2);font-size:15px;line-height:1.7}
-.steps ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-.steps ul li{padding-left:16px;position:relative;color:var(--text-2);font-size:15px;line-height:1.65}
-.steps ul li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:6px;border:1px solid var(--accent);border-radius:50%}
-.case .tags{margin-top:auto}
-.case.wide{grid-column:1/-1}
-@media (max-width:900px){.cases{grid-template-columns:1fr}}
 
 /* ── field notes */
 
@@ -323,28 +298,22 @@ svg text{font-family:var(--mono)}
 /* ── contact */
 
 
-.contact{padding-bottom:0}
 .site-foot{margin-top:clamp(72px,9vw,112px);padding-top:22px;padding-bottom:28px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--muted)}
-.site-foot::before{display:none}
 
 /* ── spotlight hover */
 .spot{position:relative;isolation:isolate}
 .spot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;opacity:0;transition:opacity .35s;
   background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(var(--acc-rgb),.07),transparent 60%)}
 .spot:hover::after{opacity:1}
-.case,.sk{transition:border-color .35s,transform .45s var(--ease),background .35s,box-shadow .45s}
-.case:hover,.sk:hover{transform:translateY(-3px);border-color:rgba(var(--acc-rgb),.28);box-shadow:0 24px 60px -30px var(--shadow),0 0 0 1px rgba(var(--acc-rgb),.04) inset}
+.sk{transition:border-color .35s,transform .45s var(--ease),background .35s,box-shadow .45s}
+.sk:hover{transform:translateY(-3px);border-color:rgba(var(--acc-rgb),.28);box-shadow:0 24px 60px -30px var(--shadow),0 0 0 1px rgba(var(--acc-rgb),.04) inset}
 .tags span{transition:border-color .25s,color .25s}
-.case:hover .tags span,.sk:hover .tags span{border-color:rgba(var(--fg-rgb),.2);color:var(--text)}
+.sk:hover .tags span{border-color:rgba(var(--fg-rgb),.2);color:var(--text)}
 .cert{transition:background .35s}
 .cert:hover{background:var(--bg-2)}
 
 
 /* ── v3 additions */
-.case .big b .u{font-size:.45em;color:var(--muted);font-weight:500;margin-left:3px;letter-spacing:-.01em}
-.case .big.txt b{font-size:clamp(22px,2.2vw,28px);letter-spacing:-.035em}
-.case.wide .steps{grid-template-columns:repeat(3,1fr);gap:28px}
-@media (max-width:900px){.case.wide .steps{grid-template-columns:1fr;gap:18px}}
 .sk.wide{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;padding:20px 26px}
 .sk.wide h3,.sk.wide p{margin:0}
 .sk.wide .tags{margin-left:auto}
@@ -376,10 +345,10 @@ svg text{font-family:var(--mono)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .rv{opacity:1;transform:none;transition:none}
-  .prompt .cursor,.scroll-hint i,.hero::after,.hero-sub::after{animation:none}
+  .scroll-hint i,.hero::after,.hero-sub::after{animation:none}
   .hero-sub::after{display:none}
   .thesis .hl{animation:none;background-size:100% 34%}
-  .case:hover,.sk:hover{transform:none}
+  .sk:hover{transform:none}
   *{transition-duration:0s!important}
 }
 
@@ -414,7 +383,6 @@ svg text{font-family:var(--mono)}
 .inc.wide{grid-column:1/-1}
 .inc .flow{margin:0 0 18px}
 @media (max-width:420px){.inc-rows > div{grid-template-columns:1fr}}
-.case .big b .arr{color:var(--accent)}
 /* flow chart */
 .flow{list-style:none;margin:6px 0 12px;padding:0;display:flex;flex-direction:column;gap:22px;counter-reset:none}
 .flow li{position:relative;display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;background:var(--surface);font-size:14px;line-height:1.45;color:var(--text)}
@@ -430,8 +398,6 @@ svg text{font-family:var(--mono)}
   .flow.h li:not(:last-child)::after{left:auto;bottom:auto;right:-20px;top:50%;margin-top:-5px;transform:rotate(-45deg)}
   .flow.h li:not(:last-child)::before{left:auto;bottom:auto;right:-24px;top:50%;width:18px;height:1.6px}
 }
-.steps .note{margin-top:4px;font-size:14px;color:var(--text-2)}
-.case .steps > div > .flow{margin-top:8px}
 .cert.exp .badge{color:var(--muted)}
 .cert.exp .d{color:var(--muted)}
 .cert.wide{grid-column:span 2}
@@ -465,8 +431,8 @@ svg text{font-family:var(--mono)}
 .tl-bar span{border-radius:0}
 .tl-bar span.cur{box-shadow:none}
 .tl-item h3 .tag{border-radius:2px;font-family:var(--mono)}
-.case,.inc,.sk,.edu > div,.flow li{border-radius:var(--r)}
-.case:hover,.sk:hover,.inc:hover{transform:none;box-shadow:none;border-color:rgba(var(--acc-rgb),.35)}
+.inc,.sk,.edu > div,.flow li{border-radius:var(--r)}
+.sk:hover,.inc:hover{transform:none;box-shadow:none;border-color:rgba(var(--acc-rgb),.35)}
 .spot::after{background:radial-gradient(520px circle at var(--mx,50%) var(--my,0%),rgba(var(--acc-rgb),.05),transparent 60%)}
 .theme-toggle,.nav .gh{border-color:var(--line)}
 .site-foot{letter-spacing:.06em}
@@ -520,7 +486,7 @@ svg text{font-family:var(--mono)}
 @media print{.lg-row details > .lg-body{display:block}.lg-bar .lg-fs,.lg-car{display:none}.lg-row{break-inside:avoid}}
 /* print */
 @media print{
-  :root,:root[data-theme]{--bg:#fff;--bg-2:#fff;--surface:#fff;--surface-2:#f4f4f4;--text:#000;--text-2:#222;--muted:#444;--accent:#6b4600;--accent-dim:transparent;--line:#ccc;--line-2:#bbb;--fg-rgb:0,0,0;--acc-rgb:107,70,0}
+  :root,:root[data-theme]{--bg:#fff;--bg-2:#fff;--surface:#fff;--surface-2:#f4f4f4;--text:#000;--text-2:#222;--muted:#444;--accent:#0b5d57;--accent-dim:transparent;--line:#ccc;--line-2:#bbb;--fg-rgb:0,0,0;--acc-rgb:11,93,87}
   html,body{background:#fff!important;color:#000}
   body::before,body::after,.hero::after,.hero-sub::after{display:none!important}
   .nav,.skip,.scroll-hint,.theme-toggle{display:none!important}
@@ -530,9 +496,29 @@ svg text{font-family:var(--mono)}
   .hero h1{background:none!important;-webkit-background-clip:border-box;background-clip:border-box;color:#000!important;font-size:64px}
   .thesis .hl{background-size:100% 34%!important}
   section{padding-top:36px}
-  .case,.inc,.sk,.cert,.pr,.tl-item,.metric,.flow li{break-inside:avoid}
-  .case,.inc,.sk{box-shadow:none!important;transform:none!important}
+  .inc,.sk,.cert,.pr,.tl-item,.metric,.flow li{break-inside:avoid}
+  .inc,.sk{box-shadow:none!important;transform:none!important}
   a{color:#000}
+}
+/* ── review fixes */
+.lg-f span{opacity:1}
+.lg-row summary:focus-visible{outline-offset:-2px;border-radius:0}
+.lg-head span:nth-child(4){text-align:right}
+.metrics{grid-template-columns:repeat(5,minmax(0,1fr))}
+.lg-body dt,.inc-rows dt span{font-family:var(--sans);letter-spacing:0;font-weight:600}
+@media (max-width:1080px){.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.metrics{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){
+  .nav ul{mask-image:linear-gradient(90deg,#000 78%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent);scroll-snap-type:x proximity}
+  .nav ul li{scroll-snap-align:start}
+  .lg-f{min-height:40px}
+}
+@media (max-width:420px){.prompt{letter-spacing:.1em}}
+@media print{
+  .lg-row[hidden]{display:block!important}
+  .lg-count{display:none}
+  .sec-head{break-after:avoid}
+  .tl-bar span{background:#ccc}
 }
 </style>
 </head>
@@ -544,7 +530,6 @@ svg text{font-family:var(--mono)}
     <symbol id="i-moon" viewBox="0 0 24 24"><title>다크 모드</title><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
     <symbol id="i-about" viewBox="0 0 24 24"><title>소개</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></g></symbol>
     <symbol id="i-career" viewBox="0 0 24 24"><title>경력</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8.5 7V5.5A1.5 1.5 0 0 1 10 4h4a1.5 1.5 0 0 1 1.5 1.5V7M3 12.5h18"/></g></symbol>
-    <symbol id="i-work" viewBox="0 0 24 24"><title>작업</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 16.5l9 5 9-5" stroke-linecap="round"/></g></symbol>
     <symbol id="i-incident" viewBox="0 0 24 24"><title>장애</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.2v.3"/></g></symbol>
     <symbol id="i-stack" viewBox="0 0 24 24"><title>기술</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></g></symbol>
     <symbol id="i-certs" viewBox="0 0 24 24"><title>자격</title><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5L7 21l5-2.5 5 2.5-1.5-7.5"/></g></symbol>
@@ -575,9 +560,8 @@ svg text{font-family:var(--mono)}
       <ul>
         <li><a href="#principles">About</a></li>
         <li><a href="#career">Career</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#log">Projects</a></li>
         <li><a href="#incident">Incident</a></li>
-        <li><a href="#log">Log</a></li>
         <li><a href="#stack">Stack</a></li>
         <li><a href="#certs">Certs</a></li>
       </ul>
@@ -707,211 +691,53 @@ svg text{font-family:var(--mono)}
   </div>
 </section>
 
-<!-- ═════════ WORK -->
-<section id="work" aria-labelledby="work-title">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="sec-idx"><svg class="ic" role="img" aria-label="작업"><use href="#i-work"/></svg>03 · Work</div>
-      <h2 class="sec-title" id="work-title">주요 작업</h2>
-      <p class="sec-lede">최근 작업부터 적었습니다. 어떤 문제가 있었고, 왜 그렇게 풀었고, 결과가 어땠는지 순서입니다.</p>
-    </div>
-
-    <div class="cases">
-      <!-- Air-gapped -->
-      <article class="case wide spot rv" aria-labelledby="c1">
-        <div class="eyebrow">Air‑gapped · On‑prem <span>현 직장 · 2026.07 – 09</span></div>
-        <h3 id="c1">폐쇄망 Kubernetes 구축 절차 표준화 및 설치 자동화</h3>
-        <div class="big"><b>3<span class="u">곳</span></b><span>증권사·공공기관 구축에 적용</span></div>
-        <ol class="flow h" aria-label="폐쇄망 설치 흐름"><li><span class="n">01</span><span class="t">웹 빌드<small>이미지·설치 파일 패키지</small></span></li><li><span class="n">02</span><span class="t">반입 전 누락 검사</span></li><li><span class="n">03</span><span class="t">USB 반입</span></li><li><span class="n">04</span><span class="t">재실행 가능한 설치 스크립트</span></li><li class="end"><span class="n">05</span><span class="t">kubeadm 클러스터</span></li></ol>
-        <div class="steps">
-          <div><h4><i>01</i> 문제</h4><p>인터넷이 막힌 고객사 서버에 설치 파일을 USB로 반입해야 하는데, 정형화된 문서가 없어 사람마다 반입 목록과 설치 방식이 달랐습니다. 이미지가 빠지면 재반입과 재설치로 일정이 밀렸습니다.</p></div>
-          <div><h4><i>02</i> 판단</h4><ul>
-            <li>설계 방향은 제가 정하고 구현은 <strong>AI 코딩 도구(Claude Code)</strong>로 했습니다. 코드 검토 역량이 부족한 부분은 <strong>PR마다 Skill·Hook으로 자동 검증</strong>되게 설계했습니다.</li>
-            <li>패키지 안 <code>info.yaml</code>에 버전·아키텍처를 담아 <strong>설치 스크립트가 이 파일만 보고 분기</strong>하게 했습니다.</li>
-            <li>이미지 이름은 그대로 두고 <strong>containerd 미러 설정(<code>certs.d</code>)</strong>으로 내부 저장소에서 받게 해, 공식 Helm 차트를 수정 없이 썼습니다(고객사 자체 저장소일 때는 이름 변경(retag) 유지).</li>
-                        <li>누락 검사는 이미지 개수가 아니라 tar 안 <code>manifest.json</code>으로 하고, 설치 단계는 <strong>몇 번 다시 실행해도 결과가 같게(멱등)</strong> 만들었습니다.</li>
-          </ul></div>
-          <div><h4><i>03</i> 결과</h4><p>증권사·공공기관 3곳 구축에 적용했습니다. 런북을 받은 동료가 공공기관 운영망 재구축과 GPU 분할을, 현장 인력이 증권사 후속 조치를 방문 없이 마쳤습니다.</p></div>
-        </div>
-        <div class="tags"><span>kubeadm</span><span>containerd</span><span>Calico</span><span>skopeo</span><span>Bash</span><span>Claude Code</span></div>
-      </article>
-
-      <!-- Securities HA -->
-      <article class="case spot rv" aria-labelledby="c2">
-        <div class="eyebrow">High availability <span>현 직장 · 증권사</span></div>
-        <h3 id="c2">증권사 고가용성 Kubernetes 클러스터 구축</h3>
-        <div class="big"><b>3<span class="arr">+</span>3</b><span>컨트롤 플레인 3 · 워커 3</span></div>
-        <div class="steps">
-          <div><h4><i>01</i> 구성</h4><ul>
-            <li>컨트롤 플레인을 3대로 두어 <strong>노드 한 대가 멈춰도 etcd 과반(쿼럼)이 유지</strong>되게 했습니다.</li>
-            <li>Secret이 etcd에 평문으로 남지 않도록 <strong>저장 시 암호화</strong>했습니다.</li>
-            <li><strong>DB와 벡터DB도 3중화</strong>했습니다.</li>
-          </ul></div>
-        </div>
-        <div class="tags"><span>Kubernetes</span><span>etcd</span><span>Encryption at rest</span><span>HA</span></div>
-      </article>
-
-      <!-- Fintech -->
-      <article class="case spot rv d1" aria-labelledby="c3">
-        <div class="eyebrow">Security · Observability <span>AP Thefin · 2025.07 – 10</span></div>
-        <h3 id="c3">AWS 7개 계정 인증 통합 및 보안·모니터링 정비</h3>
-        <div class="big"><b>0<span class="u">개</span></b><span>장기 Access Key · Critical 취약 이미지</span></div>
-        <div class="steps">
-          <div><h4><i>01</i> 문제</h4><p>AWS 계정 7개의 로그인 관리, 컨테이너 이미지 보안, 모니터링을 혼자 정비해야 했습니다.</p></div>
-          <div><h4><i>02</i> 판단</h4><ul>
-            <li>사내 Keycloak으로 <strong>AWS 7개 계정의 로그인을 SSO로 통합</strong>하고, 오래 쓰는 접속 키 대신 임시 자격 증명을 쓰게 했습니다.</li>
-            <li>Alpine 멀티스테이지로 베이스 이미지를 맞추고, <strong>CodeBuild에 Trivy 취약점 검사 단계</strong>를 넣어 기준 미달 이미지 배포를 막았습니다.</li>
-            <li>Prometheus · Loki · Grafana로 모니터링을 모으고, Launch Template과 Helm으로 에이전트를 자동 설치했습니다.</li>
-          </ul></div>
-          <div><h4><i>03</i> 결과</h4><p>계정 관리가 한 곳으로 모였고, 장기 키와 Critical 취약 이미지가 모두 0개가 됐습니다. 신규 서버 모니터링 누락도 0건입니다.</p></div>
-        </div>
-        <div class="tags"><span>Keycloak</span><span>SAML 2.0</span><span>IAM · STS</span><span>Trivy</span><span>CodeBuild</span><span>Prometheus</span><span>Loki</span><span>Grafana</span></div>
-      </article>
-
-      <!-- EKS -->
-      <article class="case spot rv" aria-labelledby="c4">
-        <div class="eyebrow">Upgrade <span>ATS · SK 계열사 · 2025.03 – 04</span></div>
-        <h3 id="c4">운영 EKS 10여 개 무중단 버전 업그레이드 (1.29 → 1.32)</h3>
-        <div class="big"><b>0<span class="u">회</span></b><span>업그레이드 중 서비스 중단<br>절차는 팀 표준 런북으로 공유</span></div>
-        <div class="steps">
-          <div><h4><i>01</i> 문제</h4><p>클러스터가 1.29에 머물러 있었고 서비스는 멈출 수 없었습니다. EKS는 이전 버전으로 되돌릴 수 없는데, 기존 EC2 스냅샷으로는 K8s 리소스를 복구할 수 없었습니다.</p></div>
-          <div><h4><i>02</i> 진행</h4><ol class="flow" aria-label="EKS 업그레이드 흐름"><li><span class="n">01</span><span class="t">폐기 API·애드온 호환성 점검<small>VPC CNI · CoreDNS</small></span></li><li><span class="n">02</span><span class="t">Velero 백업<small>되돌릴 수 없어 이 백업이 복구 경로</small></span></li><li><span class="n">03</span><span class="t">1.29 → 1.30 → 1.31 → 1.32<small>컨트롤 플레인 → 노드 그룹</small></span></li><li class="end"><span class="n">04</span><span class="t">중단 0회 · 팀 런북</span></li></ol></div>
-        </div>
-        <div class="tags"><span>AWS EKS</span><span>eksctl</span><span>Velero</span><span>VPC CNI</span><span>CoreDNS</span></div>
-      </article>
-
-      <!-- ChatOps -->
-      <article class="case spot rv d1" aria-labelledby="c5">
-        <div class="eyebrow">ChatOps · GitOps <span>Posicube · 2024.01 – 03</span></div>
-        <h3 id="c5">Teams 챗봇 배포 자동화 (ChatOps)</h3>
-        <div class="big"><b>120<span class="arr">→</span>10<span class="u">분</span></b><span>하루 배포 처리 시간<br>배포 이력 기록</span></div>
-        <div class="steps">
-          <div><h4><i>01</i> 문제</h4><p>배포 요청이 DM으로 오면 DevOps가 손으로 처리했습니다. 하루 평균 120분이 걸렸고, 누가 언제 무엇을 배포했는지 기록이 없었습니다.</p></div>
-          <div><h4><i>02</i> 바꾼 흐름</h4><ol class="flow" aria-label="ChatOps 배포 흐름"><li><span class="n">01</span><span class="t">개발자 Teams 요청<small>환경 · 이미지 태그 선택</small></span></li><li><span class="n">02</span><span class="t">승인 버튼</span></li><li><span class="n">03</span><span class="t">ArgoCD 동기화</span></li><li class="end"><span class="n">04</span><span class="t">채널 알림 · 이력<small>하루 120분 → 10분</small></span></li></ol><p class="note">챗봇은 Azure Bot Service로 만들었고, 셀프서비스여도 승인을 거쳐야 배포되게 했습니다.</p></div>
-        </div>
-        <div class="tags"><span>Node.js</span><span>Azure Bot Service</span><span>ArgoCD</span><span>Helm</span></div>
-      </article>
-
-      <!-- Rancher -->
-      <article class="case spot rv" aria-labelledby="c6">
-        <div class="eyebrow">Multi‑cluster <span>Posicube · 2023.08 – 2024.08</span></div>
-        <h3 id="c6">Rancher 도입 및 멀티 클러스터 통합 관리</h3>
-        <div class="big"><b>10<span class="u">여 개</span></b><span>Rancher에 연결한 vanilla 클러스터</span></div>
-        <div class="steps">
-          <div><h4><i>01</i> 구성</h4><ol class="flow h" aria-label="Rancher 구성"><li><span class="n">01</span><span class="t">vanilla K8s 클러스터 10여 개</span></li><li class="end"><span class="n">02</span><span class="t">Rancher<small>RBAC · 단일 화면</small></span></li></ol><p class="note">Rancher 서버를 직접 설치해 연결했고, RBAC은 UI 한곳에서 같은 규칙으로 관리했습니다.</p></div>
-          <div><h4><i>02</i> GitOps 도입 전 배포 경로</h4><ol class="flow h" aria-label="GitOps 도입 전 배포 경로"><li><span class="n">01</span><span class="t">FastAPI API<small>배포 이미지 변경만 허용</small></span></li><li class="end"><span class="n">02</span><span class="t">Rancher</span></li></ol><p class="note">배포는 이 API로만 하게 해 권한을 최소로 좁혔습니다. ArgoCD 도입 후에는 필요 없어졌습니다.</p></div>
-        </div>
-        <div class="tags"><span>Rancher</span><span>RBAC</span><span>Python</span><span>FastAPI</span><span>ArgoCD</span></div>
-      </article>
-
-      <!-- AKS -->
-      <article class="case spot rv d1" aria-labelledby="c7">
-        <div class="eyebrow">IaC · Azure <span>Posicube · 2023.08 – 12</span></div>
-        <h3 id="c7">고객사별 AKS 인프라 Terraform 모듈화</h3>
-        <div class="steps">
-          <div><h4><i>01</i> 문제</h4><p>금융·엔터프라이즈 고객사에 납품하는 AI 챗봇을, 고객사마다 외부와 격리된 Azure 환경에 올려야 했습니다.</p></div>
-          <div><h4><i>02</i> 한 일</h4><ul>
-            <li>Private AKS와 VNet을 <strong>Terraform 모듈</strong>로 만들어 고객사마다 같은 구성으로 구축했습니다.</li>
-            <li><strong>Fluent Bit와 Elasticsearch</strong>로 로그 파이프라인을 구성했습니다.</li>
-          </ul></div>
-        </div>
-        <div class="tags"><span>Azure AKS</span><span>Terraform</span><span>VNet</span><span>Fluent Bit</span><span>Elasticsearch</span></div>
-      </article>
-
-      <!-- WAF -->
-      <article class="case wide spot rv" aria-labelledby="c8">
-        <div class="eyebrow">Product <span>Cloudbric · 2021.10 – 2022.04</span></div>
-        <h3 id="c8">AWS WAF 보안 규칙 상품 개발 및 Marketplace 출시</h3>
-        <div class="big"><b>1<span class="u">억 원 이상</span></b><span>상품 월 구독 매출<br>개발·배포를 맡은 상품</span></div>
-        <div class="steps">
-          <div><h4><i>01</i> 문제</h4><p>자사 웹방화벽의 탐지 규칙을 AWS WAF 사용자가 구독해서 바로 쓸 수 있는 상품으로 만들어야 했습니다. 규칙은 AWS WAF를 지원하는 모든 리전에 같은 상태로 있어야 했습니다.</p></div>
-          <div><h4><i>02</i> 판단</h4><ul>
-            <li>OWASP Top 10 관련 공격 패턴을 <strong>정규식 기반 탐지·차단 규칙</strong>으로 개발했습니다.</li>
-            <li>리전마다 손으로 올리지 않고 <strong>Python 도구로 전 리전에 자동 배포·동기화</strong>해 리전 간 차이를 없앴습니다.</li>
-          </ul></div>
-          <div><h4><i>03</i> 결과</h4><p>AWS Marketplace에 출시했고, 상품 월 구독 매출이 1억 원을 넘었습니다.</p></div>
-        </div>
-        <div class="tags"><span>AWS WAF</span><span>Marketplace</span><span>Regex</span><span>Python · Boto3</span></div>
-      </article>
-
-      <!-- AI -->
-      <article class="case wide spot rv" aria-labelledby="c9">
-        <div class="eyebrow">AI 활용 <span>현 직장 · 2026</span></div>
-        <h3 id="c9">AI 코딩 도구 기반 온보딩 교육 및 문서 작성 표준화</h3>
-        <div class="steps">
-          <div><h4><i>01</i> 온보딩</h4><p>신규 입사자가 AI 코딩 도구와 대화하며 반입·설치·장애 대응·보안 점검을 단계별로 익히도록 온보딩 스킬 10종을 만들었습니다.</p></div>
-          <div><h4><i>02</i> 위키 작성 규칙</h4><p>AI로 쓴 문서도 같은 문체와 구조를 따르도록 팀 위키 작성 규칙을 스킬로 만들었습니다.</p></div>
-          <div><h4><i>03</i> 문서 생성과 검증</h4><p>설계·제안 문서를 HTML에서 PDF로 만드는 커맨드를 만들고, 생성 후 새 에이전트를 따로 띄워 결재자 입장에서 검토하게 했습니다.</p></div>
-        </div>
-        <div class="tags"><span>Claude Code</span><span>Codex</span><span>Skills</span><span>Commands</span><span>Agent review</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ═════════ INCIDENT -->
-<section id="incident" aria-labelledby="inc-title">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="sec-idx"><svg class="ic" role="img" aria-label="장애"><use href="#i-incident"/></svg>04 · Incident</div>
-      <h2 class="sec-title" id="inc-title">장애 대응</h2>
-      <p class="sec-lede">증상만 가라앉히고 끝내지 않습니다. 로그와 기록으로 원인을 확인한 뒤 같은 장애가 다시 나지 않게 고칩니다.</p>
-    </div>
-    <div class="incs">
-      <article class="inc wide spot rv" aria-labelledby="i1">
-        <div class="eyebrow">Database · Hardware <span>현 직장</span></div>
-        <h3 id="i1">PostgreSQL 반복 재시작 원인 분석 및 복구</h3>
-        <ol class="flow h" aria-label="장애 파악과 조치 순서"><li><span class="n">01</span><span class="t">재현으로 범위 좁힘</span></li><li><span class="n">02</span><span class="t">손상 행 추적<small>ctid · TOAST</small></span></li><li><span class="n">03</span><span class="t">하드웨어 이벤트 로그·부팅 기록 대조</span></li><li><span class="n">04</span><span class="t">강제 전원 차단 확정</span></li><li><span class="n">05</span><span class="t">재적재 안내</span></li><li><span class="n">06</span><span class="t">복제본 재구성<small>3 → 2 → 3</small></span></li><li class="end"><span class="n">07</span><span class="t">타임아웃 60초</span></li></ol>
-        <dl class="inc-rows">
-          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>Kubernetes 오퍼레이터(CloudNativePG)로 운영하던 PostgreSQL이 약 800만 행 테이블을 조회할 때마다 재시작됐고, 다음 날에는 복제본이 200회 넘게 재시작하며 주 서버(primary)가 계속 바뀌었습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>로그의 손상 행을 물리 위치(<code>ctid</code>)로 따라가 큰 값을 따로 저장하는 영역(TOAST)의 첫 조각이 빠진 것을 찾았습니다. 하드웨어 이벤트 로그(IPMI SEL)의 강제 전원 차단 기록(<code>S5: entered by override</code>)과 journalctl 부팅 이력을 대조해 <strong>디스크·OS 문제가 아니라 예기치 않은 전원 차단</strong>임을 확정했습니다. 쓰기 도중 전원이 끊겨 TOAST 데이터가 손상된 것으로 판단했고, 반복된 재시작과 주 서버 전환으로 복제본의 WAL 타임라인이 어긋났습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>손상된 테이블은 재적재로 복구하도록 안내했고, 복제본은 Pod·PVC·PV를 지운 뒤 클러스터를 3 → 2 → 3으로 조정해 복제를 다시 구성했습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>복제본 재시작이 반복되지 않도록, 5초로 짧게 잡혀 있던 <code>wal_sender_timeout</code> · <code>wal_receiver_timeout</code>을 CloudNativePG GitHub 이슈를 근거로 PostgreSQL 기본값인 60초로 변경했습니다.</dd></div>
-        </dl>
-        <div class="tags"><span>CloudNativePG</span><span>PostgreSQL</span><span>IPMI SEL</span><span>journalctl</span></div>
-      </article>
-
-      <article class="inc spot rv" aria-labelledby="i2">
-        <div class="eyebrow">Release · Validation <span>현 직장</span></div>
-        <h3 id="i2">설치 패키지 이미지 누락 검출 및 검증 강화</h3>
-        <dl class="inc-rows">
-          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>검증을 통과한 패키지에 Calico 이미지만 있고 쿠버네티스 시스템 이미지가 전부 빠져 있었습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>검증이 이미지 개수만 세고 있었습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>이미지 묶음(tar) 안의 목록 파일(<code>manifest.json</code>)까지 열어 이미지 이름과 레이어를 확인하는 방식으로 검증을 다시 설계하고, AI 코딩 도구로 반영했습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>압축 전과 후에 검증이 자동으로 돌아서, 잘못된 패키지는 현장에 반입되기 전에 막힙니다.</dd></div>
-        </dl>
-        <div class="tags"><span>OCI</span><span>manifest.json</span><span>Claude Code</span></div>
-      </article>
-
-      <article class="inc spot rv d1" aria-labelledby="i3">
-        <div class="eyebrow">Install <span>현 직장 · 아키텍처가 다른 사이트</span></div>
-        <h3 id="i3">아키텍처 불일치 사전 차단 및 설치 안정화</h3>
-        <dl class="inc-rows">
-          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>여러 설치 단계가 노드를 바꾼 뒤에야 <code>Exec format error</code>로 실패했습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>설치를 시작하기 전에 서버와 패키지의 아키텍처가 맞는지 확인하지 않았습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>사전 점검에서 아키텍처가 다르면 아무것도 바꾸기 전에 중단하도록 설계하고, AI 코딩 도구로 반영했습니다.</dd></div>
-          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>설치 단계를 몇 번 다시 실행해도 결과가 같게(멱등) 만들고, 실패하면 이어서 실행할 명령을 그대로 출력하게 했습니다.</dd></div>
-        </dl>
-        <div class="tags"><span>Bash</span><span>kubeadm</span><span>Claude Code</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ═════════ STACK -->
+<!-- ═════════ PROJECTS -->
 <section id="log" aria-labelledby="log-title">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sec-idx"><svg class="ic" role="img" aria-label="기록"><use href="#i-log"/></svg>05 · Log</div>
-      <h2 class="sec-title" id="log-title">프로젝트 기록</h2>
-      <p class="sec-lede">지금까지 맡은 프로젝트 전체입니다. 행을 누르면 배경, 한 일, 결과를 볼 수 있습니다.</p>
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="기록"><use href="#i-log"/></svg>03 · Projects</div>
+      <h2 class="sec-title" id="log-title">프로젝트</h2>
+      <p class="sec-lede">맡았던 프로젝트를 최신순으로 정리했습니다. 행을 누르면 배경, 한 일, 결과가 펼쳐집니다.</p>
     </div>
     <div class="plog rv">
-      <div class="lg-bar"><p class="lg-cmd mono"><span class="ok">$</span> ls -lt ~/projects <span class="lg-count">total 20</span></p><div class="lg-fs" role="group" aria-label="회사별 필터"><button type="button" class="lg-f on" data-f="all" aria-pressed="true">All <span>20</span></button><button type="button" class="lg-f" data-f="genon" aria-pressed="false">GenOn <span>8</span></button><button type="button" class="lg-f" data-f="apthefin" aria-pressed="false">AP Thefin <span>3</span></button><button type="button" class="lg-f" data-f="ats" aria-pressed="false">ATS <span>2</span></button><button type="button" class="lg-f" data-f="posicube" aria-pressed="false">Posicube <span>3</span></button><button type="button" class="lg-f" data-f="cloudbric" aria-pressed="false">Cloudbric <span>4</span></button></div></div>
+      <div class="lg-bar"><p class="lg-cmd mono"><span class="ok">$</span> ls -lt ~/projects <span class="lg-count">total 21</span></p><div class="lg-fs" role="group" aria-label="회사별 필터"><button type="button" class="lg-f on" data-f="all" aria-pressed="true">All <span>21</span></button><button type="button" class="lg-f" data-f="genon" aria-pressed="false">GenOn <span>9</span></button><button type="button" class="lg-f" data-f="apthefin" aria-pressed="false">AP Thefin <span>3</span></button><button type="button" class="lg-f" data-f="ats" aria-pressed="false">ATS <span>2</span></button><button type="button" class="lg-f" data-f="posicube" aria-pressed="false">Posicube <span>3</span></button><button type="button" class="lg-f" data-f="cloudbric" aria-pressed="false">Cloudbric <span>4</span></button></div></div>
       <div class="lg-head mono" aria-hidden="true"><span>No</span><span>Period</span><span>Project</span><span>Company</span><span></span></div>
       <ol class="lg-list">
       <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#20</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">폐쇄망 설치 패키지 빌더 개발 및 설치 자동화</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#21</span><span class="lg-when mono">2026.08 – 09</span><span class="lg-title">인프라 위키 구축 및 장애 대응 문서 체계화</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <div class="lg-body">
+          <dl>
+            <div><dt>배경</dt><dd>구축과 장애 대응 지식이 개인 경험과 스프레드시트에 흩어져 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>Wiki.js를 사내 Kubernetes에 Helm으로 배포하고 문서를 git으로 관리했습니다.</li><li>제품 구조, 구축 절차, 운영, 증상별 장애 대응으로 문서 체계를 나눴습니다.</li><li>모든 문서에 적용 버전과 확인 날짜를 적어, 언제 기준의 내용인지 알 수 있게 했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>신규 입사자 온보딩 섹션을 포함한 팀 위키가 됐습니다.</dd></div>
+          </dl>
+          <div class="tags"><span>Wiki.js</span><span>Helm</span><span>git</span></div>
+        </div>
+      </details></li>
+      <li class="lg-row" data-co="genon"><details>
+        <summary><span class="lg-no mono">#20</span><span class="lg-when mono">2026.08 – 09</span><span class="lg-title">AI 코딩 도구 기반 온보딩 과정 및 문서 작성 가이드 구축</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <div class="lg-body">
+          <dl>
+            <div><dt>배경</dt><dd>신규 입사자 교육과 AI로 쓰는 문서에 팀 공통의 기준이 필요했습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>신규 입사자가 AI 코딩 도구에 넣어 쓰는 작업 지침(스킬)으로 반입·설치·장애 대응·보안 점검을 단계별로 익히는 온보딩 스킬 10종을 만들었습니다.</li><li>AI로 쓴 문서도 같은 문체와 구조를 따르도록 팀 위키 작성 규칙을 스킬로 만들었습니다.</li><li>설계·제안 문서를 HTML에서 PDF로 만드는 커맨드를 만들고, 생성 후 별도 에이전트가 결재자 입장에서 검토하게 했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>온보딩 과정과 문서 작성 규칙을 스킬로 정리했습니다.</dd></div>
+          </dl>
+          <div class="tags"><span>Claude Code</span><span>Codex</span><span>Skills</span><span>Agent review</span></div>
+        </div>
+      </details></li>
+      <li class="lg-row" data-co="genon"><details>
+        <summary><span class="lg-no mono">#19</span><span class="lg-when mono">2026.08</span><span class="lg-title">감리 대응 보안 점검 스크립트 개발</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <div class="lg-body">
+          <dl>
+            <div><dt>배경</dt><dd>공공·금융 고객사는 구축 후 감리에서 OS와 Kubernetes 보안 점검 결과를 요구하는데, 사이트마다 처음부터 준비하고 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>KISA 가이드를 기준으로 Linux·Docker·Kubernetes 점검 항목을 정리하고, 기존 스크립트를 참고해 다시 설계한 뒤 AI 코딩 도구로 구현했습니다.</li><li>점검 도구는 서버를 바꾸지 않는 진단 전용으로 두고, 조치는 별도 스크립트로 분리했습니다. 조치 전에는 백업하고, 조치 후에는 같은 점검 함수로 다시 확인합니다.</li><li>항목별 판정, 실제 설정값, 조치 방법을 리포트에 함께 남겨 감리 증빙 자료로 쓰게 했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>공공기관 감리 전 보안 조치와 증빙 자료 작성에 사용했습니다.</dd></div>
+          </dl>
+          <div class="tags"><span>Bash</span><span>Kubernetes</span><span>Docker</span><span>KISA</span></div>
+        </div>
+      </details></li>
+      <li class="lg-row" data-co="genon"><details>
+        <summary><span class="lg-no mono">#18</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">폐쇄망 설치 패키지 빌더 개발 및 설치 자동화</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>인터넷이 차단된 고객사 서버에 플랫폼을 설치하려면 OS 패키지, 바이너리, 이미지 120여 개, Helm 차트를 밖에서 모두 챙겨 반입해야 했습니다. 정형화된 문서가 없어 사람마다 설치 방식이 달랐고, 이미지 누락으로 재반입과 재설치가 반복됐습니다.</dd></div>
@@ -922,58 +748,36 @@ svg text{font-family:var(--mono)}
         </div>
       </details></li>
       <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#19</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">증권사 고가용성 Kubernetes 클러스터 구축</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#17</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">증권사 고가용성 Kubernetes 클러스터 구축</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>증권사 사내망에 생성형 AI 플랫폼을 설치하는 사업으로, 노드 장애에도 서비스가 유지돼야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>컨트롤 플레인 3대로 etcd 과반을 유지하고 워커 3대로 구성했습니다.</li><li>DB와 벡터DB를 3중화했습니다.</li><li>Secret이 etcd에 평문으로 남지 않도록 저장 시 암호화를 적용했습니다.</li><li>설치 후 남은 조치는 런북으로 정리해 현장 인력에게 넘겼습니다.</li></ul></dd></div>
+            <div><dt>한 일</dt><dd><ul><li>컨트롤 플레인 3대, 워커 3대로 구성해 노드 한 대가 빠져도 etcd 과반이 유지되게 했습니다.</li><li>DB와 벡터DB를 3중화했습니다.</li><li>Secret이 etcd에 평문으로 남지 않도록 저장 시 암호화를 적용했습니다.</li><li>설치 후 남은 조치는 런북으로 정리해 현장 인력에게 넘겼습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>현장 인력이 런북으로 후속 조치를 제 방문 없이 마쳤습니다.</dd></div>
           </dl>
           <div class="tags"><span>Kubernetes</span><span>kubeadm</span><span>etcd</span><span>NFS</span><span>GPU</span></div>
         </div>
       </details></li>
       <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#18</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">공공기관 AI 플랫폼 구축 및 운영 인계</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#16</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">공공기관 AI 플랫폼 구축 및 운영 인계</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>현장 작업 시간이 제한된 공공기관 IDC라, 들어가기 전에 범위와 시간을 확정해야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>사전 체크리스트와 작업계획서로 작업 범위와 시간을 확정한 뒤 입실했습니다.</li><li>반입 버전, 이미지, 볼륨 위치를 정리해 운영 담당자에게 인계했습니다.</li><li>후속 구성 요소 중 BSL 라이선스 소프트웨어가 있어 납품 형태에 제약이 생길 수 있다는 점을 찾아 검토를 요청했습니다.</li></ul></dd></div>
+            <div><dt>한 일</dt><dd><ul><li>사전 체크리스트와 작업계획서로 작업 범위와 시간을 확정한 뒤 현장에 들어갔습니다.</li><li>반입 버전, 이미지, 볼륨 위치를 정리해 운영 담당자에게 인계했습니다.</li><li>후속 구성 요소 중 상업적 사용에 제한이 있는 BSL 라이선스 소프트웨어가 있어 납품 형태에 제약이 생길 수 있다는 점을 찾아 검토를 요청했습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>개발망을 구축했고, 빠져 있던 워크플로 엔진(Temporal)은 원격 가이드로 복구했습니다.</dd></div>
           </dl>
           <div class="tags"><span>Kubernetes</span><span>helmfile</span><span>Temporal</span></div>
         </div>
       </details></li>
       <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#17</span><span class="lg-when mono">2026.07 – 08</span><span class="lg-title">공공기관 개발망·운영망 구축 및 GPU 분할</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#15</span><span class="lg-when mono">2026.07 – 08</span><span class="lg-title">공공기관 개발망·운영망 구축 및 GPU 분할</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>퍼블릭 클라우드 VM 위의 공공망에 개발망과 운영망을 따로 구축하는 사업이었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>두 망의 버전이 달라지지 않도록 같은 버전으로 맞춰 다시 구축했습니다.</li><li>운영망에서 파일이 보이지 않고 DB가 뜨지 않는 문제를 GPU 서버의 NFS 마운트 옵션 차이로 확인해 바로잡았습니다.</li><li>GPU를 MIG 7개 인스턴스로 나눠 서비스별로 할당했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>운영망 재구축과 GPU 분할은 가이드를 넘겨 동료 엔지니어가 진행했습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>두 망의 버전이 달라지지 않도록 같은 버전으로 다시 구축하는 가이드를 만들었습니다.</li><li>운영망에서 파일이 보이지 않고 DB가 뜨지 않는 문제를 GPU 서버의 NFS 마운트 옵션 차이로 확인해 바로잡았습니다.</li><li>GPU를 MIG 7개 인스턴스로 나눠 서비스별로 할당하는 분할 가이드를 만들었습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>가이드를 받은 동료 엔지니어가 운영망 재구축과 GPU 분할을 마쳤습니다.</dd></div>
           </dl>
           <div class="tags"><span>Kubernetes</span><span>NFS</span><span>MariaDB</span><span>NVIDIA MIG</span></div>
-        </div>
-      </details></li>
-      <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#16</span><span class="lg-when mono">2026.08 – 09</span><span class="lg-title">인프라 위키 구축 및 문서 작성 표준화</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
-        <div class="lg-body">
-          <dl>
-            <div><dt>배경</dt><dd>구축과 장애 대응 지식이 개인 경험과 스프레드시트에 흩어져 있었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>Wiki.js를 사내 Kubernetes에 Helm으로 배포하고 문서를 git으로 관리했습니다.</li><li>제품 구조, 구축 절차, 운영, 증상별 장애 대응으로 문서 체계를 나눴습니다.</li><li>모든 문서에 적용 버전과 확인 날짜를 적고, AI로 쓰는 문서도 같은 문체·구조가 되도록 작성 가이드를 만들었습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>신규 입사자 온보딩 섹션을 포함한 팀 위키가 됐습니다.</dd></div>
-          </dl>
-          <div class="tags"><span>Wiki.js</span><span>Helm</span><span>git</span></div>
-        </div>
-      </details></li>
-      <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#15</span><span class="lg-when mono">2026.08</span><span class="lg-title">감리 대응 보안 점검 스크립트 개발</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
-        <div class="lg-body">
-          <dl>
-            <div><dt>배경</dt><dd>공공·금융 고객사는 구축 후 감리에서 OS와 Kubernetes 보안 점검 결과를 요구하는데, 사이트마다 처음부터 준비하고 있었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>KISA 가이드를 기준으로 Linux·Docker·Kubernetes 점검 항목을 정리하고, 기존 스크립트를 참고해 다시 설계한 뒤 AI 코딩 도구로 구현했습니다.</li><li>점검 도구는 서버를 바꾸지 않는 진단 전용으로 두고, 조치는 별도 스크립트로 분리했습니다. 조치 전 백업, 조치 후 같은 함수로 재점검합니다.</li><li>항목별 판정, 실제 설정값, 조치 방법을 리포트에 함께 남겨 감리 증적으로 쓰게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>공공기관 감리 전 보안 조치와 증적 작성에 사용했습니다.</dd></div>
-          </dl>
-          <div class="tags"><span>Bash</span><span>Kubernetes</span><span>Docker</span><span>KISA</span></div>
         </div>
       </details></li>
       <li class="lg-row" data-co="genon"><details>
@@ -988,11 +792,11 @@ svg text{font-family:var(--mono)}
         </div>
       </details></li>
       <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#13</span><span class="lg-when mono">2026.06 – 09</span><span class="lg-title">공공 사업 Kubernetes 인프라 구성 설계</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#13</span><span class="lg-when mono">2026.06 – 09</span><span class="lg-title">공공 사업 Kubernetes 인프라 구성 검토</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>여러 회사가 참여하는 공공 사업의 공동 인프라 구성도에 AI 플랫폼 요건을 반영해야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>etcd 과반 때문에 컨트롤 플레인은 홀수여야 해서, 서버 4대 중 3대를 컨트롤 플레인으로 배정했습니다.</li><li>NIC 본딩에 필요한 10G 모듈 수량을 산정했습니다.</li></ul></dd></div>
+            <div><dt>한 일</dt><dd><ul><li>etcd 과반 때문에 컨트롤 플레인은 홀수여야 해서, 서버 4대 중 3대를 컨트롤 플레인으로 배정했습니다.</li><li>네트워크 카드 이중 연결(본딩)에 필요한 10G 모듈 수량을 산정했습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>컨트롤 플레인 3 · 워커 1 구성과 10G 본딩 요구사항이 구성도에 반영됐습니다.</dd></div>
           </dl>
           <div class="tags"><span>Kubernetes</span><span>etcd</span><span>Network</span></div>
@@ -1003,7 +807,7 @@ svg text{font-family:var(--mono)}
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>AWS 계정 7개마다 사용자를 따로 두어, 입·퇴사 때마다 7곳을 처리해야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>사내 Keycloak을 IdP로 AWS IAM과 SAML 연동하고 팀별 역할을 매핑했습니다.</li><li>CLI도 임시 자격 증명을 받아 쓰게 하고, 오래 쓰던 접속 키는 정리했습니다.</li></ul></dd></div>
+            <div><dt>한 일</dt><dd><ul><li>사내 Keycloak을 로그인 관리 서버(IdP)로 삼아 AWS IAM과 SAML 연동하고 팀별 역할을 매핑했습니다.</li><li>CLI도 임시 자격 증명을 받아 쓰게 하고, 오래 쓰던 접속 키는 정리했습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>계정 관리가 한곳으로 모였고, 장기 접속 키를 없앴습니다.</dd></div>
           </dl>
           <div class="tags"><span>Keycloak</span><span>SAML 2.0</span><span>AWS IAM</span><span>STS</span></div>
@@ -1013,7 +817,7 @@ svg text{font-family:var(--mono)}
         <summary><span class="lg-no mono">#11</span><span class="lg-when mono">2025.10</span><span class="lg-title">컨테이너 이미지 취약점 제거 및 배포 차단 자동화</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>운영 이미지마다 베이스 이미지가 달랐고 Critical 취약점이 남아 있었습니다.</dd></div>
+            <div><dt>배경</dt><dd>서비스마다 베이스 이미지가 달라 취약점을 같은 기준으로 관리하기 어려웠습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>멀티스테이지 빌드로 베이스 이미지를 표준화하고 불필요한 패키지를 걷어 냈습니다.</li><li>CI 파이프라인에 Trivy 검사를 넣어 기준 미달 이미지는 배포되지 않게 했습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>Critical 취약점이 남은 운영 이미지를 0개로 만들었습니다.</dd></div>
           </dl>
@@ -1024,8 +828,8 @@ svg text{font-family:var(--mono)}
         <summary><span class="lg-no mono">#10</span><span class="lg-when mono">2025.07</span><span class="lg-title">메트릭·로그 통합 모니터링 구축</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>CloudWatch 중심이라 로그 누락과 메트릭 가시성 부족이 반복됐습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>메트릭과 로그를 Prometheus·Loki·Grafana로 모았습니다.</li><li>로그 원본은 S3 수명 주기로 보관 등급을 나눴습니다.</li><li>Launch Template과 Helm으로 수집 에이전트를 자동 설치하고, 알람은 그룹화해 소음을 줄였습니다.</li></ul></dd></div>
+            <div><dt>배경</dt><dd>CloudWatch 중심이라 메트릭과 로그를 한곳에서 보기 어려웠습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>메트릭과 로그를 Prometheus·Loki·Grafana로 모았습니다.</li><li>로그 원본은 S3 수명 주기로 보관 등급을 나눴습니다.</li><li>Launch Template과 Helm으로 수집 에이전트를 자동 설치하고, 같은 알람이 여러 번 오지 않게 묶었습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>새 서버가 모니터링에서 빠지는 일이 없어졌습니다.</dd></div>
           </dl>
           <div class="tags"><span>Prometheus</span><span>Loki</span><span>Grafana</span><span>Alertmanager</span><span>S3</span></div>
@@ -1054,25 +858,25 @@ svg text{font-family:var(--mono)}
         </div>
       </details></li>
       <li class="lg-row" data-co="posicube"><details>
-        <summary><span class="lg-no mono">#07</span><span class="lg-when mono">2023.08 – 24.08</span><span class="lg-title">Rancher 도입 및 멀티 클러스터 통합 관리</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
-        <div class="lg-body">
-          <dl>
-            <div><dt>배경</dt><dd>사내 vanilla Kubernetes 클러스터 10여 개를 한곳에서 관리할 방법이 필요했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>Rancher 서버를 직접 설치하고 클러스터 10여 개를 연결했습니다.</li><li>RBAC을 UI 한곳에서 같은 규칙으로 관리하고, 사용자는 한 화면에서 상태를 보게 했습니다.</li><li>GitOps 도입 전까지는 Rancher API를 FastAPI로 감싸 배포 이미지 변경만 허용하는 API를 만들고, 배포는 이 API로만 하게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>클러스터 관리와 권한이 한곳으로 모였습니다.</dd></div>
-          </dl>
-          <div class="tags"><span>Rancher</span><span>Kubernetes</span><span>RBAC</span><span>FastAPI</span></div>
-        </div>
-      </details></li>
-      <li class="lg-row" data-co="posicube"><details>
-        <summary><span class="lg-no mono">#06</span><span class="lg-when mono">2024.01 – 03</span><span class="lg-title">Teams 챗봇 배포 자동화 (ChatOps)</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#07</span><span class="lg-when mono">2024.01 – 03</span><span class="lg-title">Teams 챗봇 배포 자동화 (ChatOps)</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>개발자가 메신저로 배포를 요청하면 DevOps가 손으로 처리해, 하루 120분이 들고 이력도 남지 않았습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>Teams 챗봇에서 환경과 이미지 태그를 골라 요청하고, 승인 버튼으로 배포하게 했습니다.</li><li>ArgoCD 동기화 결과를 채널에 알려 모두가 같은 상태를 보게 했습니다.</li></ul></dd></div>
+            <div><dt>한 일</dt><dd><ul><li>Teams 챗봇에서 환경과 이미지 태그를 골라 요청하고, 승인 버튼으로 배포하게 했습니다.</li><li>ArgoCD 동기화 결과를 채널에 알리게 했습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>하루 배포 처리 시간이 120분에서 10분으로 줄었고, 배포 이력이 남게 됐습니다.</dd></div>
           </dl>
           <div class="tags"><span>Node.js</span><span>Azure Bot Service</span><span>ArgoCD</span><span>Helm</span></div>
+        </div>
+      </details></li>
+      <li class="lg-row" data-co="posicube"><details>
+        <summary><span class="lg-no mono">#06</span><span class="lg-when mono">2023.08 – 24.08</span><span class="lg-title">Rancher 도입 및 멀티 클러스터 통합 관리</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <div class="lg-body">
+          <dl>
+            <div><dt>배경</dt><dd>사내 vanilla Kubernetes 클러스터 10여 개를 한곳에서 관리할 방법이 필요했습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>Rancher 서버를 직접 설치하고 클러스터 10여 개를 연결했습니다.</li><li>RBAC을 UI 한곳에서 같은 규칙으로 관리하고, 사용자는 한 화면에서 상태를 보게 했습니다.</li><li>GitOps 도입 전에는 Rancher API를 FastAPI로 감싼 배포 API를 만들었습니다. 이 API는 이미지 변경만 허용해, 배포는 모두 이 길로만 하게 했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>클러스터 관리와 권한이 한곳으로 모였습니다.</dd></div>
+          </dl>
+          <div class="tags"><span>Rancher</span><span>Kubernetes</span><span>RBAC</span><span>FastAPI</span></div>
         </div>
       </details></li>
       <li class="lg-row" data-co="posicube"><details>
@@ -1125,7 +929,7 @@ svg text{font-family:var(--mono)}
           <dl>
             <div><dt>배경</dt><dd>고객 요청마다 5개 클라우드 콘솔에서 손으로 환경을 만들어 건당 50분이 걸렸습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>클라우드별 Terraform을 Jenkins 파이프라인 하나로 묶었습니다.</li><li>배포 직후 스모크 테스트가 돌게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>고객 환경 제공 시간이 50분에서 10분으로 줄었습니다.</dd></div>
+            <div><dt>결과</dt><dd>고객 환경 구축 시간이 50분에서 10분으로 줄었습니다.</dd></div>
           </dl>
           <div class="tags"><span>Terraform</span><span>Jenkins</span><span>AWS</span><span>Azure</span><span>GCP</span></div>
         </div>
@@ -1135,10 +939,59 @@ svg text{font-family:var(--mono)}
   </div>
 </section>
 
+<section id="incident" aria-labelledby="inc-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="장애"><use href="#i-incident"/></svg>04 · Incident</div>
+      <h2 class="sec-title" id="inc-title">장애 대응</h2>
+      <p class="sec-lede">증상만 가라앉히고 끝내지 않습니다. 로그와 기록으로 원인을 확인한 뒤 같은 장애가 다시 나지 않게 고칩니다.</p>
+    </div>
+    <div class="incs">
+      <article class="inc wide spot rv" aria-labelledby="i1">
+        <div class="eyebrow">Database · Hardware <span>현 직장</span></div>
+        <h3 id="i1">PostgreSQL 반복 재시작 원인 분석 및 복구</h3>
+        <ol class="flow h" aria-label="장애 파악과 조치 순서"><li><span class="n">01</span><span class="t">재현으로 범위 좁힘</span></li><li><span class="n">02</span><span class="t">손상 행 추적<small>ctid · TOAST</small></span></li><li><span class="n">03</span><span class="t">하드웨어 이벤트 로그·부팅 기록 대조</span></li><li><span class="n">04</span><span class="t">강제 전원 차단 확정</span></li><li><span class="n">05</span><span class="t">재적재 안내</span></li><li><span class="n">06</span><span class="t">복제본 재구성<small>3 → 2 → 3</small></span></li><li class="end"><span class="n">07</span><span class="t">타임아웃 60초</span></li></ol>
+        <dl class="inc-rows">
+          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>Kubernetes 오퍼레이터(CloudNativePG)로 운영하던 PostgreSQL이 약 800만 행 테이블을 조회할 때마다 재시작됐고, 다음 날에는 복제본이 200회 넘게 재시작하며 주 서버(primary)가 계속 바뀌었습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>로그의 손상 행을 물리 위치(<code>ctid</code>)로 따라가 큰 값을 따로 저장하는 영역(TOAST)의 첫 조각이 빠진 것을 찾았습니다. 하드웨어 이벤트 로그(IPMI SEL)의 강제 전원 차단 기록(<code>S5: entered by override</code>)과 journalctl 부팅 이력을 대조해 <strong>디스크·OS 문제가 아니라 예기치 않은 전원 차단</strong>임을 확정했습니다. 쓰기 도중 전원이 끊겨 TOAST 데이터가 손상된 것으로 판단했고, 반복된 재시작과 주 서버 전환으로 복제본의 WAL 타임라인이 어긋났습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>손상된 테이블은 재적재로 복구하도록 안내했고, 복제본은 Pod·PVC·PV를 지운 뒤 클러스터를 3 → 2 → 3으로 조정해 복제를 다시 구성했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>복제본 재시작이 반복되지 않도록, 5초로 짧게 잡혀 있던 <code>wal_sender_timeout</code> · <code>wal_receiver_timeout</code>을 CloudNativePG GitHub 이슈를 근거로 PostgreSQL 기본값인 60초로 변경했습니다.</dd></div>
+        </dl>
+        <div class="tags"><span>CloudNativePG</span><span>PostgreSQL</span><span>IPMI SEL</span><span>journalctl</span></div>
+      </article>
+
+      <article class="inc spot rv" aria-labelledby="i2">
+        <div class="eyebrow">Release · Validation <span>현 직장</span></div>
+        <h3 id="i2">설치 패키지 이미지 누락 검출 및 검증 강화</h3>
+        <dl class="inc-rows">
+          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>검증을 통과한 패키지에 Calico 이미지만 있고 쿠버네티스 시스템 이미지가 전부 빠져 있었습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>검증이 이미지 개수만 세고 있었습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>이미지 묶음(tar) 안의 목록 파일(<code>manifest.json</code>)까지 열어 이미지 이름과 레이어를 확인하는 방식으로 검증을 다시 설계하고, AI 코딩 도구로 반영했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>압축 전과 후에 검증이 자동으로 돌아서, 잘못된 패키지는 현장에 반입되기 전에 막힙니다.</dd></div>
+        </dl>
+        <div class="tags"><span>OCI</span><span>manifest.json</span><span>Claude Code</span></div>
+      </article>
+
+      <article class="inc spot rv d1" aria-labelledby="i3">
+        <div class="eyebrow">Install <span>현 직장 · 아키텍처가 다른 사이트</span></div>
+        <h3 id="i3">아키텍처 불일치 사전 차단 및 설치 안정화</h3>
+        <dl class="inc-rows">
+          <div><dt><svg class="ic" role="img" aria-label="증상"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>여러 설치 단계가 노드를 바꾼 뒤에야 <code>Exec format error</code>로 실패했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="원인"><use href="#i-cause"/></svg><span>원인</span></dt><dd>설치를 시작하기 전에 서버와 패키지의 아키텍처가 맞는지 확인하지 않았습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="해결"><use href="#i-fix"/></svg><span>해결</span></dt><dd>사전 점검에서 아키텍처가 다르면 아무것도 바꾸기 전에 중단하도록 설계하고, AI 코딩 도구로 반영했습니다.</dd></div>
+          <div><dt><svg class="ic" role="img" aria-label="재발 방지"><use href="#i-prevent"/></svg><span>재발 방지</span></dt><dd>설치 단계를 몇 번 다시 실행해도 결과가 같게(멱등) 만들고, 실패하면 이어서 실행할 명령을 그대로 출력하게 했습니다.</dd></div>
+        </dl>
+        <div class="tags"><span>Bash</span><span>kubeadm</span><span>Claude Code</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ STACK -->
 <section id="stack" aria-labelledby="stack-title">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sec-idx"><svg class="ic" role="img" aria-label="기술"><use href="#i-stack"/></svg>06 · Stack</div>
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="기술"><use href="#i-stack"/></svg>05 · Stack</div>
       <h2 class="sec-title" id="stack-title">기술 스택</h2>
     </div>
     <div class="skills">
@@ -1157,7 +1010,7 @@ svg text{font-family:var(--mono)}
 <section id="certs" aria-labelledby="certs-title">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sec-idx"><svg class="ic" role="img" aria-label="자격"><use href="#i-certs"/></svg>07 · Certs</div>
+      <div class="sec-idx"><svg class="ic" role="img" aria-label="자격"><use href="#i-certs"/></svg>06 · Certs</div>
       <h2 class="sec-title" id="certs-title">자격 · 학력</h2>
     </div>
     <div class="certs rv">
@@ -1189,8 +1042,8 @@ svg text{font-family:var(--mono)}
   var root=document.documentElement,tb=document.querySelector('.theme-toggle');
   var mq=window.matchMedia('(prefers-color-scheme: light)');
   function cur(){return root.getAttribute('data-theme')||(mq.matches?'light':'dark')}
-  function sync(){var c=cur();tb.setAttribute('aria-label',c==='light'?'다크 모드로 전환':'라이트 모드로 전환');tb.setAttribute('aria-pressed',c==='light'?'true':'false');
-    var m=document.querySelectorAll('meta[name="theme-color"]');[].forEach.call(m,function(x){x.setAttribute('content',c==='light'?'#f6f3ec':'#0e0d0c')})}
+  function sync(){var c=cur();tb.setAttribute('aria-label',c==='light'?'다크 모드로 전환':'라이트 모드로 전환');
+    var m=document.querySelectorAll('meta[name="theme-color"]');[].forEach.call(m,function(x){x.setAttribute('content',c==='light'?'#f7f8f9':'#0b0c0e')})}
   if(tb){tb.addEventListener('click',function(){var n=cur()==='light'?'dark':'light';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}sync()});sync();
     if(mq.addEventListener)mq.addEventListener('change',function(){if(!root.getAttribute('data-theme'))sync()})}
   // active nav link
