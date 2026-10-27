@@ -265,7 +265,6 @@
           <dl>
             <div><dt>배경</dt><dd>공공기관 IDC와 NCP 공공 클라우드에 개발망·운영망을 구축하는 작업이었습니다. 현장에 머물 수 있는 시간이 제한돼 있어, 들어가기 전에 작업 범위와 시간을 확정해야 했습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>사전 체크리스트와 작업계획서로 범위와 시간을 확정하고, 현장에서는 helmfile로 구축했습니다.</li><li>반입한 버전과 이미지 목록, 데이터가 저장되는 위치(PV)를 시트로 정리했습니다.</li><li>두 망의 플랫폼 버전이 어긋나지 않도록 같은 버전으로 다시 구축하는 가이드와, GPU 한 장을 MIG로 7개 인스턴스로 나눠 서비스별로 할당하는 가이드를 만들었습니다.</li><li>납품 구성에 포함된 Vault·ArangoDB가 상용 이용을 제한하는 BSL 라이선스라는 점을 발견해 검토를 요청했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>개발망 구축을 마쳤고, 설치에서 빠진 워크플로 엔진(Temporal)은 원격으로 안내해 복구했습니다.</dd></div>
           </dl>
           <div class="tags"><span>Kubernetes</span><span>helmfile</span><span>NCP</span><span>NVIDIA MIG</span><span>Temporal</span></div>
         </div>
@@ -342,7 +341,6 @@
           <dl>
             <div><dt>배경</dt><dd>사내에 직접 구축한(vanilla) Kubernetes 클러스터 10여 개를 한곳에서 관리할 방법이 필요했습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>Rancher 서버를 직접 설치하고 클러스터 10여 개를 연결했습니다.</li><li>권한(RBAC)은 Rancher 한곳에서 같은 기준으로 관리하고, 사용자는 한 화면에서 각 클러스터 상태를 보게 했습니다.</li><li>Rancher 권한을 그대로 주면 배포 외 작업까지 할 수 있어서, Rancher API를 FastAPI로 감싸 이미지 변경만 허용하는 배포 API를 만들었습니다. GitOps를 도입하기 전까지 배포는 이 API로 처리했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>클러스터 관리와 권한이 한곳으로 모였습니다.</dd></div>
           </dl>
           <div class="tags"><span>Rancher</span><span>Kubernetes</span><span>RBAC</span><span>FastAPI</span></div>
         </div>
@@ -408,7 +406,7 @@
           <dl>
             <div><dt>배경</dt><dd>고객 요청이 들어올 때마다 5개 클라우드의 콘솔에서 환경을 손으로 만들고, 구축 후 테스트도 손으로 했습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>AWS, Azure, Linode, DigitalOcean, Vultr용 Terraform 코드를 Jenkins 파이프라인 하나로 묶었습니다.</li><li>Terraform이 만든 결과값을 Python 테스트에 넘겨, 구축 직후 자동으로 검증하게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>고객 환경 구축이 약 4시간에서 약 1시간으로 줄었고, Jenkins에서 클라우드와 사양을 고르면 구축과 검증 결과까지 한 번에 나오게 됐습니다.</dd></div>
+            <div><dt>결과</dt><dd>고객 환경 구축이 약 4시간에서 약 1시간으로 줄었습니다.</dd></div>
           </dl>
           <div class="tags"><span>Terraform</span><span>Jenkins</span><span>Python</span><span>AWS</span><span>Azure</span></div>
         </div>
