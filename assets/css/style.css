@@ -509,3 +509,4 @@ svg text{font-family:var(--mono)}
 .inc-more > summary::before{content:"+ "}
 .inc-more[open] > summary::before{content:"− "}
 @media print{.inc-more > summary{display:none}}
+.metric.wide .num{font-size:clamp(28px,2.8vw,40px)}
