@@ -92,23 +92,23 @@
     <p class="prompt"><span><span class="ok">●</span> Cloud since 2020 · Kubernetes since 2023</span></p>
     <h1 id="hero-title">지병훈</h1>
     <div class="hero-sub">
-      <p class="role">DevOps<span class="slash">/</span>Platform Engineer<small>6년 차 · EKS · AKS · kubeadm(폐쇄망) · Rancher</small></p>
+      <p class="role">DevOps<span class="slash">/</span>Platform Engineer<small>6년 차 · AWS EKS · Kubernetes · CI/CD · Terraform</small></p>
       <div>
         <p class="thesis">바꾸기 전에 <span class="hl">복구할 길</span>부터 만들고, 반복되는 일은 누가 해도 같은 결과가 나오는 <span class="hl">절차와 도구</span>로 남깁니다.</p>
         <div class="hero-meta">
           <span class="chip">AWS DevOps Pro · SAA · ICA</span>
-          <span class="chip">Rancher · ArgoCD · Terraform</span>
-          <span class="chip">증권사·공공기관 폐쇄망 · 망분리 핀테크 · SK 계열사 운영 클러스터</span>
+          <span class="chip">ArgoCD · Jenkins · Terraform</span>
+          <span class="chip">금융·공공 폐쇄망 · 핀테크 AWS · SK 계열 EKS</span>
         </div>
       </div>
     </div>
 
     <dl class="metrics" aria-label="주요 성과">
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-upgrade"/></svg>10<small>여 개</small></dt><dd class="lbl">운영 EKS 무중단 업그레이드<span class="ctx">1.29 → 1.32 · 파트 표준 절차서</span></dd></div>
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-airgap"/></svg>3<small>곳</small></dt><dd class="lbl">증권사·공공기관 폐쇄망 Kubernetes<span class="ctx">같은 빌드 · 같은 절차로 구축</span></dd></div>
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clock"/></svg>1<small>시간</small><span class="arr">→</span>3<small>분</small></dt><dd class="lbl">계정 발급 · MFA 7개 → 1개<span class="ctx">Keycloak SSO · AWS 7개 계정</span></dd></div>
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clusters"/></svg>10<small>여 개</small></dt><dd class="lbl">Rancher로 연결한 클러스터<span class="ctx">vanilla Kubernetes · RBAC 한 기준</span></dd></div>
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-lock"/></svg>0<small>건</small></dt><dd class="lbl">Critical·High 취약점 이미지 등록<span class="ctx">Trivy 게이트 · Non-root 실행</span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-upgrade"/></svg>10<small>여 개</small></dt><dd class="lbl">운영 EKS 무중단 업그레이드<span class="ctx">1.29 → 1.32 · 파트 표준 절차서 <a class="mlink" href="#p10" aria-label="관련 프로젝트 보기: 운영 EKS 업그레이드">#10 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-airgap"/></svg>3<small>곳</small></dt><dd class="lbl">증권사·공공기관 폐쇄망 Kubernetes<span class="ctx">같은 빌드 · 같은 절차로 구축 <a class="mlink" href="#p16" aria-label="관련 프로젝트 보기: 폐쇄망 빌드 플랫폼">#16 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clock"/></svg>1<small>시간</small><span class="arr">→</span>3<small>분</small></dt><dd class="lbl">계정 발급 · MFA 7개 → 1개<span class="ctx">Keycloak SSO · AWS 7개 계정 <a class="mlink" href="#p13" aria-label="관련 프로젝트 보기: Keycloak SSO">#13 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clusters"/></svg>2~3<small>일</small><span class="arr">→</span>1<small>일</small></dt><dd class="lbl">신규 고객사 환경 구성<span class="ctx">Terraform 모듈 · 고객사 4곳 <a class="mlink" href="#p06" aria-label="관련 프로젝트 보기: Terraform 모듈">#06 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-lock"/></svg>0<small>건</small></dt><dd class="lbl">Critical·High 취약점 이미지 등록<span class="ctx">Trivy 게이트 · Non-root 실행 <a class="mlink" href="#p12" aria-label="관련 프로젝트 보기: 이미지 보안 게이트">#12 →</a></span></dd></div>
     </dl>
     <p class="scroll-hint" aria-hidden="true"><i></i>scroll</p>
   </div>
@@ -216,7 +216,7 @@
       <div class="lg-bar"><p class="lg-cmd mono"><span class="ok">$</span> ls -lt ~/projects <span class="lg-count">total 18</span></p><div class="lg-fs" role="group" aria-label="회사별 필터"><button type="button" class="lg-f on" data-f="all" aria-pressed="true">All <span>18</span></button><button type="button" class="lg-f" data-f="genon" aria-pressed="false">GenOn <span>5</span></button><button type="button" class="lg-f" data-f="apthefin" aria-pressed="false">AP Thefin <span>3</span></button><button type="button" class="lg-f" data-f="ats" aria-pressed="false">ATS <span>2</span></button><button type="button" class="lg-f" data-f="posicube" aria-pressed="false">Posicube <span>3</span></button><button type="button" class="lg-f" data-f="cloudbric" aria-pressed="false">Cloudbric <span>5</span></button></div></div>
       <div class="lg-head mono" aria-hidden="true"><span>No</span><span>Period</span><span>Project</span><span>Company</span><span></span></div>
       <ol class="lg-list">
-      <li class="lg-row" data-co="genon"><details>
+      <li class="lg-row" id="p18" data-co="genon"><details>
         <summary><span class="lg-no mono">#18</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">인프라 위키·온보딩 체계와 사내 자산 관리</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -227,7 +227,7 @@
           <div class="tags"><span>Wiki.js</span><span>Helm</span><span>git</span><span>Claude Code</span><span>NetBox</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="genon"><details>
+      <li class="lg-row" id="p17" data-co="genon"><details>
         <summary><span class="lg-no mono">#17</span><span class="lg-when mono">2026.08</span><span class="lg-title">감리 대응 보안 점검 도구</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -238,8 +238,8 @@
           <div class="tags"><span>Bash</span><span>Kubernetes</span><span>Docker</span><span>KISA</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="genon"><details>
-        <summary><span class="lg-no mono">#16</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">폐쇄망 설치 패키지 빌드 플랫폼과 구축 절차 표준화</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p16" data-co="genon"><details>
+        <summary><span class="lg-no mono">#16</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">폐쇄망 설치 패키지 빌드 플랫폼과 구축 절차 표준화<em class="lg-pin">대표</em></span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>인터넷이 차단된 고객사 서버에 플랫폼을 설치하려면 OS 패키지, 실행 파일, 컨테이너 이미지, Helm 차트를 밖에서 모두 챙겨 USB로 반입해야 합니다. 엔지니어마다 로컬에서 이미지·설치 파일을 각자 방식으로 수동 다운로드해 패키지를 만들어, 결과물이 사람마다 달랐고 이미지가 하나라도 빠지면 다시 반입해 재설치해야 했습니다.</dd></div>
@@ -249,7 +249,7 @@
           <div class="tags"><span>Python</span><span>Flask</span><span>Bash</span><span>kubeadm</span><span>containerd</span><span>Calico</span><span>skopeo</span><span>regctl</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="genon"><details>
+      <li class="lg-row" id="p15" data-co="genon"><details>
         <summary><span class="lg-no mono">#15</span><span class="lg-when mono">2026.06 – 09</span><span class="lg-title">증권사 고가용성 Kubernetes 클러스터 구축</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -260,7 +260,7 @@
           <div class="tags"><span>Kubernetes</span><span>kubeadm</span><span>etcd</span><span>HAMi</span><span>GPU</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="genon"><details>
+      <li class="lg-row" id="p14" data-co="genon"><details>
         <summary><span class="lg-no mono">#14</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">공공기관 구축 및 기술지원</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -271,8 +271,8 @@
           <div class="tags"><span>Kubernetes</span><span>helmfile</span><span>NCP</span><span>NVIDIA MIG</span><span>Temporal</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="apthefin"><details>
-        <summary><span class="lg-no mono">#13</span><span class="lg-when mono">2025.06 – 10</span><span class="lg-title">AWS 멀티 계정 로그인 통합 (Terraform → Keycloak SSO)</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p13" data-co="apthefin"><details>
+        <summary><span class="lg-no mono">#13</span><span class="lg-when mono">2025.06 – 10</span><span class="lg-title">AWS 멀티 계정 로그인 통합 (Terraform → Keycloak SSO)<em class="lg-pin">대표</em></span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>입·퇴사자가 생길 때마다 AWS 7개, ArgoCD 2개, Grafana 2개, 모두 11개 계정을 손으로 만들거나 지우고 안내해야 했고, 약 1시간이 걸렸습니다. 사용자는 계정마다 MFA를 따로 등록해야 했습니다. AWS Identity Center는 MSP 조직(Organization) 쪽 제약과 외부 노출 문제 때문에, 내부망 전용 로그인으로 쓸 수 없었습니다.</dd></div>
@@ -282,7 +282,7 @@
           <div class="tags"><span>Keycloak</span><span>SAML 2.0</span><span>OIDC</span><span>AWS IAM</span><span>STS</span><span>saml2aws</span><span>Terraform</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="apthefin"><details>
+      <li class="lg-row" id="p12" data-co="apthefin"><details>
         <summary><span class="lg-no mono">#12</span><span class="lg-when mono">2025.10</span><span class="lg-title">컨테이너 이미지 보안 기준과 배포 게이트</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -293,7 +293,7 @@
           <div class="tags"><span>Docker</span><span>Alpine</span><span>Trivy</span><span>AWS CodeBuild</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="apthefin"><details>
+      <li class="lg-row" id="p11" data-co="apthefin"><details>
         <summary><span class="lg-no mono">#11</span><span class="lg-when mono">2025.07</span><span class="lg-title">Grafana 스택 기반 통합 모니터링</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -304,8 +304,8 @@
           <div class="tags"><span>Prometheus</span><span>Loki</span><span>Promtail</span><span>Grafana</span><span>Alertmanager</span><span>S3</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="ats"><details>
-        <summary><span class="lg-no mono">#10</span><span class="lg-when mono">2025.03 – 04</span><span class="lg-title">운영 EKS 10여 개 무중단 버전 업그레이드 (1.29 → 1.32)</span><span class="lg-co mono">ATS</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p10" data-co="ats"><details>
+        <summary><span class="lg-no mono">#10</span><span class="lg-when mono">2025.03 – 04</span><span class="lg-title">운영 EKS 10여 개 무중단 버전 업그레이드 (1.29 → 1.32)<em class="lg-pin">대표</em></span><span class="lg-co mono">ATS</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>SK 계열사의 운영 EKS 클러스터 10여 개가 1.29에 머물러 있었습니다. 서비스 중단은 허용되지 않았고, EKS는 한 번 올린 버전을 되돌릴 수 없습니다.</dd></div>
@@ -315,7 +315,7 @@
           <div class="tags"><span>AWS EKS</span><span>eksctl</span><span>Velero</span><span>Helm</span><span>Grafana</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="ats"><details>
+      <li class="lg-row" id="p09" data-co="ats"><details>
         <summary><span class="lg-no mono">#09</span><span class="lg-when mono">2024.11 – 25.02</span><span class="lg-title">EKS·AKS 클러스터 백업 및 알람 구성</span><span class="lg-co mono">ATS</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -326,7 +326,7 @@
           <div class="tags"><span>Velero</span><span>Prometheus</span><span>Grafana</span><span>EKS</span><span>AKS</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="posicube"><details>
+      <li class="lg-row" id="p08" data-co="posicube"><details>
         <summary><span class="lg-no mono">#08</span><span class="lg-when mono">2024.01 – 03</span><span class="lg-title">ChatOps와 GitOps를 묶은 배포 절차</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -337,7 +337,7 @@
           <div class="tags"><span>Node.js</span><span>Teams Bot</span><span>ArgoCD</span><span>Helm</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="posicube"><details>
+      <li class="lg-row" id="p07" data-co="posicube"><details>
         <summary><span class="lg-no mono">#07</span><span class="lg-when mono">2023.08 – 24.08</span><span class="lg-title">Rancher 도입 및 멀티 클러스터 통합 관리</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -348,8 +348,8 @@
           <div class="tags"><span>Rancher</span><span>Kubernetes</span><span>RBAC</span><span>FastAPI</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="posicube"><details>
-        <summary><span class="lg-no mono">#06</span><span class="lg-when mono">2023.08 – 12</span><span class="lg-title">고객사별 Private AKS 인프라 Terraform 모듈화</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p06" data-co="posicube"><details>
+        <summary><span class="lg-no mono">#06</span><span class="lg-when mono">2023.08 – 12</span><span class="lg-title">고객사별 Private AKS 인프라 Terraform 모듈화<em class="lg-pin">대표</em></span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
             <div><dt>배경</dt><dd>생성형 AI 챗봇 솔루션을 고객사마다 격리된 Azure 환경으로 납품해야 해서, 같은 구성을 고객사마다 반복해 만들어야 했습니다.</dd></div>
@@ -359,7 +359,7 @@
           <div class="tags"><span>Azure AKS</span><span>Terraform</span><span>Fluent Bit</span><span>Elasticsearch</span><span>Grafana</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="cloudbric"><details>
+      <li class="lg-row" id="p05" data-co="cloudbric"><details>
         <summary><span class="lg-no mono">#05</span><span class="lg-when mono">2022.05 – 08</span><span class="lg-title">고객 도메인 등록 자동화</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -370,7 +370,7 @@
           <div class="tags"><span>Python</span><span>Google Sheets API</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="cloudbric"><details>
+      <li class="lg-row" id="p04" data-co="cloudbric"><details>
         <summary><span class="lg-no mono">#04</span><span class="lg-when mono">2021.10 – 22.04</span><span class="lg-title">AWS WAF 보안 규칙 상품 개발 및 Marketplace 출시</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -381,7 +381,7 @@
           <div class="tags"><span>AWS WAF</span><span>OWASP</span><span>Regex</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="cloudbric"><details>
+      <li class="lg-row" id="p03" data-co="cloudbric"><details>
         <summary><span class="lg-no mono">#03</span><span class="lg-when mono">2021.02 – 08</span><span class="lg-title">AWS WAF 관리형 서비스(WMS) 인프라 설계 및 운영</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -392,7 +392,7 @@
           <div class="tags"><span>AWS</span><span>Route 53</span><span>Elasticsearch</span><span>Logstash</span><span>Python</span><span>Boto3</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="cloudbric"><details>
+      <li class="lg-row" id="p02" data-co="cloudbric"><details>
         <summary><span class="lg-no mono">#02</span><span class="lg-when mono">2021.01 – 02</span><span class="lg-title">WAF 장애 대응 Slack 챗봇</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -403,7 +403,7 @@
           <div class="tags"><span>Python</span><span>Slack Bot</span><span>Celery</span></div>
         </div>
       </details></li>
-      <li class="lg-row" data-co="cloudbric"><details>
+      <li class="lg-row" id="p01" data-co="cloudbric"><details>
         <summary><span class="lg-no mono">#01</span><span class="lg-when mono">2021.01 – 02</span><span class="lg-title">5개 클라우드 고객 환경 구축 자동화</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
@@ -431,12 +431,14 @@
         <div class="eyebrow">Database · Hardware <span>고객사 PoC 기술지원</span></div>
         <h3 id="i1">PostgreSQL 반복 재시작 원인 분석 및 복구</h3>
         <ol class="flow h" aria-label="장애 파악과 조치 순서"><li><span class="n">01</span><span class="t">재현으로 범위 좁힘</span></li><li><span class="n">02</span><span class="t">손상 행 추적<small>ctid · TOAST</small></span></li><li class="end"><span class="n">03</span><span class="t">하드웨어 로그·부팅 기록 대조<small>강제 전원 차단 확정</small></span></li><li><span class="n">04</span><span class="t">복제본 재구성<small>3 → 2 → 3</small></span></li></ol>
+        <details class="inc-more"><summary>분석 과정 보기</summary>
         <dl class="inc-rows">
           <div><dt><svg class="ic" aria-hidden="true"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>고객사 PoC 환경에서 Kubernetes 오퍼레이터(CloudNativePG)로 운영하던 PostgreSQL이 약 800만 행 테이블을 조회할 때마다 재시작됐습니다. 다음 날에는 복제본이 200회 넘게 재시작하면서 주 서버(primary)가 계속 바뀌었습니다.</dd></div>
           <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cause"/></svg><span>원인</span></dt><dd>로그에 찍힌 손상 행을 물리 위치(<code>ctid</code>)로 따라가 보니, 큰 값을 따로 저장하는 영역(TOAST)의 첫 조각이 빠져 있었습니다. 서버 하드웨어 로그(IPMI SEL)의 강제 전원 차단 기록과 부팅 이력(journalctl)을 대조해, 원인이 <strong>예기치 않은 전원 차단</strong>임을 확정했습니다. 데이터를 쓰는 도중 전원이 끊겨 손상됐고, 재시작과 주 서버 전환이 반복되면서 복제본의 복제 이력(WAL 타임라인)도 어긋났습니다.</dd></div>
           <div><dt><svg class="ic" aria-hidden="true"><use href="#i-fix"/></svg><span>해결</span></dt><dd>손상된 테이블은 원본 데이터를 다시 적재해 복구하도록 안내했습니다. 복제본은 인스턴스 수를 3 → 2 → 3으로 조정해 복제를 처음부터 다시 구성했습니다.</dd></div>
           <div><dt><svg class="ic" aria-hidden="true"><use href="#i-prevent"/></svg><span>추가 조치</span></dt><dd>재시작의 직접 원인은 아니었지만, 5초로 짧게 잡혀 있던 복제 송수신 타임아웃(<code>wal_sender_timeout</code> · <code>wal_receiver_timeout</code>)을 CloudNativePG GitHub 이슈를 근거로 PostgreSQL 기본값인 60초로 되돌렸습니다.</dd></div>
         </dl>
+        </details>
         <div class="tags"><span>CloudNativePG</span><span>PostgreSQL</span><span>IPMI SEL</span><span>journalctl</span></div>
       </article>
 
