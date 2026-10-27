@@ -15,7 +15,7 @@
   // active nav link
   var links={};[].forEach.call(document.querySelectorAll('.nav ul a'),function(a){links[a.getAttribute('href').slice(1)]=a});
   if('IntersectionObserver' in window){
-    var so=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){for(var k in links)links[k].classList.toggle('active',k===e.target.id)}})},{rootMargin:'-45% 0px -50% 0px'});
+    var so=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){for(var k in links)links[k].classList.toggle('active',k===e.target.id);var a=links[e.target.id],ul=a&&a.parentNode.parentNode;if(ul&&ul.scrollWidth>ul.clientWidth)ul.scrollTo({left:a.offsetLeft-ul.clientWidth/2+a.offsetWidth/2,behavior:'smooth'})}})},{rootMargin:'-45% 0px -50% 0px'});
     Object.keys(links).forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el)});
   }
   // spotlight
