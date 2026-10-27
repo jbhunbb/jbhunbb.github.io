@@ -169,9 +169,8 @@
         <div><h3>AP Thefin</h3><p class="role">망분리 대출비교 핀테크 · 인프라 1인 운영</p><p class="ctx">AWS 7개 계정 · EKS · RDS · VPN</p></div>
         <ul>
           <li>Keycloak SSO 도입: 입·퇴사자 계정 생성·안내 <strong>1시간 → 3분</strong>, 사용자당 MFA 7개 → 1개</li>
-          <li>베이스 이미지 표준화와 Trivy 배포 게이트: Critical·High가 1건이라도 있으면 레지스트리 등록을 막고, 모든 컨테이너를 전용 사용자(Non-Root)로 실행</li>
+          <li>베이스 이미지 표준화와 CodeBuild CI 파이프라인의 Trivy 게이트: Critical·High가 1건이라도 있으면 레지스트리 등록을 막고, 모든 컨테이너를 전용 사용자(Non-Root)로 실행. 전환 가이드는 개발팀과 공유</li>
           <li>Prometheus·Loki·Grafana로 로그·메트릭·알람을 한곳에 모으고, EC2는 서비스 디스커버리로 자동 등록</li>
-          <li>CodeBuild CI 파이프라인에 Trivy 게이트를 넣고, Non-root 전환 가이드를 개발팀과 공유</li>
         </ul>
       </li>
       <li class="tl-item rv">
@@ -188,8 +187,8 @@
         <ul>
           <li>ChatOps(Teams 챗봇)와 ArgoCD로 개발자 셀프서비스 배포를 도입하고, 스테이징·운영 배포에 DevOps 검토 단계를 넣음</li>
           <li>Rancher를 직접 설치해 사내 클러스터 <strong>10여 개</strong>를 연결하고 권한(RBAC)을 한곳에서 관리</li>
-          <li>고객사별로 격리된 Azure 환경(Private AKS)을 Terraform 모듈로 만들어 고객사 4곳에 적용</li>
-          <li>솔루션 Helm 차트 작성·배포. Terraform 모듈로 신규 고객사 환경 구성 2~3일 → 1일</li>
+          <li>고객사별로 격리된 Azure 환경(Private AKS)을 Terraform 모듈로 만들어 신규 고객사 환경 구성 <strong>2~3일 → 1일</strong>, 고객사 4곳에 적용</li>
+          <li>솔루션 Helm 차트 작성·배포</li>
         </ul>
       </li>
       <li class="tl-item rv">
@@ -197,7 +196,7 @@
         <div><h3>Cloudbric</h3><p class="role">클라우드 웹방화벽(WAF) SaaS</p><p class="ctx">5개 클라우드에 고객 환경 구축</p></div>
         <ul>
           <li>AWS WAF용 보안 규칙 상품(관리형 규칙 그룹)을 Marketplace에 출시</li>
-          <li>5개 클라우드 고객 환경 구축을 Jenkins 파이프라인 하나로 묶고, 구축 직후 Python 테스트로 자동 검증. 구축 자동화는 팀에 공유</li>
+          <li>5개 클라우드 고객 환경 구축을 Jenkins 파이프라인 하나로 묶고, 구축 직후 Python 테스트로 자동 검증. 고객 환경 구축 반나절 → 약 1시간</li>
           <li>자사 WAF 관리형 서비스 다중 AZ 고가용성 구성, CSAP 대응 보안 설정·증적 작성, 고객 도메인 등록 자동화</li>
         </ul>
       </li>
@@ -448,7 +447,7 @@
           <div><dt><svg class="ic" aria-hidden="true"><use href="#i-prevent"/></svg><span>복구 경로</span></dt><dd>EKS·AKS에 Velero로 볼륨까지 포함한 주기 백업을 돌리고 복구 테스트를 정기적으로 했습니다. 되돌릴 수 없는 EKS 업그레이드는 이 백업으로 새 클러스터에 복원하는 경로를 먼저 확보한 뒤 진행했습니다.</dd></div>
           <div><dt><svg class="ic" aria-hidden="true"><use href="#i-symptom"/></svg><span>알람</span></dt><dd>컨테이너 재시작, 자원 과다 사용, 수집 실패를 알람 규칙으로 두고 Alertmanager로 묶어 중복을 걸러 Critical만 Teams로 보냈습니다. 새 EC2는 서비스 디스커버리로 자동 등록돼 모니터링에서 빠지지 않습니다.</dd></div>
           <div><dt><svg class="ic" aria-hidden="true"><use href="#i-fix"/></svg><span>실패해도 안전</span></dt><dd>폐쇄망 설치 스크립트는 어느 단계를 다시 실행해도 결과가 같고, 실패하면 이어서 실행할 명령을 알려 줍니다. 서버와 패키지의 CPU 아키텍처가 다르면 아무것도 바꾸기 전에 멈춥니다.</dd></div>
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cause"/></svg><span>문서</span></dt><dd>증상별 장애 대응 문서를 팀 위키에 두어, 같은 증상에는 같은 순서로 확인하고 대응합니다.</dd></div>
+          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cause"/></svg><span>문서</span></dt><dd>증상별 장애 대응 문서를 팀 위키에 모아, 장애 때 팀이 한곳에서 찾아보게 했습니다.</dd></div>
         </dl>
         <div class="tags"><span>Velero</span><span>Alertmanager</span><span>Prometheus</span><span>Wiki.js</span></div>
       </article>
