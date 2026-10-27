@@ -107,7 +107,7 @@
       <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-upgrade"/></svg>10<small>여 개</small></dt><dd class="lbl">운영 EKS 무중단 업그레이드<span class="ctx">1.29 → 1.32 · 파트 표준 절차서 <a class="mlink" href="#p10" aria-label="관련 프로젝트 보기: 운영 EKS 업그레이드">#10 →</a></span></dd></div>
       <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-airgap"/></svg>3<small>곳</small></dt><dd class="lbl">증권사·공공기관 폐쇄망 Kubernetes<span class="ctx">같은 빌드 · 같은 절차로 구축 <a class="mlink" href="#p16" aria-label="관련 프로젝트 보기: 폐쇄망 빌드 플랫폼">#16 →</a></span></dd></div>
       <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clock"/></svg>1<small>시간</small><span class="arr">→</span>3<small>분</small></dt><dd class="lbl">계정 발급 · MFA 7개 → 1개<span class="ctx">Keycloak SSO · AWS 7개 계정 <a class="mlink" href="#p13" aria-label="관련 프로젝트 보기: Keycloak SSO">#13 →</a></span></dd></div>
-      <div class="metric wide"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clusters"/></svg>2~3<small>일</small><span class="arr">→</span>1<small>일</small></dt><dd class="lbl">신규 고객사 환경 구성<span class="ctx">Terraform 모듈 · 고객사 4곳 <a class="mlink" href="#p06" aria-label="관련 프로젝트 보기: Terraform 모듈">#06 →</a></span></dd></div>
+      <div class="metric wide"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clusters"/></svg>3<small>일</small><span class="arr">→</span>1<small>일</small></dt><dd class="lbl">신규 고객사 환경 구성<span class="ctx">Terraform 모듈 · 고객사 4곳 <a class="mlink" href="#p06" aria-label="관련 프로젝트 보기: Terraform 모듈">#06 →</a></span></dd></div>
       <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-lock"/></svg>0<small>건</small></dt><dd class="lbl">Critical·High 취약점 이미지 등록<span class="ctx">Trivy 게이트 · Non-root 실행 <a class="mlink" href="#p12" aria-label="관련 프로젝트 보기: 이미지 보안 게이트">#12 →</a></span></dd></div>
     </dl>
     <p class="scroll-hint" aria-hidden="true"><i></i>scroll</p>
@@ -158,7 +158,7 @@
         <div class="when">2026.06 – 현재<b>Infra Engineer · Lv2</b></div>
         <div><h3>GenOn <span style="color:var(--muted);font-weight:500">제논</span><span class="tag now">NOW</span></h3><p class="role">공공·금융 대상 온프레미스 생성형 AI 플랫폼</p><p class="ctx">kubeadm · containerd · Calico · 폐쇄망 · NCP 금융·공공</p></div>
         <ul>
-          <li>엔지니어마다 로컬에서 수동으로 만들던 폐쇄망 설치 패키지를 사내 <strong>빌드 플랫폼</strong>으로 바꿔, 누구나 같은 형태로 빌드하고 같은 절차로 구축 (설계와 팀 표준화, 구현에 AI 코딩 도구 활용). 설치 패키지 준비 1~2일 → 반나절</li>
+          <li>엔지니어마다 로컬에서 수동으로 만들던 폐쇄망 설치 패키지를 사내 <strong>빌드 플랫폼</strong>으로 바꿔, 누구나 같은 형태로 빌드하고 같은 절차로 구축 (설계와 팀 표준화, 구현에 AI 코딩 도구 활용). 설치 패키지 준비 약 8시간 → 약 3시간</li>
           <li>증권사 1곳·공공기관 2곳을 같은 절차로 구축. 증권사는 컨트롤 플레인 3대·고객사 L4 3중화 고가용성 구성</li>
           <li>감리용 보안 점검 도구 설계: KISA 기준 123개 항목, 진단과 조치를 분리</li>
           <li>구축과 장애 대응 지식을 팀 위키로 모으고, NetBox로 사내 서버 자산과 IP를 정리</li>
@@ -187,7 +187,7 @@
         <ul>
           <li>ChatOps(Teams 챗봇)와 ArgoCD로 개발자 셀프서비스 배포를 도입하고, 스테이징·운영 배포에 DevOps 검토 단계를 넣음</li>
           <li>Rancher를 직접 설치해 사내 클러스터 <strong>10여 개</strong>를 연결하고 권한(RBAC)을 한곳에서 관리</li>
-          <li>고객사별로 격리된 Azure 환경(Private AKS)을 Terraform 모듈로 만들어 신규 고객사 환경 구성 <strong>2~3일 → 1일</strong>, 고객사 4곳에 적용</li>
+          <li>고객사별로 격리된 Azure 환경(Private AKS)을 Terraform 모듈로 만들어 신규 고객사 환경 구성 <strong>약 3일 → 약 1일</strong>, 고객사 4곳에 적용</li>
           <li>솔루션 Helm 차트 작성·배포</li>
         </ul>
       </li>
@@ -196,7 +196,7 @@
         <div><h3>Cloudbric</h3><p class="role">클라우드 웹방화벽(WAF) SaaS</p><p class="ctx">5개 클라우드에 고객 환경 구축</p></div>
         <ul>
           <li>AWS WAF용 보안 규칙 상품(관리형 규칙 그룹)을 Marketplace에 출시</li>
-          <li>5개 클라우드 고객 환경 구축을 Jenkins 파이프라인 하나로 묶고, 구축 직후 Python 테스트로 자동 검증. 고객 환경 구축 반나절 → 약 1시간</li>
+          <li>5개 클라우드 고객 환경 구축을 Jenkins 파이프라인 하나로 묶고, 구축 직후 Python 테스트로 자동 검증. 고객 환경 구축 약 4시간 → 약 1시간</li>
           <li>자사 WAF 관리형 서비스 다중 AZ 고가용성 구성, CSAP 대응 보안 설정·증적 작성, 고객 도메인 등록 자동화</li>
         </ul>
       </li>
@@ -233,7 +233,7 @@
           <dl>
             <div><dt>배경</dt><dd>공공·금융 고객사는 구축이 끝나면 외부 감리에서 OS와 Kubernetes 보안 점검 결과를 요구합니다. 정해진 기준과 양식이 없어 사이트마다 점검을 처음부터 다시 준비하고 있었습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>KISA 가이드를 기준으로 Linux 67개, Docker 32개, Kubernetes 24개, 모두 123개 점검 항목을 정리하고 도구 구조를 설계했습니다. 구현에는 AI 코딩 도구를 활용했습니다.</li><li>점검 도구가 서버 설정을 바꾸면 &#x27;점검 당시의 상태&#x27;라는 증빙이 성립하지 않습니다. 그래서 점검은 진단만 하고, 조치는 별도 스크립트로 분리했습니다. 조치 전에는 백업하고, 조치 후에는 같은 점검 함수로 다시 확인합니다.</li><li>항목별 판정, 실제 설정값, 확인에 쓴 명령을 리포트에 함께 남겨 감리 증빙 자료로 쓸 수 있게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>서버 1대 수동 점검이 반나절에서 수 분으로 줄었습니다. 공공기관 감리 전 보안 조치와 증빙 자료 작성에 썼고, 팀의 표준 점검 도구로 정착시켰습니다.</dd></div>
+            <div><dt>결과</dt><dd>서버 1대 123개 항목 점검이 수작업 약 4시간에서 도구 실행 약 10분으로 줄었습니다. 공공기관 감리 전 보안 조치와 증빙 자료 작성에 썼고, 팀의 표준 점검 도구로 정착시켰습니다.</dd></div>
           </dl>
           <div class="tags"><span>Bash</span><span>Kubernetes</span><span>Docker</span><span>KISA</span></div>
         </div>
@@ -244,7 +244,7 @@
           <dl>
             <div><dt>배경</dt><dd>인터넷이 차단된 고객사 서버에 플랫폼을 설치하려면 OS 패키지, 실행 파일, 컨테이너 이미지, Helm 차트를 밖에서 모두 챙겨 USB로 반입해야 합니다. 엔지니어마다 로컬에서 이미지·설치 파일을 각자 방식으로 수동 다운로드해 패키지를 만들어, 결과물이 사람마다 달랐고 이미지가 하나라도 빠지면 다시 반입해 재설치해야 했습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>사내 웹 빌드 플랫폼으로 바꿨습니다. 버전별 템플릿을 골라 빌드를 요청하면 누가 언제 빌드해도 같은 구성의 설치 패키지가 나오고, 그 패키지와 설치 스크립트로 어느 현장에서나 같은 방식으로 구축합니다. 구조와 검증 기준은 제가 설계했고 구현에는 AI 코딩 도구를 활용했으며, 코드는 PR마다 자동 테스트를 거칩니다.</li><li>폐쇄망에서는 빌드 서버에 접속할 수 없습니다. 그래서 버전, CPU 아키텍처, 네트워크 대역을 패키지 안 설정 파일에 기록하고, 설치 스크립트는 이 파일만 보고 동작하게 했습니다. containerd 레지스트리 미러를 써서 이미지 주소를 바꾸지 않고 공식 Helm 차트를 수정 없이 씁니다.</li><li>설치 스크립트는 어느 단계를 다시 실행해도 결과가 같게 만들고, 실패하면 이어서 실행할 명령을 알려 주게 했습니다. 서버와 패키지의 아키텍처가 다르면 아무것도 바꾸기 전에 멈춥니다.</li><li>빌드 단계에서 이미지 개수만 세지 않고, 이미지마다 태그와 레이어까지 확인해 누락을 차단합니다.</li><li>사내 SSO 로그인과 빌드 완료 Slack 알림을 붙여 팀 공용 도구로 배포했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>설치 패키지 준비가 엔지니어별 수작업 1~2일에서 빌드 요청 후 반나절로 줄었고, 컨테이너 이미지 누락으로 인한 재반입이 없어졌습니다. 증권사 1곳·공공기관 2곳을 같은 절차로 구축했습니다.</dd></div>
+            <div><dt>결과</dt><dd>설치 패키지 준비가 엔지니어별 수작업 약 8시간에서 빌드 요청 후 약 3시간으로 줄었고, 컨테이너 이미지 누락으로 인한 재반입이 없어졌습니다. 증권사 1곳·공공기관 2곳을 같은 절차로 구축했습니다.</dd></div>
           </dl>
           <div class="tags"><span>Python</span><span>Flask</span><span>Bash</span><span>kubeadm</span><span>containerd</span><span>Calico</span><span>skopeo</span><span>regctl</span></div>
         </div>
@@ -332,7 +332,7 @@
           <dl>
             <div><dt>배경</dt><dd>개발자가 메신저로 배포를 요청하면 DevOps가 요청마다 배포 API나 CLI로 이미지를 바꿔 반영했습니다. 개발(DEV) 외 환경에 배포할 때도 따로 검토하는 절차가 없었습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>개발자가 Teams 챗봇에서 고객·환경·이미지를 골라 직접 배포를 요청하게 했습니다. 선택지는 고객별 Helm values 파일에서 만들어, 실제로 있는 조합만 고를 수 있습니다.</li><li>DEV는 ArgoCD가 자동으로 반영하고, 스테이징·운영은 DevOps가 ArgoCD에서 검토한 뒤 반영하도록 나눴습니다.</li><li>GitHub Webhook으로 ArgoCD가 변경을 바로 감지(Refresh)하게 하고, 자동 반영이 일어나거나 실제 상태가 Git과 어긋나면 DevOps에게 알람이 가게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>DEV 배포는 개발자가 DevOps 담당자를 기다리지 않고 수 분 안에 직접 하게 되면서, 배포 요청과 실행에 드는 DevOps의 수작업이 줄었습니다. 스테이징·운영 배포는 DevOps가 ArgoCD에서 검토한 뒤에만 반영됩니다.</dd></div>
+            <div><dt>결과</dt><dd>DEV 배포는 개발자가 Teams에서 직접 하게 돼 요청부터 반영까지 약 30분에서 약 5분으로 줄었습니다. 스테이징·운영 배포는 DevOps가 ArgoCD에서 검토한 뒤에만 반영됩니다.</dd></div>
           </dl>
           <div class="tags"><span>Node.js</span><span>Teams Bot</span><span>ArgoCD</span><span>Helm</span></div>
         </div>
@@ -354,7 +354,7 @@
           <dl>
             <div><dt>배경</dt><dd>생성형 AI 챗봇 솔루션을 고객사마다 격리된 Azure 환경으로 납품해야 해서, 같은 구성을 고객사마다 반복해 만들어야 했습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>네트워크(VNet), Private AKS, Private DNS 등 고객 환경 하나를 이루는 자원을 Terraform 모듈로 만들어, 고객사 추가를 같은 모듈 호출로 처리하게 했습니다.</li><li>동시 접속 4,000명 이상 요구에 맞춰 노드 7대 AKS 클러스터를 구성했습니다.</li><li>로그는 Fluent Bit로 모아 Elasticsearch에 저장하고 보존 기간 정책을 두어, Grafana에서 검색하게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>신규 고객사 환경 구성이 2~3일에서 1일로 줄었고, 같은 모듈을 은행·에너지·제조·교육 분야 고객사 4곳에 적용했습니다.</dd></div>
+            <div><dt>결과</dt><dd>신규 고객사 환경 구성이 약 3일에서 약 1일로 줄었고, 같은 모듈을 은행·에너지·제조·교육 분야 고객사 4곳에 적용했습니다.</dd></div>
           </dl>
           <div class="tags"><span>Azure AKS</span><span>Terraform</span><span>Fluent Bit</span><span>Elasticsearch</span><span>Grafana</span></div>
         </div>
@@ -398,7 +398,7 @@
           <dl>
             <div><dt>배경</dt><dd>웹방화벽 장애 확인과 정책 변경을 Slack에서 처리할 업무용 챗봇이 필요했고, 설계와 개발을 맡았습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>WAF 엔진 API와 SSH를 연동해 헬스 체크 재확인, Let&#x27;s Encrypt 인증서 강제 재발급, 서버 리소스 확인 명령을 만들었습니다.</li><li>정책 변경을 업무 시간 외로 예약하고, 실행 전후에 알람을 보내게 했습니다.</li><li>같은 알람이 두 번 이상 가던 문제는 알람 작업의 중복 실행을 막아 해결했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>장애 확인과 반복 조치를 Slack 명령으로 처리하게 돼, 반복 장애 조치가 건당 약 30분에서 5분 안팎으로 줄었습니다.</dd></div>
+            <div><dt>결과</dt><dd>장애 확인과 반복 조치를 Slack 명령으로 처리하게 돼, 반복 장애 조치가 건당 약 30분에서 약 5분으로 줄었습니다.</dd></div>
           </dl>
           <div class="tags"><span>Python</span><span>Slack Bot</span><span>Celery</span></div>
         </div>
@@ -409,7 +409,7 @@
           <dl>
             <div><dt>배경</dt><dd>고객 요청이 들어올 때마다 5개 클라우드의 콘솔에서 환경을 손으로 만들고, 구축 후 테스트도 손으로 했습니다.</dd></div>
             <div><dt>한 일</dt><dd><ul><li>AWS, Azure, Linode, DigitalOcean, Vultr용 Terraform 코드를 Jenkins 파이프라인 하나로 묶었습니다.</li><li>Terraform이 만든 결과값을 Python 테스트에 넘겨, 구축 직후 자동으로 검증하게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>고객 환경 구축이 반나절에서 약 1시간으로 줄었고, Jenkins에서 클라우드와 사양을 고르면 구축과 검증 결과까지 한 번에 나오게 됐습니다.</dd></div>
+            <div><dt>결과</dt><dd>고객 환경 구축이 약 4시간에서 약 1시간으로 줄었고, Jenkins에서 클라우드와 사양을 고르면 구축과 검증 결과까지 한 번에 나오게 됐습니다.</dd></div>
           </dl>
           <div class="tags"><span>Terraform</span><span>Jenkins</span><span>Python</span><span>AWS</span><span>Azure</span></div>
         </div>
