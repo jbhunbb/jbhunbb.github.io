@@ -104,11 +104,11 @@
     </div>
 
     <dl class="metrics" aria-label="주요 성과">
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-upgrade"/></svg>10<small>여 개</small></dt><dd class="lbl">운영 EKS 무중단 업그레이드<span class="ctx">1.29 → 1.32 · 파트 표준 절차서 <a class="mlink" href="#p10" aria-label="관련 프로젝트 보기: 운영 EKS 업그레이드">#10 →</a></span></dd></div>
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-airgap"/></svg>3<small>곳</small></dt><dd class="lbl">증권사·공공기관 폐쇄망 Kubernetes<span class="ctx">같은 빌드 · 같은 절차로 구축 <a class="mlink" href="#p16" aria-label="관련 프로젝트 보기: 폐쇄망 빌드 플랫폼">#16 →</a></span></dd></div>
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clock"/></svg>1<small>시간</small><span class="arr">→</span>3<small>분</small></dt><dd class="lbl">계정 발급 · MFA 7개 → 1개<span class="ctx">Keycloak SSO · AWS 7개 계정 <a class="mlink" href="#p13" aria-label="관련 프로젝트 보기: Keycloak SSO">#13 →</a></span></dd></div>
-      <div class="metric wide"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clusters"/></svg>3<small>일</small><span class="arr">→</span>1<small>일</small></dt><dd class="lbl">신규 고객사 환경 구성<span class="ctx">Terraform 모듈 · 고객사 4곳 <a class="mlink" href="#p06" aria-label="관련 프로젝트 보기: Terraform 모듈">#06 →</a></span></dd></div>
-      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-lock"/></svg>0<small>건</small></dt><dd class="lbl">Critical·High 취약점 이미지 등록<span class="ctx">Trivy 게이트 · Non-root 실행 <a class="mlink" href="#p12" aria-label="관련 프로젝트 보기: 이미지 보안 게이트">#12 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-upgrade"/></svg>10<small>여 개</small></dt><dd class="lbl">운영 EKS 무중단 업그레이드<span class="ctx">1.29 → 1.32 · 파트 표준 절차서 <a class="mlink" href="#p09" aria-label="관련 프로젝트 보기: 운영 EKS 업그레이드">#09 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-airgap"/></svg>3<small>곳</small></dt><dd class="lbl">증권사·공공기관 폐쇄망 Kubernetes<span class="ctx">같은 절차 적용 <a class="mlink" href="#p14" aria-label="관련 프로젝트 보기: 폐쇄망 빌드 플랫폼">#14 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clock"/></svg>1<small>시간</small><span class="arr">→</span>3<small>분</small></dt><dd class="lbl">입퇴사 1건당 계정 작업 · MFA 7개 → 1개<span class="ctx">Keycloak SSO · AWS 7개 계정 <a class="mlink" href="#p12" aria-label="관련 프로젝트 보기: Keycloak SSO">#12 →</a></span></dd></div>
+      <div class="metric wide"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-clusters"/></svg><small>약 </small>3<small>일</small><span class="arr">→</span><small>약 </small>1<small>일</small></dt><dd class="lbl">신규 고객사 환경 구성<span class="ctx">Terraform 모듈 · 고객사 4곳 <a class="mlink" href="#p05" aria-label="관련 프로젝트 보기: Terraform 모듈">#05 →</a></span></dd></div>
+      <div class="metric"><dt class="num"><svg class="ic mi" aria-hidden="true"><use href="#i-lock"/></svg><small>약 </small>4<small>시간</small><span class="arr">→</span><small>약 </small>10<small>분</small></dt><dd class="lbl">서버 1대 보안 점검<span class="ctx">KISA 기준 123개 항목 · 팀 표준 점검 도구 <a class="mlink" href="#p15" aria-label="관련 프로젝트 보기: 감리 대응 보안 점검 도구">#15 →</a></span></dd></div>
     </dl>
     <p class="scroll-hint" aria-hidden="true"><i></i>scroll</p>
   </div>
@@ -123,10 +123,10 @@
       <p class="sec-lede">같은 일을 두 번 하게 되면 도구로 만듭니다. 다만 만든 사람만 이해하는 자동화는 고장 날 때마다 그 사람이 손으로 챙겨야 하므로, 다음 사람이 읽고 고칠 수 있는 구조를 더 중요하게 봅니다.</p>
     </div>
     <div class="principles">
-      <article class="pr spot rv"><span class="k">01</span><h3>반복되면 도구로</h3><p>메신저로 받아 손으로 처리하던 배포 요청은 Teams 챗봇과 ArgoCD로, 클라우드 다섯 곳의 콘솔에서 하나씩 만들던 고객 환경은 Terraform과 Jenkins 파이프라인으로 바꿨습니다.</p></article>
+      <article class="pr spot rv"><span class="k">01</span><h3>반복되면 도구로</h3><p>메신저로 받아 손으로 처리하던 배포 요청을 Teams 챗봇과 ArgoCD로 옮겼습니다. 클라우드 다섯 곳의 콘솔에서 하나씩 만들던 고객 환경도 Terraform 코드와 Jenkins로 같은 절차를 거쳐 만들어집니다.</p></article>
       <article class="pr spot rv d1"><span class="k">02</span><h3>바꾸기 전에 복구할 길부터</h3><p>EKS는 한 번 올린 버전을 되돌릴 수 없습니다. 그래서 사라지는 API와 애드온 호환성을 먼저 확인하고, Velero로 백업하고, 스테이징에서 리허설한 뒤에 한 버전씩 올렸습니다.</p></article>
-      <article class="pr spot rv d2"><span class="k">03</span><h3>증상보다 원인</h3><p>PostgreSQL이 계속 재시작될 때 재시작만 멈추고 끝내지 않았습니다. 손상된 행과 서버 하드웨어 로그까지 따라가, 원인이 강제 전원 차단이었음을 확인했습니다.</p></article>
-      <article class="pr spot rv d3"><span class="k">04</span><h3>검증은 기준부터</h3><p>이미지 개수만 세던 검증이 시스템 이미지가 빠진 빌드를 통과시킨 뒤로, 이미지마다 태그와 레이어까지 확인하게 바꿨습니다. 잘못된 설정값은 서버를 바꾸기 전에 거부하는지 341가지 경우로 시험했습니다.</p></article>
+      <article class="pr spot rv d2"><span class="k">03</span><h3>현장에 들어가기 전에 범위부터</h3><p>공공기관 IDC는 현장 작업 시간이 제한되어 있습니다. 체크리스트와 작업계획서로 고객과 작업 범위, 시간을 미리 확정한 뒤 현장에 들어갔습니다.</p></article>
+      <article class="pr spot rv d3"><span class="k">04</span><h3>검증은 기준부터</h3><p>이미지 개수만 세던 검증이 시스템 이미지가 빠진 빌드를 통과시킨 뒤로, 이미지마다 태그와 레이어까지 확인하게 바꿨습니다. 현장 설치는 서버와 패키지의 CPU 아키텍처가 다르면 서버 설정을 건드리기 전에 멈춥니다.</p></article>
     </div>
   </div>
 </section>
@@ -137,7 +137,7 @@
     <div class="sec-head rv">
       <div class="sec-idx"><svg class="ic" aria-hidden="true"><use href="#i-career"/></svg>02 · Career</div>
       <h2 class="sec-title" id="career-title">경력</h2>
-      <p class="sec-lede">2020년 클라우드 웹방화벽 SaaS에서 시작해 Azure·AWS 쿠버네티스 운영을 거쳤고, 지금은 인터넷이 차단된 고객사 서버에 쿠버네티스를 직접 설치하는 일을 하고 있습니다.</p>
+      <p class="sec-lede">2020년 클라우드 웹방화벽 SaaS에서 시작해 Azure와 AWS의 Kubernetes 운영을 거쳤고, 지금은 인터넷이 차단된 공공, 금융 고객사 서버에 Kubernetes를 구축하는 일을 하고 있습니다.</p>
     </div>
 
     <div class="rv" aria-hidden="true">
@@ -155,49 +155,51 @@
 
     <ol class="tl-list" reversed>
       <li class="tl-item rv">
-        <div class="when">2026.06 – 현재<b>Infra Engineer · Lv2</b></div>
-        <div><h3>GenOn <span style="color:var(--muted);font-weight:500">제논</span><span class="tag now">NOW</span></h3><p class="role">공공·금융 대상 온프레미스 생성형 AI 플랫폼</p><p class="ctx">kubeadm · containerd · Calico · 폐쇄망 · NCP 금융·공공</p></div>
+        <div class="when">2026.06 – 현재<b>Infra Engineer</b></div>
+        <div><h3>GenOn <span style="color:var(--muted);font-weight:500">제논</span><span class="tag now">NOW</span></h3><p class="role">공공·금융 고객사 폐쇄망 Kubernetes 구축</p><p class="ctx">kubeadm · containerd · Calico · 폐쇄망 · NCP 금융·공공</p></div>
         <ul>
-          <li>엔지니어마다 로컬에서 수동으로 만들던 폐쇄망 설치 패키지를 사내 <strong>빌드 플랫폼</strong>으로 바꿔, 누구나 같은 형태로 빌드하고 같은 절차로 구축 (설계와 팀 표준화, 구현에 AI 코딩 도구 활용). 설치 패키지 준비 약 8시간 → 약 3시간</li>
-          <li>증권사 1곳·공공기관 2곳을 같은 절차로 구축. 증권사는 컨트롤 플레인 3대·고객사 L4 3중화 고가용성 구성</li>
-          <li>감리용 보안 점검 도구 설계: KISA 기준 123개 항목, 진단과 조치를 분리</li>
-          <li>구축과 장애 대응 지식을 팀 위키로 모으고, NetBox로 사내 서버 자산과 IP를 정리</li>
+          <li>엔지니어마다 손으로 만들던 폐쇄망 설치 패키지를 사내 <strong>빌드 플랫폼</strong>으로 바꿔 준비 시간을 약 8시간에서 약 3시간으로 줄였습니다. 설계와 팀 표준화를 맡았고 구현에는 AI 코딩 도구를 활용했습니다.</li>
+          <li>증권사 1곳과 공공기관 2곳 구축에 같은 절차를 적용했습니다.</li>
+          <li>KISA 가이드 기준 123개 항목의 감리 대응 보안 점검 도구를 설계해 서버 1대 점검을 약 4시간에서 약 10분으로 줄였습니다.</li>
+          <li>구축과 장애 대응 지식을 팀 위키로 모으고, NetBox로 사내 서버 약 50대의 자산과 IP를 정리했습니다.</li>
         </ul>
       </li>
       <li class="tl-item rv">
         <div class="when">2025.04 – 2026.06<b>DevOps · 1인 운영</b></div>
         <div><h3>AP Thefin</h3><p class="role">망분리 대출비교 핀테크 · 인프라 1인 운영</p><p class="ctx">AWS 7개 계정 · EKS · RDS · VPN</p></div>
         <ul>
-          <li>Keycloak SSO 도입: 입·퇴사자 계정 생성·안내 <strong>1시간 → 3분</strong>, 사용자당 MFA 7개 → 1개</li>
-          <li>베이스 이미지 표준화와 CodeBuild CI 파이프라인의 Trivy 게이트: Critical·High가 1건이라도 있으면 레지스트리 등록을 막고, 모든 컨테이너를 전용 사용자(Non-Root)로 실행. 전환 가이드는 개발팀과 공유</li>
-          <li>Prometheus·Loki·Grafana로 로그·메트릭·알람을 한곳에 모으고, EC2는 서비스 디스커버리로 자동 등록</li>
+          <li>AWS 7개 계정과 ArgoCD, Grafana 로그인을 Keycloak SSO로 통합해 입퇴사 1건당 계정 작업을 <strong>1시간에서 3분</strong>으로 줄였고, 사용자당 MFA는 7개에서 1개가 됐습니다. 사용자의 영구 Access Key도 없앴습니다.</li>
+          <li>CodeBuild에 Trivy Quality Gate를 넣어 Critical이나 High 취약점이 있는 이미지의 레지스트리 등록을 막고, 모든 서비스 컨테이너를 전용 사용자로 실행하도록 의무화했습니다.</li>
+          <li>로그 수집이 없던 EKS와 EC2에 Prometheus, Loki, Grafana로 Observability 환경을 구축했습니다. 새 EC2는 따로 등록하지 않아도 모니터링됩니다.</li>
+          <li>제휴 금융기관 30여 곳과의 연계 구간을 기관에 따라 Site-to-Site VPN이나 AWS Direct Connect로 연결하고 Transit Gateway를 설정했습니다.</li>
         </ul>
       </li>
       <li class="tl-item rv">
         <div class="when">2024.11 – 2025.04<b>Kubernetes 운영</b></div>
         <div><h3>애커튼테크놀로지서비스</h3><p class="role">정규직 · SK 계열사 파견</p><p class="ctx">AWS EKS · Azure AKS 운영</p></div>
         <ul>
-          <li>운영 EKS 10여 개를 서비스 중단 없이 <strong>1.29 → 1.32</strong>로 업그레이드. 절차는 SK C&amp;C 파트 표준 절차서가 됨</li>
-          <li>EKS·AKS에 Velero 백업과 정기 복구 테스트, 알람 체계 구성</li>
+          <li>운영 EKS 10여 개를 서비스 중단 없이 <strong>1.29에서 1.32</strong>로 업그레이드했고, 이 작업 절차는 SK C&amp;C 파트의 표준 절차서가 됐습니다.</li>
+          <li>AKS와 EKS 모두에 Velero로 PV를 포함한 리소스 백업을 적용했습니다. 임계값을 넘으면 Slack과 Teams로 알람이 가도록 하고, Grafana 대시보드 하나에 AKS와 EKS를 함께 모았습니다.</li>
         </ul>
       </li>
       <li class="tl-item rv">
         <div class="when">2023.08 – 2024.08<b>DevOps</b></div>
-        <div><h3>Posicube</h3><p class="role">기업용 생성형 AI 챗봇 솔루션</p><p class="ctx">Azure · 고객사별 격리 환경 납품</p></div>
+        <div><h3>Posicube</h3><p class="role">GPT 챗봇 솔루션</p><p class="ctx">Azure · 고객사별 격리 환경 납품</p></div>
         <ul>
-          <li>ChatOps(Teams 챗봇)와 ArgoCD로 개발자 셀프서비스 배포를 도입하고, 스테이징·운영 배포에 DevOps 검토 단계를 넣음</li>
-          <li>Rancher를 직접 설치해 사내 클러스터 <strong>10여 개</strong>를 연결하고 권한(RBAC)을 한곳에서 관리</li>
-          <li>고객사별로 격리된 Azure 환경(Private AKS)을 Terraform 모듈로 만들어 신규 고객사 환경 구성 <strong>약 3일 → 약 1일</strong>, 고객사 4곳에 적용</li>
-          <li>솔루션 Helm 차트 작성·배포</li>
+          <li>Teams 챗봇과 ArgoCD로 DEV 배포를 약 30분에서 약 5분으로 줄였고, 스테이징과 운영 배포는 DevOps 검토를 거치도록 했습니다.</li>
+          <li>Rancher를 직접 설치해 사내 클러스터 <strong>10여 개</strong>를 연결하고 RBAC을 같은 기준으로 관리했습니다.</li>
+          <li>고객사별로 격리된 Azure 환경(Private AKS)을 Terraform 모듈로 만들어 신규 고객사 환경 구성을 <strong>약 3일에서 약 1일</strong>로 줄였고, 고객사 4곳에 적용했습니다.</li>
+          <li>솔루션을 Helm 차트로 만들고 고객사와 환경별 차이는 values 파일로만 관리했습니다.</li>
         </ul>
       </li>
       <li class="tl-item rv">
         <div class="when">2020.11 – 2023.07<b>Cloud</b></div>
         <div><h3>Cloudbric</h3><p class="role">클라우드 웹방화벽(WAF) SaaS</p><p class="ctx">5개 클라우드에 고객 환경 구축</p></div>
         <ul>
-          <li>AWS WAF용 보안 규칙 상품(관리형 규칙 그룹)을 Marketplace에 출시</li>
-          <li>5개 클라우드 고객 환경 구축을 Jenkins 파이프라인 하나로 묶고, 구축 직후 Python 테스트로 자동 검증. 고객 환경 구축 약 4시간 → 약 1시간</li>
-          <li>자사 WAF 관리형 서비스 다중 AZ 고가용성 구성, CSAP 대응 보안 설정·증적 작성, 고객 도메인 등록 자동화</li>
+          <li>AWS WAF용 보안 규칙 상품을 개발해 AWS Marketplace 구독 상품으로 출시했습니다.</li>
+          <li>5개 클라우드의 Terraform 코드를 Git으로 관리하고 Jenkins에서 실행하게 바꿔 고객 환경 구축을 약 4시간에서 약 1시간으로 줄였습니다.</li>
+          <li>WAF 장애 대응 Slack 챗봇으로 반복 장애 조치를 건당 약 30분에서 약 5분으로 줄였습니다.</li>
+          <li>CSAP 대응 보안 설정과 증적 작성을 맡았고, 고객 도메인 등록을 자동화했습니다.</li>
         </ul>
       </li>
     </ol>
@@ -213,202 +215,181 @@
       <p class="sec-lede">맡았던 프로젝트를 최신순으로 정리했습니다. 행을 누르면 배경, 한 일, 결과가 펼쳐집니다.</p>
     </div>
     <div class="plog rv">
-      <div class="lg-bar"><p class="lg-cmd mono"><span class="ok">$</span> ls -lt ~/projects <span class="lg-count">total 18</span></p><div class="lg-fs" role="group" aria-label="회사별 필터"><button type="button" class="lg-f on" data-f="all" aria-pressed="true">All <span>18</span></button><button type="button" class="lg-f" data-f="genon" aria-pressed="false">GenOn <span>5</span></button><button type="button" class="lg-f" data-f="apthefin" aria-pressed="false">AP Thefin <span>3</span></button><button type="button" class="lg-f" data-f="ats" aria-pressed="false">ATS <span>2</span></button><button type="button" class="lg-f" data-f="posicube" aria-pressed="false">Posicube <span>3</span></button><button type="button" class="lg-f" data-f="cloudbric" aria-pressed="false">Cloudbric <span>5</span></button></div></div>
+      <div class="lg-bar"><p class="lg-cmd mono"><span class="ok">$</span> ls -lt ~/projects <span class="lg-count">total 16</span></p><div class="lg-fs" role="group" aria-label="회사별 필터"><button type="button" class="lg-f on" data-f="all" aria-pressed="true">All <span>16</span></button><button type="button" class="lg-f" data-f="genon" aria-pressed="false">GenOn <span>4</span></button><button type="button" class="lg-f" data-f="apthefin" aria-pressed="false">AP Thefin <span>3</span></button><button type="button" class="lg-f" data-f="ats" aria-pressed="false">ATS <span>2</span></button><button type="button" class="lg-f" data-f="posicube" aria-pressed="false">Posicube <span>3</span></button><button type="button" class="lg-f" data-f="cloudbric" aria-pressed="false">Cloudbric <span>4</span></button></div></div>
       <div class="lg-head mono" aria-hidden="true"><span>No</span><span>Period</span><span>Project</span><span>Company</span><span></span></div>
       <ol class="lg-list">
-      <li class="lg-row" id="p18" data-co="genon"><details>
-        <summary><span class="lg-no mono">#18</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">인프라 위키·온보딩 체계와 사내 자산 관리</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p16" data-co="genon"><details>
+        <summary><span class="lg-no mono">#16</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">인프라 위키·장애 대응 문서와 사내 자산 관리</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>구축과 장애 대응 지식이 개인 경험과 스프레드시트에 흩어져 있었고, 신규 입사자 교육과 AI로 작성하는 문서에 팀 공통 기준이 없었습니다. 사내 서버 약 50대의 목록·IP·권한도 스프레드시트로 손으로 관리하고 있었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>Wiki.js를 사내 Kubernetes에 Helm으로 배포하고 문서는 git으로 관리했습니다. 구축 절차, 운영(노드 증설·인증서·백업·업그레이드), 증상별 장애 대응 문서를 작성했습니다.</li><li>AI로 쓴 문서도 같은 문체와 구조를 따르도록 작성 규칙을 AI 코딩 도구용 스킬로 만들었습니다.</li><li>신규 입사자가 AI 코딩 도구와 대화하며 반입·설치·장애 대응·보안 점검을 단계별로 익히는 온보딩 과정을 만들었습니다.</li><li>자산 관리 도구 NetBox를 도입해 IDC 랙 배치도, 서버 관리 대장, IP 매핑을 정비했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>구축부터 장애 대응까지 팀이 한곳에서 찾아보게 됐고, 신규 입사자가 같은 순서로 익히는 과정이 생겼습니다. 서버 약 50대의 자산과 IP를 한곳에서 관리합니다.</dd></div>
+            <div><dt>배경</dt><dd>구축과 장애 대응 지식이 개인 경험과 스프레드시트에 흩어져 있어 같은 작업도 사람마다 결과가 달랐습니다. 사내 서버 약 50대의 자산과 IP도 스프레드시트로 관리하고 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>문서를 git으로 관리할 수 있도록 Wiki.js를 사내 Kubernetes에 Helm으로 배포했습니다.</li><li>제품 개요, 구축 절차, 운영(노드 증설, 인증서, 백업, 업그레이드), 증상별 장애 대응, 서버, 네트워크, 스토리지 문서를 정리했습니다. 장애 대응은 클러스터, 노드, 파드, 네트워크, 스토리지, 관측 증상별로 나눴습니다.</li><li>문서마다 품질이 달라지지 않도록 작성 규칙을 정하고, 규칙 준수 여부를 검사기와 Claude Code 스킬로 확인했습니다.</li><li>접근 통제, 자산, 모니터링, 설정 자동화를 묶은 관리 체계를 제안하고 1단계로 NetBox를 도입했습니다. 서버 자산과 IP 정보를 옮기고, 로그인은 GitHub SSO로 연결해 기본 권한을 viewer로 두었습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>신규 입사자 온보딩부터 장애 대응까지 필요한 내용을 팀이 한곳에서 찾게 됐습니다. 서버 약 50대의 자산과 IP를 한곳에서 관리하게 됐고, IDC 상면도(랙 배치도)와 서버 관리대장도 정비했습니다.</dd></div>
           </dl>
           <div class="tags"><span>Wiki.js</span><span>Helm</span><span>git</span><span>Claude Code</span><span>NetBox</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p17" data-co="genon"><details>
-        <summary><span class="lg-no mono">#17</span><span class="lg-when mono">2026.08</span><span class="lg-title">감리 대응 보안 점검 도구</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p15" data-co="genon"><details>
+        <summary><span class="lg-no mono">#15</span><span class="lg-when mono">2026.08</span><span class="lg-title">감리 대응 보안 점검 도구</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>공공·금융 고객사는 구축이 끝나면 외부 감리에서 OS와 Kubernetes 보안 점검 결과를 요구합니다. 정해진 기준과 양식이 없어 사이트마다 점검을 처음부터 다시 준비하고 있었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>KISA 가이드를 기준으로 Linux 67개, Docker 32개, Kubernetes 24개, 모두 123개 점검 항목을 정리하고 도구 구조를 설계했습니다. 구현에는 AI 코딩 도구를 활용했습니다.</li><li>점검 도구가 서버 설정을 바꾸면 &#x27;점검 당시의 상태&#x27;라는 증빙이 성립하지 않습니다. 그래서 점검은 진단만 하고, 조치는 별도 스크립트로 분리했습니다. 조치 전에는 백업하고, 조치 후에는 같은 점검 함수로 다시 확인합니다.</li><li>항목별 판정, 실제 설정값, 확인에 쓴 명령을 리포트에 함께 남겨 감리 증빙 자료로 쓸 수 있게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>서버 1대 123개 항목 점검이 수작업 약 4시간에서 도구 실행 약 10분으로 줄었습니다. 공공기관 감리 전 보안 조치와 증빙 자료 작성에 썼고, 팀의 표준 점검 도구로 정착시켰습니다.</dd></div>
+            <div><dt>배경</dt><dd>공공, 금융 고객사는 감리에서 OS와 Kubernetes 보안 점검 결과를 요구합니다. 정해진 기준과 양식이 없어 사이트마다 점검을 처음부터 준비해야 했습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>KISA 가이드를 기준으로 Linux 67개, Docker 32개, Kubernetes 24개, 모두 123개 점검 항목을 정하고 RHEL, Rocky, Ubuntu에서 모두 쓸 수 있게 했습니다. 점검 기준과 구조를 설계했고 구현에는 AI 코딩 도구를 활용했습니다.</li><li>점검 도구가 서버 설정을 바꾸면 증적으로 쓸 수 없기 때문에, 설정은 전혀 바꾸지 않고 점검만 합니다. 조치는 별도 스크립트로 분리해 바꾸기 전에 백업하고, 바꾼 뒤에는 같은 기준으로 다시 점검합니다.</li><li>리포트에는 항목마다 판정, 실제 설정값, 진단 명령과 결과를 함께 남겨 그대로 증적으로 냅니다.</li><li>기존 스크립트가 마스터 노드에서는 건너뛰던 워커 노드 항목도 점검 대상에 넣었습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>서버 1대 123개 항목 점검이 수작업 약 4시간에서 도구 실행 약 10분으로 줄었습니다. 공공기관 감리 전 보안 조치와 증적 작성에 사용했고, 팀의 표준 점검 도구가 됐습니다.</dd></div>
           </dl>
           <div class="tags"><span>Bash</span><span>Kubernetes</span><span>Docker</span><span>KISA</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p16" data-co="genon"><details>
-        <summary><span class="lg-no mono">#16</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">폐쇄망 설치 패키지 빌드 플랫폼과 구축 절차 표준화<em class="lg-pin">대표</em></span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
-        <div class="lg-body">
-          <dl>
-            <div><dt>배경</dt><dd>인터넷이 차단된 고객사 서버에 플랫폼을 설치하려면 OS 패키지, 실행 파일, 컨테이너 이미지, Helm 차트를 밖에서 모두 챙겨 USB로 반입해야 합니다. 엔지니어마다 로컬에서 이미지·설치 파일을 각자 방식으로 수동 다운로드해 패키지를 만들어, 결과물이 사람마다 달랐고 이미지가 하나라도 빠지면 다시 반입해 재설치해야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>사내 웹 빌드 플랫폼으로 바꿨습니다. 버전별 템플릿을 골라 빌드를 요청하면 누가 언제 빌드해도 같은 구성의 설치 패키지가 나오고, 그 패키지와 설치 스크립트로 어느 현장에서나 같은 방식으로 구축합니다. 구조와 검증 기준은 제가 설계했고 구현에는 AI 코딩 도구를 활용했으며, 코드는 PR마다 자동 테스트를 거칩니다.</li><li>폐쇄망에서는 빌드 서버에 접속할 수 없습니다. 그래서 버전, CPU 아키텍처, 네트워크 대역을 패키지 안 설정 파일에 기록하고, 설치 스크립트는 이 파일만 보고 동작하게 했습니다. containerd 레지스트리 미러를 써서 이미지 주소를 바꾸지 않고 공식 Helm 차트를 수정 없이 씁니다.</li><li>설치 스크립트는 어느 단계를 다시 실행해도 결과가 같게 만들고, 실패하면 이어서 실행할 명령을 알려 주게 했습니다. 서버와 패키지의 아키텍처가 다르면 아무것도 바꾸기 전에 멈춥니다.</li><li>빌드 단계에서 이미지 개수만 세지 않고, 이미지마다 태그와 레이어까지 확인해 누락을 차단합니다.</li><li>사내 SSO 로그인과 빌드 완료 Slack 알림을 붙여 팀 공용 도구로 배포했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>설치 패키지 준비가 엔지니어별 수작업 약 8시간에서 빌드 요청 후 약 3시간으로 줄었고, 컨테이너 이미지 누락으로 인한 재반입이 없어졌습니다. 증권사 1곳·공공기관 2곳을 같은 절차로 구축했습니다.</dd></div>
-          </dl>
-          <div class="tags"><span>Python</span><span>Flask</span><span>Bash</span><span>kubeadm</span><span>containerd</span><span>Calico</span><span>skopeo</span><span>regctl</span></div>
-        </div>
-      </details></li>
-      <li class="lg-row" id="p15" data-co="genon"><details>
-        <summary><span class="lg-no mono">#15</span><span class="lg-when mono">2026.06 – 09</span><span class="lg-title">증권사 고가용성 Kubernetes 클러스터 구축</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
-        <div class="lg-body">
-          <dl>
-            <div><dt>배경</dt><dd>증권사 사내망에 생성형 AI 플랫폼을 설치하는 사업이었습니다. 서버 한 대가 멈춰도 서비스는 계속 돌아가야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>컨트롤 플레인 3대, 워커 3대로 구성해 노드 한 대가 빠져도 클러스터 상태 저장소(etcd)가 과반을 유지하게 했습니다. etcd는 과반이 살아 있어야 동작해서 컨트롤 플레인을 4대로 두어도 1대 장애까지만 견딥니다. 그래서 다른 공공 사업의 공동 인프라 구성도에도 서버 4대 중 3대를 컨트롤 플레인, 1대를 워커로 배정하고 10G 본딩 요구사항을 반영했습니다.</li><li>API 서버 앞단은 고객사 L4 장비로 3대에 나눠 보내도록 구성했습니다.</li><li>DB와 벡터DB를 3중화하고, 비밀번호 같은 Secret이 etcd에 평문으로 남지 않도록 저장 시 암호화를 적용했습니다.</li><li>GPU를 고정 크기로 나누는 MIG 방식으로는 한 장에 여러 모델을 올리기 어려워, MIG를 끄고 GPU 공유 도구(HAMi)로 바꿨습니다.</li></ul></dd></div>
-          </dl>
-          <div class="tags"><span>Kubernetes</span><span>kubeadm</span><span>etcd</span><span>HAMi</span><span>GPU</span></div>
-        </div>
-      </details></li>
       <li class="lg-row" id="p14" data-co="genon"><details>
-        <summary><span class="lg-no mono">#14</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">공공기관 구축 및 기술지원</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#14</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">폐쇄망 설치 패키지 빌드 플랫폼과 구축 절차 표준화<em class="lg-pin">대표</em></span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>공공기관 IDC와 NCP 공공 클라우드에 개발망·운영망을 구축하는 작업이었습니다. 현장에 머물 수 있는 시간이 제한돼 있어, 들어가기 전에 작업 범위와 시간을 확정해야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>사전 체크리스트와 작업계획서로 범위와 시간을 확정하고, 현장에서는 helmfile로 구축했습니다.</li><li>반입한 버전과 이미지 목록, 데이터가 저장되는 위치(PV)를 시트로 정리했습니다.</li><li>두 망의 플랫폼 버전이 어긋나지 않도록 같은 버전으로 다시 구축하는 가이드와, GPU 한 장을 MIG로 7개 인스턴스로 나눠 서비스별로 할당하는 가이드를 만들었습니다.</li><li>납품 구성에 포함된 Vault·ArangoDB가 상용 이용을 제한하는 BSL 라이선스라는 점을 발견해 검토를 요청했습니다.</li></ul></dd></div>
+            <div><dt>배경</dt><dd>고객사 대부분이 폐쇄망이라 설치 파일을 USB로 반입하는데, 반입할 때마다 고객사 승인을 받아야 합니다. 엔지니어마다 패키지를 각자 만들다 보니 결과물이 달랐고, Helm 차트에 쓰이는 이미지 3~4개가 빠져 두 번 넘게 다시 반입한 일도 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>문제를 정리해 파트에 공유하고, 해야 할 일을 표준 절차, 설치 도구, 고객사 사전 질문지, 엔지니어용 템플릿 네 가지로 나눴습니다.</li><li>빌드가 길게는 몇 시간씩 걸리고 동료들도 함께 써야 해서, 요청을 순서대로 처리하고 이력이 남는 웹 빌드 플랫폼으로 만들었습니다. OS 패키지, 런타임, Kubernetes 구성 요소, 이미지, 차트, 설치 스크립트 중 필요한 것만 골라 빌드할 수 있습니다. 설계와 팀 표준화를 맡았고 구현에는 AI 코딩 도구를 활용했습니다.</li><li>현장에서는 빌드 서버에 접속할 수 없기 때문에, 버전, CPU 아키텍처, 네트워크 대역 같은 설치 정보를 패키지 안에 함께 담았습니다. containerd 레지스트리 미러를 설정해 이미지 주소를 바꾸지 않고 공식 Helm 차트를 수정 없이 씁니다.</li><li>처음에는 이미지 개수만 세서 검증했는데, 시스템 이미지가 빠진 빌드가 그대로 통과된 일이 있어 이미지마다 태그와 레이어까지 확인하도록 바꿨습니다.</li><li>현장 설치는 스크립트 하나로 사전 점검부터 클러스터 생성까지 자동화했습니다. 서버와 패키지의 CPU 아키텍처가 다르면 서버 설정을 건드리기 전에 설치를 멈추고, 중간에 실패하면 실패한 단계부터 이어서 실행합니다.</li><li>사내 SSO 로그인과 빌드 완료 Slack 알림을 붙여 팀 공용 도구로 배포하고, 사용 가이드를 공유하고 교육했습니다. 고객사와 미리 맞춰야 할 내용은 사전 체크리스트, 서버 목록, 작업 범위와 일정 양식으로 정리했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>설치 패키지 준비 시간이 약 8시간에서 약 3시간으로 줄었고, 도입 후 컨테이너 이미지 누락으로 인한 재반입이 없어졌습니다. 증권사 1곳과 공공기관 2곳 구축에 같은 절차를 적용했습니다.</dd></div>
+          </dl>
+          <div class="tags"><span>Python</span><span>Flask</span><span>Bash</span><span>Docker</span><span>kubeadm</span><span>containerd</span><span>Calico</span><span>Helm</span></div>
+        </div>
+      </details></li>
+      <li class="lg-row" id="p13" data-co="genon"><details>
+        <summary><span class="lg-no mono">#13</span><span class="lg-when mono">2026.07 – 09</span><span class="lg-title">공공기관 구축 및 기술지원</span><span class="lg-co mono">GenOn</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <div class="lg-body">
+          <dl>
+            <div><dt>배경</dt><dd>공공기관 IDC는 현장 작업 시간이 제한되어 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>체크리스트와 작업계획서로 고객과 작업 범위, 시간을 미리 확정한 뒤 현장에 들어갔습니다.</li><li>개발망에 helmfile로 구축하고, 반입 버전과 이미지 목록, 데이터 저장 위치(PV)를 시트로 정리했습니다.</li><li>설치에서 빠진 워크플로 엔진(Temporal)은 원격으로 복구 절차를 정리해 보냈고, 현장 엔지니어가 복구했습니다.</li><li>납품 구성에 포함된 Vault와 ArangoDB가 BSL 라이선스라는 것을 발견하고 납품 조건 검토를 요청했습니다.</li></ul></dd></div>
           </dl>
           <div class="tags"><span>Kubernetes</span><span>helmfile</span><span>NCP</span><span>NVIDIA MIG</span><span>Temporal</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p13" data-co="apthefin"><details>
-        <summary><span class="lg-no mono">#13</span><span class="lg-when mono">2025.06 – 10</span><span class="lg-title">AWS 멀티 계정 로그인 통합 (Terraform → Keycloak SSO)<em class="lg-pin">대표</em></span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p12" data-co="apthefin"><details>
+        <summary><span class="lg-no mono">#12</span><span class="lg-when mono">2025.06 – 10</span><span class="lg-title">AWS IAM 코드화와 Keycloak SSO 통합<em class="lg-pin">대표</em></span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>입·퇴사자가 생길 때마다 AWS 7개, ArgoCD 2개, Grafana 2개, 모두 11개 계정을 손으로 만들거나 지우고 안내해야 했고, 약 1시간이 걸렸습니다. 사용자는 계정마다 MFA를 따로 등록해야 했습니다. AWS Identity Center는 MSP 조직(Organization) 쪽 제약과 외부 노출 문제 때문에, 내부망 전용 로그인으로 쓸 수 없었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>1단계로 IAM 사용자·그룹·정책을 Terraform 모듈과 계정별 변수 파일로 코드화해, 여러 계정을 같은 방식으로 관리하게 했습니다.</li><li>2단계로 로그인 서버(Keycloak)를 인터넷이 차단된 DMZ에 두고, 사용자 PC에서만 접근하도록 Security Group을 설정했습니다.</li><li>AWS는 SAML, ArgoCD·Grafana는 OIDC로 Keycloak에 연결했습니다. Keycloak 그룹을 계정별 IAM Role과 1:1로 묶어, 그룹만 정하면 권한이 정해지게 했습니다.</li><li>CLI와 Git(CodeCommit)도 saml2aws로 단기 토큰(STS)을 받아 쓰게 해, 영구 접속 키가 필요 없게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>입·퇴사자 계정 생성·안내 시간이 1시간에서 3분으로 줄었고, 사용자당 MFA는 7개에서 1개가 됐습니다. 영구 IAM Access Key 사용도 중단했습니다.</dd></div>
+            <div><dt>배경</dt><dd>입퇴사가 있을 때마다 계정 11개(AWS 7, ArgoCD 2, Grafana 2)를 손으로 만들고 지우는 데 1시간이 걸렸습니다. 사용자마다 MFA 7개와 영구 접속 키가 필요했고, 300일 넘게 갱신되지 않은 Access Key도 남아 있었습니다. AWS Identity Center는 MSP 계정 구조의 제약과 외부 노출 문제로 쓸 수 없었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>1단계로 IAM 사용자, 그룹, 정책을 Terraform 코드로 옮겼습니다.</li><li>2단계로 Keycloak을 인터넷이 차단된 공유 네트워크 구간에 이중화해 설치하고, Security Group으로 개발망과 운영망의 사용자 PC에서만 접속하게 했습니다. Keycloak 장애에 대비해 비상 계정을 따로 발급했습니다.</li><li>AWS 7개 계정과 ArgoCD, Grafana 로그인을 SAML과 OIDC로 Keycloak에 연결했습니다. Keycloak 그룹을 계정별 IAM Role과 연결하는 RBAC으로, 사용자를 그룹에 추가하기만 하면 권한이 부여됩니다.</li><li>CLI와 CodeCommit 사용자도 saml2aws로 STS 임시 자격 증명을 받게 하고 사용 가이드를 공유했습니다. 기존 IAM User와 오래 쓰지 않은 Access Key는 일괄 제거했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>입퇴사 1건당 계정 작업이 1시간에서 3분으로 줄었고, 사용자가 관리하던 MFA는 7개에서 1개가 됐습니다. 사용자의 영구 Access Key를 없앴습니다.</dd></div>
           </dl>
           <div class="tags"><span>Keycloak</span><span>SAML 2.0</span><span>OIDC</span><span>AWS IAM</span><span>STS</span><span>saml2aws</span><span>Terraform</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p12" data-co="apthefin"><details>
-        <summary><span class="lg-no mono">#12</span><span class="lg-when mono">2025.10</span><span class="lg-title">컨테이너 이미지 보안 기준과 배포 게이트</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p11" data-co="apthefin"><details>
+        <summary><span class="lg-no mono">#11</span><span class="lg-when mono">2025.10</span><span class="lg-title">컨테이너 이미지 보안 기준과 CI 보안 게이트</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>컨테이너 이미지 취약점이 관리되지 않고 있었습니다. 실행에 필요 없는 패키지가 많아 취약점 경고가 과다하게 나왔고, 대부분의 컨테이너가 root 권한으로 실행됐습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>Python·Java·Node.js별로 가벼운 Alpine 기반 베이스 이미지를 표준으로 정하고, root 대신 전용 사용자로 실행하게 했습니다.</li><li>멀티스테이지 빌드로 빌드·디버깅 도구를 최종 이미지에서 빼고, Dockerfile 정적 검사로 실행 사용자 지정 누락을 잡았습니다.</li><li>빌드 단계(CodeBuild)에 Trivy 취약점 검사를 넣어, Critical·High가 1건이라도 나오면 빌드를 실패시키고 레지스트리에 올라가지 못하게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>Critical·High 취약점이 1건이라도 있는 이미지는 레지스트리에 올라가지 못하게 됐고, 모든 컨테이너가 root가 아닌 전용 사용자로 실행됩니다. root를 빼면서 생기는 권한 문제(포트 바인딩 등)는 해결 가이드를 만들어 개발팀에 공유했습니다.</dd></div>
+            <div><dt>배경</dt><dd>AWS ECR 이미지 스캔에서 운영 중인 10여 개 이미지마다 Critical 취약점이 5개 이상 나왔습니다. 실행에 필요 없는 패키지가 많았고 컨테이너 대부분이 root로 실행되고 있어, 경고부터 줄인 뒤 게이트를 거는 순서로 진행했습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>서비스마다 다르던 베이스 이미지를 언어별(Python, Java, Node.js) Alpine 이미지로 단일화해 실행에 필요 없는 패키지와 공격 표면을 줄였습니다.</li><li>Dockerfile에 전용 사용자를 만들어 컨테이너를 root가 아닌 이 사용자로 실행하고, 멀티스테이지 빌드로 빌드 도구와 curl, wget, bash를 최종 이미지에서 뺐습니다. root로 실행되는 Dockerfile은 정적 검사에서 걸러 냅니다.</li><li>ECR 기본 스캔을 보완하려고 CodeBuild 파이프라인에 Trivy 검사를 넣고, Critical이나 High 취약점이 하나라도 있으면 레지스트리 등록을 막는 Quality Gate를 추가했습니다.</li><li>root가 아닌 사용자로 실행할 때 생기는 포트 바인딩 같은 문제와 해결 방법을 정리해 개발팀에 공유했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>취약점 검사를 빌드 단계로 앞당긴(Shift-Left) DevSecOps 절차를 갖췄습니다. Critical이나 High 취약점이 있는 이미지는 레지스트리에 등록되지 않고, 모든 서비스 컨테이너를 전용 사용자로 실행하도록 의무화했습니다.</dd></div>
           </dl>
-          <div class="tags"><span>Docker</span><span>Alpine</span><span>Trivy</span><span>AWS CodeBuild</span></div>
+          <div class="tags"><span>Docker</span><span>Alpine</span><span>Trivy</span><span>Multi-stage build</span><span>AWS CodeBuild</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p11" data-co="apthefin"><details>
-        <summary><span class="lg-no mono">#11</span><span class="lg-when mono">2025.07</span><span class="lg-title">Grafana 스택 기반 통합 모니터링</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p10" data-co="apthefin"><details>
+        <summary><span class="lg-no mono">#10</span><span class="lg-when mono">2025.07</span><span class="lg-title">Grafana 스택 기반 통합 모니터링</span><span class="lg-co mono">AP Thefin</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>컨테이너 로그를 수집하지 않고 있었고, EC2 서버의 리소스도 모니터링하지 않고 있었습니다. 메트릭과 알림은 서로 다른 시스템에 흩어져 있었습니다. 로그 수집은 비용이 가장 적게 드는 방식으로 만들어 달라는 요청을 받았습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>로그 수집기 Promtail을 Kubernetes 모든 노드(DaemonSet)와 EC2에 배포하고, 로그 저장소 Loki는 S3에 데이터를 보관하게 했습니다.</li><li>클러스터 메트릭은 Prometheus Operator로 모으고, EC2는 Node Exporter를 설치해 서비스 디스커버리로 자동 등록되게 했습니다.</li><li>컨테이너 재시작, 자원 과다 사용, 수집 실패 알람을 정의하고, Alertmanager로 묶고 중복을 걸러 Teams로 보냈습니다.</li><li>Grafana 대시보드는 Kubernetes, 애플리케이션, EC2 세 가지로 나눠 만들었습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>라이선스 비용 없이 오픈소스로 컨테이너 로그 수집을 시작했고, 로그·메트릭·알람을 Grafana 한곳에서 보게 됐습니다. 새 EC2 서버는 서비스 디스커버리로 자동 등록돼, 따로 모니터링 대상에 추가하지 않아도 됩니다.</dd></div>
+            <div><dt>배경</dt><dd>컨테이너 로그 수집과 EC2 리소스 모니터링이 없었고, 알림도 여러 시스템에 흩어져 있었습니다. 로그 수집은 비용이 가장 적게 드는 방식으로 만들어 달라는 요청이 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>라이선스 비용이 들지 않는 Loki를 쓰고 저장소를 S3로 정했으며, S3 수명 주기 정책을 두어 오래된 로그가 저렴한 저장 계층으로 옮겨지게 했습니다.</li><li>Promtail로 컨테이너와 EC2 로그를 모으면서 네임스페이스와 파드 이름을 붙여 어느 서비스의 로그인지 바로 찾을 수 있습니다.</li><li>메트릭은 Prometheus로 모으고, 새로 만든 EC2는 Node Exporter와 Service Discovery로 자동으로 모니터링 대상에 들어갑니다. Grafana 대시보드는 Kubernetes, 애플리케이션, EC2 세 가지로 구성했습니다.</li><li>컨테이너 재시작, CPU 90% 이상, 로그와 메트릭 수집 실패를 알람 조건으로 정하고, Alertmanager의 그룹화와 중복 제거로 같은 알람을 묶어 심각한 알람만 Teams로 보냈습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>흩어져 있던 로그와 메트릭을 Grafana 한곳에서 보는 Observability 환경이 생겼고, 새 EC2는 따로 등록하지 않아도 모니터링됩니다.</dd></div>
           </dl>
           <div class="tags"><span>Prometheus</span><span>Loki</span><span>Promtail</span><span>Grafana</span><span>Alertmanager</span><span>S3</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p10" data-co="ats"><details>
-        <summary><span class="lg-no mono">#10</span><span class="lg-when mono">2025.03 – 04</span><span class="lg-title">운영 EKS 10여 개 무중단 버전 업그레이드 (1.29 → 1.32)<em class="lg-pin">대표</em></span><span class="lg-co mono">ATS</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p09" data-co="ats"><details>
+        <summary><span class="lg-no mono">#09</span><span class="lg-when mono">2025.03 – 04</span><span class="lg-title">운영 EKS 10여 개 무중단 업그레이드 (1.29 → 1.32)<em class="lg-pin">대표</em></span><span class="lg-co mono">ATS</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>SK 계열사의 운영 EKS 클러스터 10여 개가 1.29에 머물러 있었습니다. 서비스 중단은 허용되지 않았고, EKS는 한 번 올린 버전을 되돌릴 수 없습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>1.32까지 사라지는 API를 쓰는 리소스를 Helm 차트와 매니페스트에서 찾아 정리하고, 네트워크·스토리지·인그레스 애드온(CNI·CSI·Ingress Controller)이 1.32를 지원하는지 확인하고, 필요한 애드온은 먼저 올렸습니다.</li><li>컨트롤 플레인은 되돌릴 수 없어 Velero 최종 백업으로 새 클러스터에 복원하는 경로를 먼저 확보하고, 운영과 같은 스테이징 클러스터에서 전체 절차를 먼저 리허설했습니다.</li><li>컨트롤 플레인은 한 버전씩 올렸고, 노드는 새 버전 노드 그룹을 만든 뒤 기존 노드의 파드를 옮겨(drain) 교체했습니다.</li><li>작업 전후 Grafana 지표를 비교해 영향을 확인했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>서비스 중단 없이 10여 개 클러스터를 1.32까지 올렸고, 이 절차는 SK C&amp;C 파트 표준 절차서가 됐습니다.</dd></div>
+            <div><dt>배경</dt><dd>SK 계열사의 운영 EKS 클러스터 10여 개가 1.29 버전에 머물러 있었습니다. EKS 컨트롤 플레인은 한 번에 한 버전씩만 올릴 수 있고 되돌릴 수 없어, 준비를 모두 마친 뒤 작업하는 순서로 진행했습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>1.32까지 없어지는 Deprecated API를 Helm 차트와 매니페스트에서 찾아 업그레이드 전에 수정 목록을 정리했습니다.</li><li>CNI, CoreDNS, CSI, Ingress Controller 같은 애드온의 새 버전 호환성을 확인하고, 먼저 올려야 하는 애드온은 컨트롤 플레인보다 앞서 올렸습니다.</li><li>Velero 백업을 새 클러스터에 복원하는 DR 경로를 미리 준비하고 테스트로 복원해 확인했습니다. 운영과 같은 구성의 스테이징 클러스터에서 전체 절차를 먼저 실행해 봤습니다.</li><li>컨트롤 플레인은 한 버전씩 차례로 1.32까지 올렸습니다. 노드는 PDB를 조정한 뒤 새 버전 노드 그룹을 만들고, 기존 노드를 하나씩 drain해 파드를 옮겨 교체했습니다.</li><li>작업 후에는 서비스 상태를 확인하고 CPU, 메모리, 응답 시간을 작업 전과 비교했습니다. 사전 분석부터 사후 검증까지의 절차를 표준 절차서로 정리했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>서비스 중단 없이 10여 개 클러스터를 1.32까지 올렸고, 이 작업 절차는 SK C&amp;C 파트의 표준 절차서가 됐습니다.</dd></div>
           </dl>
           <div class="tags"><span>AWS EKS</span><span>eksctl</span><span>Velero</span><span>Helm</span><span>Grafana</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p09" data-co="ats"><details>
-        <summary><span class="lg-no mono">#09</span><span class="lg-when mono">2024.11 – 25.02</span><span class="lg-title">EKS·AKS 클러스터 백업 및 알람 구성</span><span class="lg-co mono">ATS</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p08" data-co="ats"><details>
+        <summary><span class="lg-no mono">#08</span><span class="lg-when mono">2024.11 – 25.02</span><span class="lg-title">Velero 백업·복구 및 모니터링 표준화</span><span class="lg-co mono">ATS</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>기존 백업은 EC2 스냅샷뿐이라, 클러스터에 문제가 생기면 Kubernetes 리소스를 되살릴 방법이 없었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>AKS와 EKS 모두에 Velero를 적용해, 볼륨(PV)까지 포함해 백업했습니다. 클러스터·네임스페이스 단위로 주기 백업을 돌리고, 복구 테스트도 정기적으로 했습니다.</li><li>Prometheus·Alertmanager 알람을 Slack·Teams로 보내고, Grafana 통합 대시보드를 만들었습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>클러스터 단위로 복구할 수 있게 됐고, 이를 EKS 업그레이드(#10)의 복구 경로로 썼습니다. 두 클라우드에 같은 백업·모니터링 구성을 적용했습니다.</dd></div>
+            <div><dt>배경</dt><dd>기존 백업은 노드 디스크 스냅샷뿐이라 Kubernetes 리소스를 복구할 수 없었고, AKS와 EKS는 관제도 따로 하고 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>AKS와 EKS 모두에 Velero를 적용해 PV를 포함한 리소스를 백업하고, 클러스터 전체와 네임스페이스 단위로 주기적인 백업 정책을 정했습니다.</li><li>임계값을 넘으면 Slack과 Teams로 알람이 가도록 설정하고, Grafana 대시보드 하나에 AKS와 EKS를 함께 모았습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>클러스터 단위로 복구할 수 있는 경로가 생겼고, 이후 EKS 업그레이드(#09) 때 이 경로를 활용했습니다.</dd></div>
           </dl>
-          <div class="tags"><span>Velero</span><span>Prometheus</span><span>Grafana</span><span>EKS</span><span>AKS</span></div>
-        </div>
-      </details></li>
-      <li class="lg-row" id="p08" data-co="posicube"><details>
-        <summary><span class="lg-no mono">#08</span><span class="lg-when mono">2024.01 – 03</span><span class="lg-title">ChatOps와 GitOps를 묶은 배포 절차</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
-        <div class="lg-body">
-          <dl>
-            <div><dt>배경</dt><dd>개발자가 메신저로 배포를 요청하면 DevOps가 요청마다 배포 API나 CLI로 이미지를 바꿔 반영했습니다. 개발(DEV) 외 환경에 배포할 때도 따로 검토하는 절차가 없었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>개발자가 Teams 챗봇에서 고객·환경·이미지를 골라 직접 배포를 요청하게 했습니다. 선택지는 고객별 Helm values 파일에서 만들어, 실제로 있는 조합만 고를 수 있습니다.</li><li>DEV는 ArgoCD가 자동으로 반영하고, 스테이징·운영은 DevOps가 ArgoCD에서 검토한 뒤 반영하도록 나눴습니다.</li><li>GitHub Webhook으로 ArgoCD가 변경을 바로 감지(Refresh)하게 하고, 자동 반영이 일어나거나 실제 상태가 Git과 어긋나면 DevOps에게 알람이 가게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>DEV 배포는 개발자가 Teams에서 직접 하게 돼 요청부터 반영까지 약 30분에서 약 5분으로 줄었습니다. 스테이징·운영 배포는 DevOps가 ArgoCD에서 검토한 뒤에만 반영됩니다.</dd></div>
-          </dl>
-          <div class="tags"><span>Node.js</span><span>Teams Bot</span><span>ArgoCD</span><span>Helm</span></div>
+          <div class="tags"><span>Velero</span><span>Prometheus</span><span>Alertmanager</span><span>Grafana</span><span>EKS</span><span>AKS</span></div>
         </div>
       </details></li>
       <li class="lg-row" id="p07" data-co="posicube"><details>
-        <summary><span class="lg-no mono">#07</span><span class="lg-when mono">2023.08 – 24.08</span><span class="lg-title">Rancher 도입 및 멀티 클러스터 통합 관리</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#07</span><span class="lg-when mono">2024.01 – 03</span><span class="lg-title">ArgoCD GitOps와 ChatOps 배포 환경 구축</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>사내에 직접 구축한(vanilla) Kubernetes 클러스터 10여 개를 한곳에서 관리할 방법이 필요했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>Rancher 서버를 직접 설치하고 클러스터 10여 개를 연결했습니다.</li><li>권한(RBAC)은 Rancher 한곳에서 같은 기준으로 관리하고, 사용자는 한 화면에서 각 클러스터 상태를 보게 했습니다.</li><li>Rancher 권한을 그대로 주면 배포 외 작업까지 할 수 있어서, Rancher API를 FastAPI로 감싸 이미지 변경만 허용하는 배포 API를 만들었습니다. GitOps를 도입하기 전까지 배포는 이 API로 처리했습니다.</li></ul></dd></div>
+            <div><dt>배경</dt><dd>개발자가 메신저로 배포를 요청하면 DevOps가 직접 처리하느라 하루 평균 약 2시간이 들었고, DEV 외 환경 배포에는 검토 절차와 알림이 없었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>Helm values를 고객별, 환경별 파일로 나눠 배포 대상마다 다른 설정을 Git에서 관리했습니다.</li><li>Teams 챗봇(Node.js)이 values 파일을 읽어 고객과 환경 선택지를 보여 주고, 개발자는 이미지를 골라 직접 배포를 요청합니다. 요청이 들어오면 챗봇 서버가 values 파일의 이미지 태그를 바꿔 Git에 반영합니다.</li><li>GitHub Webhook을 연결해 브랜치가 바뀌면 ArgoCD가 바로 변경을 감지합니다. DEV 환경은 바로 자동 동기화되고, 스테이징과 운영 환경은 DevOps가 ArgoCD에서 검토한 뒤 동기화합니다.</li><li>클러스터 상태가 Git과 달라지거나 자동 배포가 일어나면 DevOps에게 알림이 오도록 했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>DEV 배포가 요청부터 반영까지 약 30분에서 약 5분으로 줄었습니다. DevOps가 배포 요청 처리에 쓰던 시간은 하루 평균 약 2시간에서 30분 이내로 줄었습니다.</dd></div>
+          </dl>
+          <div class="tags"><span>Node.js</span><span>Teams Bot</span><span>ArgoCD</span><span>Helm</span><span>GitHub Webhook</span></div>
+        </div>
+      </details></li>
+      <li class="lg-row" id="p06" data-co="posicube"><details>
+        <summary><span class="lg-no mono">#06</span><span class="lg-when mono">2023.08 – 24.08</span><span class="lg-title">Rancher 도입 및 멀티 클러스터 통합 관리</span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <div class="lg-body">
+          <dl>
+            <div><dt>배경</dt><dd>사내 Kubernetes 클러스터가 10여 개였는데, 사용자에게 클러스터 권한을 그대로 주면 배포 말고 다른 작업까지 할 수 있는 상태였습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>Rancher 서버를 직접 설치하고 사내 클러스터 10여 개를 연결해 RBAC을 같은 기준으로 관리했습니다.</li><li>Rancher API를 감싼 배포 API(FastAPI)를 개발해, 사용자는 컨테이너 이미지만 바꿔 배포하고 다른 클러스터 작업은 할 수 없게 했습니다.</li></ul></dd></div>
           </dl>
           <div class="tags"><span>Rancher</span><span>Kubernetes</span><span>RBAC</span><span>FastAPI</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p06" data-co="posicube"><details>
-        <summary><span class="lg-no mono">#06</span><span class="lg-when mono">2023.08 – 12</span><span class="lg-title">고객사별 Private AKS 인프라 Terraform 모듈화<em class="lg-pin">대표</em></span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p05" data-co="posicube"><details>
+        <summary><span class="lg-no mono">#05</span><span class="lg-when mono">2023.08 – 12</span><span class="lg-title">고객사별 Private AKS 인프라 Terraform 모듈화<em class="lg-pin">대표</em></span><span class="lg-co mono">Posicube</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>생성형 AI 챗봇 솔루션을 고객사마다 격리된 Azure 환경으로 납품해야 해서, 같은 구성을 고객사마다 반복해 만들어야 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>네트워크(VNet), Private AKS, Private DNS 등 고객 환경 하나를 이루는 자원을 Terraform 모듈로 만들어, 고객사 추가를 같은 모듈 호출로 처리하게 했습니다.</li><li>동시 접속 4,000명 이상 요구에 맞춰 노드 7대 AKS 클러스터를 구성했습니다.</li><li>로그는 Fluent Bit로 모아 Elasticsearch에 저장하고 보존 기간 정책을 두어, Grafana에서 검색하게 했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>신규 고객사 환경 구성이 약 3일에서 약 1일로 줄었고, 같은 모듈을 은행·에너지·제조·교육 분야 고객사 4곳에 적용했습니다.</dd></div>
+            <div><dt>배경</dt><dd>GPT 챗봇 솔루션을 고객사마다 격리된 Azure 환경에 납품했고, 고객 요구 조건은 사설망 구성과 동시 접속 4,000명 이상이었습니다. 이전에는 고객사마다 Azure 콘솔에서 환경을 손으로 만들었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>네트워크, Private AKS, 사설 DNS를 Terraform 모듈로 묶어 고객사 환경이 사설망 안에서만 동작하도록 구성했습니다.</li><li>클러스터는 고객사가 정한 사양에 맞춰 노드 7대로 구성했습니다.</li><li>Fluent Bit으로 로그를 Elasticsearch에 모으고 보존 기간 정책을 정했습니다. Grafana에 Elasticsearch를 연결해 로그를 필드별로 검색할 수 있게 했습니다.</li><li>인프라 구성에 맞춰 솔루션 Helm 차트를 작성하고, 고객사마다 같은 방식으로 배포했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>신규 고객사 환경 구성이 약 3일에서 약 1일로 줄었고, 같은 모듈을 은행, 에너지, 제조, 교육 분야 고객사 4곳에 적용했습니다.</dd></div>
           </dl>
-          <div class="tags"><span>Azure AKS</span><span>Terraform</span><span>Fluent Bit</span><span>Elasticsearch</span><span>Grafana</span></div>
+          <div class="tags"><span>Azure AKS</span><span>Terraform</span><span>Helm</span><span>Fluent Bit</span><span>Elasticsearch</span><span>Grafana</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p05" data-co="cloudbric"><details>
-        <summary><span class="lg-no mono">#05</span><span class="lg-when mono">2022.05 – 08</span><span class="lg-title">고객 도메인 등록 자동화</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p04" data-co="cloudbric"><details>
+        <summary><span class="lg-no mono">#04</span><span class="lg-when mono">2022.05 – 08</span><span class="lg-title">고객 도메인 등록 자동화</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>고객 도메인을 스프레드시트를 보며 손으로 등록하다 보니, DNS 백업 설정을 빠뜨리는 실수가 생겼습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>CS팀이 Google Sheets에 고객 도메인을 올리면, 스크립트가 시트를 읽어 필수 값과 형식부터 검증하게 했습니다.</li><li>검증을 통과하면 자사 WAF API로 도메인과 DNS 백업 설정을 등록하고, 등록 후 실제로 접속되는지 확인합니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>등록 전에는 필수 값과 형식을, 등록 후에는 실제 접속을 자동으로 확인하게 돼, DNS 백업 설정을 빠뜨린 채 등록되는 일을 막았습니다.</dd></div>
+            <div><dt>배경</dt><dd>고객 도메인을 손으로 등록하다 보니 DNS 백업 설정 같은 항목이 빠지는 실수가 있었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>CS팀이 도메인 목록을 시트에 올리면 엔지니어가 스크립트로 한 번에 등록하도록 바꿨습니다. 등록 전에는 시트의 필수 값과 형식을 먼저 검사합니다.</li><li>자사 WAF API로 도메인과 DNS 백업 설정을 등록하고, 접속되는지까지 확인합니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>DNS 백업 설정이 빠진 채 등록되는 일이 없어졌습니다.</dd></div>
           </dl>
           <div class="tags"><span>Python</span><span>Google Sheets API</span></div>
         </div>
       </details></li>
-      <li class="lg-row" id="p04" data-co="cloudbric"><details>
-        <summary><span class="lg-no mono">#04</span><span class="lg-when mono">2021.10 – 22.04</span><span class="lg-title">AWS WAF 보안 규칙 상품 개발 및 Marketplace 출시</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
+      <li class="lg-row" id="p03" data-co="cloudbric"><details>
+        <summary><span class="lg-no mono">#03</span><span class="lg-when mono">2021.10 – 22.04</span><span class="lg-title">AWS WAF 보안 규칙 상품 개발 및 Marketplace 출시</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>AWS Marketplace에서 판매할 AWS WAF용 보안 규칙 묶음(관리형 규칙 그룹) 상품을 만드는 일이었습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>OWASP Top 10(2017)을 기준으로 SQL 인젝션, XSS 같은 공격을 탐지하는 정규식 규칙을 설계했습니다.</li><li>AWS WAF 규칙 그룹 형식에 맞춰 규칙마다 차단·카운트 동작을 정하고, 정상 요청을 막지 않도록 오탐 테스트를 반복했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>AWS Marketplace에 출시했습니다.</dd></div>
+            <div><dt>배경</dt><dd>AWS Marketplace에서 판매할 AWS WAF용 보안 규칙 상품을 만드는 일이었습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>OWASP Top 10(2017)을 기준으로 SQLi, XSS 등 탐지 정규식 규칙을 설계했습니다.</li><li>AWS WAF 규칙 그룹 구조에 맞춰 차단과 카운트 액션을 정하고 오탐 테스트를 반복했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>AWS Marketplace 구독 상품으로 출시했습니다.</dd></div>
           </dl>
           <div class="tags"><span>AWS WAF</span><span>OWASP</span><span>Regex</span></div>
-        </div>
-      </details></li>
-      <li class="lg-row" id="p03" data-co="cloudbric"><details>
-        <summary><span class="lg-no mono">#03</span><span class="lg-when mono">2021.02 – 08</span><span class="lg-title">AWS WAF 관리형 서비스(WMS) 인프라 설계 및 운영</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
-        <div class="lg-body">
-          <dl>
-            <div><dt>배경</dt><dd>고객사 AWS WAF 로그를 분석해 규칙을 관리해 주는 서비스의 인프라를 맡았습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>한 가용 영역(AZ)에 장애가 나도 서비스가 멈추지 않도록, 프런트엔드·백엔드를 여러 AZ에 구성하고 Route 53 헬스 체크로 장애 조치를 걸었습니다.</li><li>Logstash로 고객사 S3의 WAF 로그를 같은 형식으로 정리해 Elasticsearch(마스터와 데이터 노드 분리)에 적재하고, 앞단에 로드밸런서를 두었습니다.</li><li>Python(Boto3)으로 모든 리전의 WAF 규칙을 한 번에 갱신하게 했고, Zabbix·Grafana로 모니터링했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>서비스 운영에 필요한 고가용성, 로그 분석, 모니터링 구성을 갖추고 자사 관리형 서비스로 출시했습니다.</dd></div>
-          </dl>
-          <div class="tags"><span>AWS</span><span>Route 53</span><span>Elasticsearch</span><span>Logstash</span><span>Python</span><span>Boto3</span></div>
         </div>
       </details></li>
       <li class="lg-row" id="p02" data-co="cloudbric"><details>
         <summary><span class="lg-no mono">#02</span><span class="lg-when mono">2021.01 – 02</span><span class="lg-title">WAF 장애 대응 Slack 챗봇</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>웹방화벽 장애 확인과 정책 변경을 Slack에서 처리할 업무용 챗봇이 필요했고, 설계와 개발을 맡았습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>WAF 엔진 API와 SSH를 연동해 헬스 체크 재확인, Let&#x27;s Encrypt 인증서 강제 재발급, 서버 리소스 확인 명령을 만들었습니다.</li><li>정책 변경을 업무 시간 외로 예약하고, 실행 전후에 알람을 보내게 했습니다.</li><li>같은 알람이 두 번 이상 가던 문제는 알람 작업의 중복 실행을 막아 해결했습니다.</li></ul></dd></div>
-            <div><dt>결과</dt><dd>장애 확인과 반복 조치를 Slack 명령으로 처리하게 돼, 반복 장애 조치가 건당 약 30분에서 약 5분으로 줄었습니다.</dd></div>
+            <div><dt>배경</dt><dd>장애 문의가 오면 엔지니어가 서버에 접속해 손으로 처리하던 작업을 Slack 명령으로 처리하도록 바꾸는 일이었습니다. 설계와 개발을 맡았습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>간헐적으로 실패하는 헬스 체크를 다시 확인하는 명령을 추가하고, 인증서 재발급과 리소스 확인도 Slack 명령에 넣었습니다.</li><li>업무 시간 외 정책 변경을 수동으로 하다 실수가 잦아, 변경을 미리 예약하고 전후로 알림을 받는 기능을 개발했습니다.</li><li>같은 알람이 여러 번 오던 문제는 Celery 작업 큐에서 한 번만 처리하도록 고쳤고, 명령마다 실행 권한이 있는지 확인하도록 했습니다.</li></ul></dd></div>
+            <div><dt>결과</dt><dd>반복 장애 조치가 건당 약 30분에서 약 5분으로 줄었습니다.</dd></div>
           </dl>
-          <div class="tags"><span>Python</span><span>Slack Bot</span><span>Celery</span></div>
+          <div class="tags"><span>Python</span><span>Django</span><span>Celery</span><span>Slack API</span></div>
         </div>
       </details></li>
       <li class="lg-row" id="p01" data-co="cloudbric"><details>
-        <summary><span class="lg-no mono">#01</span><span class="lg-when mono">2021.01 – 02</span><span class="lg-title">5개 클라우드 고객 환경 구축 자동화</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
+        <summary><span class="lg-no mono">#01</span><span class="lg-when mono">2021.01 – 02</span><span class="lg-title">5개 클라우드 고객 환경 구축·테스트 자동화</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>고객 요청이 들어올 때마다 5개 클라우드의 콘솔에서 환경을 손으로 만들고, 구축 후 테스트도 손으로 했습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>AWS, Azure, Linode, DigitalOcean, Vultr용 Terraform 코드를 Jenkins 파이프라인 하나로 묶었습니다.</li><li>Terraform이 만든 결과값을 Python 테스트에 넘겨, 구축 직후 자동으로 검증하게 했습니다.</li></ul></dd></div>
+            <div><dt>배경</dt><dd>고객 요청이 올 때마다 AWS, Azure, Linode, DigitalOcean, Vultr 콘솔에서 환경을 수작업으로 만들고 테스트도 손으로 했습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>클라우드별 Terraform 코드를 Git으로 관리하고, Jenkins에서 사양을 고르고 실행하면 같은 절차로 환경이 만들어지게 했습니다.</li><li>환경이 만들어지면 바로 Python Smoke Test로 동작을 검증하고, 결과를 Jenkins에 남겼습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>고객 환경 구축이 약 4시간에서 약 1시간으로 줄었습니다.</dd></div>
           </dl>
-          <div class="tags"><span>Terraform</span><span>Jenkins</span><span>Python</span><span>AWS</span><span>Azure</span></div>
+          <div class="tags"><span>Terraform</span><span>Jenkins</span><span>Python</span><span>Git</span><span>AWS</span><span>Azure</span></div>
         </div>
       </details></li>
       </ol>
@@ -421,32 +402,17 @@
     <div class="sec-head rv">
       <div class="sec-idx"><svg class="ic" aria-hidden="true"><use href="#i-incident"/></svg>04 · Incident</div>
       <h2 class="sec-title" id="inc-title">장애 대응</h2>
-      <p class="sec-lede">장애가 나기 전에 복구 경로와 알람, 문서를 갖춰 두고, 장애가 나면 증상만 가라앉히지 않고 로그와 기록으로 원인을 확인합니다.</p>
+      <p class="sec-lede">장애가 나기 전에 복구 경로와 알람, 문서를 갖춰 둡니다.</p>
     </div>
     <div class="incs">
-      <article class="inc wide spot rv" aria-labelledby="i1">
-        <div class="eyebrow">Database · Hardware <span>고객사 PoC 기술지원</span></div>
-        <h3 id="i1">PostgreSQL 반복 재시작 원인 분석 및 복구</h3>
-        <ol class="flow h" aria-label="장애 파악과 조치 순서"><li><span class="n">01</span><span class="t">재현으로 범위 좁힘</span></li><li><span class="n">02</span><span class="t">손상 행 추적<small>ctid · TOAST</small></span></li><li class="end"><span class="n">03</span><span class="t">하드웨어 로그·부팅 기록 대조<small>강제 전원 차단 확정</small></span></li><li><span class="n">04</span><span class="t">복제본 재구성<small>3 → 2 → 3</small></span></li></ol>
-        <details class="inc-more"><summary>분석 과정 보기</summary>
-        <dl class="inc-rows">
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-symptom"/></svg><span>증상</span></dt><dd>고객사 PoC 환경에서 Kubernetes 오퍼레이터(CloudNativePG)로 운영하던 PostgreSQL이 약 800만 행 테이블을 조회할 때마다 재시작됐습니다. 다음 날에는 복제본이 200회 넘게 재시작하면서 주 서버(primary)가 계속 바뀌었습니다.</dd></div>
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cause"/></svg><span>원인</span></dt><dd>로그에 찍힌 손상 행을 물리 위치(<code>ctid</code>)로 따라가 보니, 큰 값을 따로 저장하는 영역(TOAST)의 첫 조각이 빠져 있었습니다. 서버 하드웨어 로그(IPMI SEL)의 강제 전원 차단 기록과 부팅 이력(journalctl)을 대조해, 원인이 <strong>예기치 않은 전원 차단</strong>임을 확정했습니다. 데이터를 쓰는 도중 전원이 끊겨 손상됐고, 재시작과 주 서버 전환이 반복되면서 복제본의 복제 이력(WAL 타임라인)도 어긋났습니다.</dd></div>
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-fix"/></svg><span>해결</span></dt><dd>손상된 테이블은 원본 데이터를 다시 적재해 복구하도록 안내했습니다. 복제본은 인스턴스 수를 3 → 2 → 3으로 조정해 복제를 처음부터 다시 구성했습니다.</dd></div>
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-prevent"/></svg><span>추가 조치</span></dt><dd>재시작의 직접 원인은 아니었지만, 5초로 짧게 잡혀 있던 복제 송수신 타임아웃(<code>wal_sender_timeout</code> · <code>wal_receiver_timeout</code>)을 CloudNativePG GitHub 이슈를 근거로 PostgreSQL 기본값인 60초로 되돌렸습니다.</dd></div>
-        </dl>
-        </details>
-        <div class="tags"><span>CloudNativePG</span><span>PostgreSQL</span><span>IPMI SEL</span><span>journalctl</span></div>
-      </article>
-
-      <article class="inc wide spot rv d1" aria-labelledby="i2">
+      <article class="inc wide spot rv" aria-labelledby="i2">
         <div class="eyebrow">Operations · Readiness <span>장애가 나기 전에</span></div>
         <h3 id="i2">장애 대응 체계로 갖춰 둔 것</h3>
         <dl class="inc-rows">
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-prevent"/></svg><span>복구 경로</span></dt><dd>EKS·AKS에 Velero로 볼륨까지 포함한 주기 백업을 돌리고 복구 테스트를 정기적으로 했습니다. 되돌릴 수 없는 EKS 업그레이드는 이 백업으로 새 클러스터에 복원하는 경로를 먼저 확보한 뒤 진행했습니다.</dd></div>
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-symptom"/></svg><span>알람</span></dt><dd>컨테이너 재시작, 자원 과다 사용, 수집 실패를 알람 규칙으로 두고 Alertmanager로 묶어 중복을 걸러 Critical만 Teams로 보냈습니다. 새 EC2는 서비스 디스커버리로 자동 등록돼 모니터링에서 빠지지 않습니다.</dd></div>
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-fix"/></svg><span>실패해도 안전</span></dt><dd>폐쇄망 설치 스크립트는 어느 단계를 다시 실행해도 결과가 같고, 실패하면 이어서 실행할 명령을 알려 줍니다. 서버와 패키지의 CPU 아키텍처가 다르면 아무것도 바꾸기 전에 멈춥니다.</dd></div>
-          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cause"/></svg><span>문서</span></dt><dd>증상별 장애 대응 문서를 팀 위키에 모아, 장애 때 팀이 한곳에서 찾아보게 했습니다.</dd></div>
+          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-prevent"/></svg><span>복구 경로</span></dt><dd>AKS와 EKS에 Velero로 PV를 포함한 주기 백업을 적용했습니다. 되돌릴 수 없는 EKS 업그레이드는 이 백업을 새 클러스터에 복원하는 경로를 먼저 준비하고 테스트로 복원해 확인한 뒤 진행했습니다.</dd></div>
+          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-symptom"/></svg><span>알람</span></dt><dd>컨테이너 재시작, CPU 90% 이상, 로그와 메트릭 수집 실패를 알람 조건으로 정하고, Alertmanager로 같은 알람을 묶어 심각한 알람만 Teams로 보냈습니다. 새 EC2는 따로 등록하지 않아도 모니터링됩니다.</dd></div>
+          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-fix"/></svg><span>실패해도 안전</span></dt><dd>폐쇄망 설치 스크립트는 중간에 실패하면 처음부터 다시 하지 않고 실패한 단계부터 이어서 실행합니다. 서버와 패키지의 CPU 아키텍처가 다르면 서버 설정을 건드리기 전에 설치를 멈춥니다.</dd></div>
+          <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cause"/></svg><span>문서</span></dt><dd>클러스터, 노드, 파드, 네트워크, 스토리지, 관측 증상별 장애 대응 문서를 팀 위키에 모아 장애 때 팀이 한곳에서 찾게 됐습니다.</dd></div>
         </dl>
         <div class="tags"><span>Velero</span><span>Alertmanager</span><span>Prometheus</span><span>Wiki.js</span></div>
       </article>
@@ -464,11 +430,11 @@
     <div class="skills">
       <div class="sk spot rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-k8s"/></svg>Kubernetes</h3><p>매니지드와 kubeadm 직접 설치</p><div class="tags"><span>Kubernetes</span><span>kubeadm</span><span>EKS</span><span>AKS</span><span>Rancher</span><span>Helm</span><span>helmfile</span><span>Velero</span><span>Calico</span><span>containerd</span></div></div>
       <div class="sk spot rv d1"><h3><svg class="ic" aria-hidden="true"><use href="#i-cloud"/></svg>Cloud · IaC</h3><p>멀티 클라우드 프로비저닝</p><div class="tags"><span>AWS</span><span>Azure</span><span>NCP</span><span>Terraform</span></div></div>
-      <div class="sk spot rv d2"><h3><svg class="ic" aria-hidden="true"><use href="#i-airgap"/></svg>Air‑gapped · On‑prem</h3><p>폐쇄망 패키징과 서버 관리</p><div class="tags"><span>skopeo</span><span>regctl</span><span>local registry</span><span>NetBox</span></div></div>
+      <div class="sk spot rv d2"><h3><svg class="ic" aria-hidden="true"><use href="#i-airgap"/></svg>Air‑gapped · On‑prem</h3><p>폐쇄망 패키징과 서버 관리</p><div class="tags"><span>local registry</span><span>registry mirror</span><span>NetBox</span></div></div>
       <div class="sk spot rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-observe"/></svg>Observability</h3><p>메트릭 · 로그 · 알람</p><div class="tags"><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Alertmanager</span><span>Fluent Bit</span><span>Elasticsearch</span></div></div>
       <div class="sk spot rv d1"><h3><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Security</h3><p>인증 · 공급망 · 감리</p><div class="tags"><span>Keycloak</span><span>SAML 2.0</span><span>AWS IAM · STS</span><span>Trivy</span><span>AWS WAF</span><span>CSAP 대응</span><span>KISA 점검</span></div></div>
       <div class="sk spot rv d2"><h3><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>CI/CD · Language</h3><p>파이프라인과 도구 개발</p><div class="tags"><span>ArgoCD</span><span>Jenkins</span><span>CodeBuild</span><span>Docker</span><span>Python</span><span>FastAPI</span><span>Bash</span><span>Node.js</span></div></div>
-      <div class="sk spot wide rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-ai"/></svg>AI 활용</h3><p>도구의 구조와 검증 기준은 사람이 정하고, AI 코딩 도구로 구현한 결과는 테스트와 검토를 거쳐 씀</p><div class="tags"><span>Claude Code</span><span>Skills</span></div></div>
+      <div class="sk spot wide rv"><h3><svg class="ic" aria-hidden="true"><use href="#i-ai"/></svg>AI 활용</h3><p>도구의 구조와 검증 기준을 정하고 구현에는 AI 코딩 도구를 활용</p><div class="tags"><span>Claude Code</span><span>Skills</span></div></div>
     </div>
   </div>
 </section>
@@ -484,6 +450,7 @@
       <div class="cert spot"><span class="badge">ICA</span><span class="iss">Istio Certified Associate</span><span class="d">The Linux Foundation · 취득 2026.04</span></div>
       <div class="cert spot"><span class="badge lg">DevOps Engineer – Professional</span><span class="iss">Amazon Web Services</span><span class="d">취득 2026.03</span></div>
       <div class="cert spot"><span class="badge lg">Solutions Architect – Associate</span><span class="iss">Amazon Web Services</span><span class="d">취득 2026.03</span></div>
+      <div class="cert spot"><span class="badge lg">Cloud Practitioner</span><span class="iss">Amazon Web Services</span><span class="d">취득 2026.03</span></div>
       <div class="cert spot exp"><span class="badge">CKA</span><span class="iss">Certified Kubernetes Administrator</span><span class="d">취득 2023.05 · 만료</span></div>
       <div class="cert spot exp"><span class="badge">CKAD</span><span class="iss">Certified Kubernetes Application Developer</span><span class="d">취득 2024.04 · 만료</span></div>
       <div class="cert spot exp"><span class="badge">CKS</span><span class="iss">Certified Kubernetes Security Specialist</span><span class="d">취득 2024.04 · 만료</span></div>
