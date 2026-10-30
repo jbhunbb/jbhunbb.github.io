@@ -172,6 +172,7 @@
           <li>CodeBuild에 Trivy Quality Gate를 넣어 Critical이나 High 취약점이 있는 이미지의 레지스트리 등록을 막고, 모든 서비스 컨테이너를 전용 사용자로 실행하도록 의무화했습니다.</li>
           <li>로그 수집이 없던 EKS와 EC2에 Prometheus, Loki, Grafana로 Observability 환경을 구축했습니다. 새 EC2는 따로 등록하지 않아도 모니터링됩니다.</li>
           <li>대출비교 서비스(더핀)는 제휴 금융기관 30여 곳과 대출 상품 정보와 심사 데이터를 주고받기 위해 전용 연계 구간이 필요했습니다. 이 연계 구간을 기관에 따라 Site-to-Site VPN이나 AWS Direct Connect로 연결했습니다. 기관마다 VPN을 설정하고 Transit Gateway에서 라우팅을 구성했으며, Site-to-Site VPN은 터널 2개로 연결되어 한쪽 터널이 끊겨도 통신이 이어집니다.</li>
+          <li>인프라 운영과 유지보수는 직접 맡고, MSP(메가존클라우드)와의 계약을 관리하며 계약에 따라 기술 지원과 기술 질의를 요청했습니다. 마이데이터 사업자로서 연계 금융기관의 보안 점검(ISMS 기준 등)에도 대응했습니다.</li>
         </ul>
       </li>
       <li class="tl-item rv">
