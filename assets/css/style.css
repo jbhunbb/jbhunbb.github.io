@@ -484,7 +484,7 @@ svg text{font-family:var(--mono)}
 .metrics{grid-template-columns:repeat(5,minmax(0,1fr))}
 .lg-body dt,.inc-rows dt span{font-family:var(--sans);letter-spacing:0;font-weight:600}
 @media (max-width:1080px){.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:640px){.metrics{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.metrics{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 @media (max-width:560px){
   .nav ul{mask-image:linear-gradient(90deg,#000 78%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent);scroll-snap-type:x proximity}
   .nav ul li{scroll-snap-align:start}
@@ -510,3 +510,4 @@ svg text{font-family:var(--mono)}
 .inc-more[open] > summary::before{content:"− "}
 @media print{.inc-more > summary{display:none}}
 .metric.wide .num{font-size:clamp(28px,2.8vw,40px)}
+@media (max-width:400px){.metric.wide .num{font-size:25px}}
