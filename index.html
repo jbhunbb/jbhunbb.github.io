@@ -385,8 +385,8 @@
         <summary><span class="lg-no mono">#01</span><span class="lg-when mono">2020.12 – 2021.01</span><span class="lg-title">WAF 장애 대응 Slack 챗봇</span><span class="lg-co mono">Cloudbric</span><span class="lg-car" aria-hidden="true">+</span></summary>
         <div class="lg-body">
           <dl>
-            <div><dt>배경</dt><dd>장애 문의가 오면 엔지니어가 서버에 접속해 손으로 처리하던 작업을 Slack 명령으로 처리하도록 바꾸는 일이었습니다. 설계와 개발을 맡았습니다.</dd></div>
-            <div><dt>한 일</dt><dd><ul><li>간헐적으로 실패하는 헬스 체크를 다시 확인하는 명령을 추가하고, 인증서 재발급과 리소스 확인도 Slack 명령에 넣었습니다.</li><li>업무 시간 외 정책 변경을 수동으로 하다 실수가 잦아, 변경을 미리 예약하고 전후로 알림을 받는 기능을 개발했습니다.</li><li>같은 알람이 여러 번 오던 문제는 Celery 작업 큐에서 한 번만 처리하도록 고쳤고, 명령마다 실행 권한이 있는지 확인하도록 했습니다.</li></ul></dd></div>
+            <div><dt>배경</dt><dd>헬스 체크 서버와 운영 서버가 지리적으로 멀어, 타임아웃 때문에 헬스 체크 실패 알람이 하루 4~5번 왔습니다. 엔지니어와 개발자가 돌아가며 맡는 장애 대응 담당자가 알람마다 SSH로 서버에 접속해 실제 장애인지 직접 확인했고, 인증서 재발급이 실패했을 때도 손으로 처리했습니다. 설계와 개발을 맡았습니다.</dd></div>
+            <div><dt>한 일</dt><dd><ul><li>Slack에서 헬스 체크를 다시 실행하는 명령을 만들어, 서버에 접속하지 않고 실제 장애인지 확인하게 했습니다.</li><li>인증서 재발급과 리소스 확인도 Slack 명령에 넣었습니다.</li><li>업무 시간 외 정책 변경을 수동으로 하다 실수가 잦아, 변경을 미리 예약하고 전후로 알림을 받는 기능을 개발했습니다.</li></ul></dd></div>
             <div><dt>결과</dt><dd>반복 장애 조치가 건당 약 30분에서 약 5분으로 줄었습니다.</dd></div>
           </dl>
           <div class="tags"><span>Python</span><span>Django</span><span>Celery</span><span>Slack API</span></div>
